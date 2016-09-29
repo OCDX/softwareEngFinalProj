@@ -24,4 +24,4 @@ that everyone is able to push changes to this repo**
 
 Jared Welch
 Andrew Stoll
-
+Liz Bryan
