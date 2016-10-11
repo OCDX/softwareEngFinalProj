@@ -1,7 +1,7 @@
 #Group Project Repository
 
 ##TODO
-Link Professor Goggins repo here:
+Link Professor Goggins repo [here](https://github.com/OCDX/OCDX-Engine/tree/master/use-cases)
 
 Finish out requirement analysis for the project
 
