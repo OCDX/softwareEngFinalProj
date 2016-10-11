@@ -23,4 +23,6 @@ Finish out requirement analysis for the project
 that everyone is able to push changes to this repo**
 
 Jared Welch
-
+Andrew Stoll
+Liz Bryan
+Zach Dolan
