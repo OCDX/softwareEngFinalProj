@@ -1,7 +1,39 @@
 Users:
-
-Acitivies (broken down by user)
-
+	Researchers
+	Students
+	Data Scientists
+	System Administrators
+Acitivies:
+	Browse Manifest:
+		-The user should be able to view all of the manifests listed. This should be a webpage feature, drawing from a backend storage device,
+		 and displaying the relevant information pulled in. There should be descriptions assosciated with them, displayed. The interface of
+		 this page should be by clicking on corresponding file (button, link, design decided later), and by searching through the files by 
+		 keyword.
+	Contribute To Database for an existing dataset:
+		(This is a brainstorm, so I feel  it appropriate to put comments such as these. I am not sure what he wants from this, very confused 
+		about the specifics.)
+		
+		-The user should be able to click an option for a specific dataset to be able to contribute to it. The method of contribution, should
+		be a link to the data to store, place to upload scripts, place to upload Jupyter Notebooks, docker config file OR link to generate
+		a file for the configuration. 
+	Create Jupyter-Hub instance:
+		-User should be able to launch a generic instance of Jupyter-Hub in order to house the project (and run it I think, might need
+		to clarify this a little). The instance is based on a generic profile by the OCDX engine(idk). 
+	Create Specific Jupyter-Hub instance"
+		-Same as creation of the generic, except this instance is configured according to a provided specification. 
+	Download a Dataset or SNC files:
+		-Displayed data sets and SNC files to the user should have an option available to download said data and files to their local machine.
+	Generate or Upload manifest:
+		-A manifest should be generated for a user based on a provided form and must be completed, or a complete manifest can be uploaded 
+		directly. 
+	Save:
+		-Same functionality as contribution to the existing dataset, just offering that option through the interface of Jupyter before they 
+		exit the instance. 
+	(THE USE CASE "SEARCH ON MANIFEST" IS GIVEN BUT I AM NOT SURE HOW IT IS DIFFERENT FROM BROWSWE MANIFEST?)
+	Spawn Jupyter-Hub instace:
+		-Create a JH instance based on a specific dataset and/or SNC files. Datasets can be opened independently, SNC must open with
+		its corresponding data. 
+	Upload New Dataset and Optionally SNC files. 	
 Data:
 
 Data Constraints:
