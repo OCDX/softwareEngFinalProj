@@ -36,10 +36,26 @@ Acitivies:
 	Upload New Dataset and Optionally SNC files. 	
 Data:
 
+	some categories (to start thinking about it):
+		Need data for the manifests, including SNC files and dataset files
+		
+		Need user data, for logging in and their account features
+
+		Need organizational data, such as name and version, to organize manifests
+
+
 Data Constraints:
+	What limits on the data do we need?
 
 System requirements:
 
+	need to be a web broswer friendly app/webpage
+
+	server to host the web files
+
+	database to save json and other persistant data
+
 system contraints:
 
+	what limits do we need on the system for it to function?
 
