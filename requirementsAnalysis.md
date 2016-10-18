@@ -14,38 +14,38 @@
 	The user should be able to view all of the manifests listed. This should be a web page feature, drawing from a backend storage device, and displaying the relevant information pulled in. There should be descriptions associated with them, displayed. The interface of this page should be by clicking on corresponding file (button, link, design decided later), and by searching through the files by keyword, user, title, or category.
 * Contribute To Database for an existing dataset:
 
-: The user should be able to click an option for a specific dataset to be able to contribute to it. The method of contribution, should be a link to the data to store, place to upload scripts, docker config file OR link to generate a file for the configuration.
+	The user should be able to click an option for a specific dataset to be able to contribute to it. The method of contribution, should be a link to the data to store, place to upload scripts, docker config file OR link to generate a file for the configuration.
 * Download a Dataset or SNC files:
 
-: Displayed data sets and SNC files to the user should have an option available to download said data and files to their local machine.
+	Displayed data sets and SNC files to the user should have an option available to download said data and files to their local machine.
 * Generate or Upload manifest:
 
-: A manifest should be generated for a user based on a provided form and must be completed, or a complete manifest can be uploaded directly.
+	A manifest should be generated for a user based on a provided form and must be completed, or a complete manifest can be uploaded directly.
 
 * Save:
 
-: Same functionality as contribution to the existing dataset, just offering that option through the interface of Jupyter before they exit the instance.
+	Same functionality as contribution to the existing dataset, just offering that option through the interface of Jupyter before they exit the instance.
 
 * Upload New Dataset and Optionally SNC files
 
 ##Data and Constraints:
-					Browsing and Searching of manifests:
-					Categories for manifest
-					Tags (?) to enable better searches
-					Title and captions for descriptions of manifest
+* Browsing and Searching of manifests:
+	- Categories for manifest
+	- Tags (?) to enable better searches
+	- Title and captions for descriptions of manifest
 
-					 	User Data:
-						Unique data per each user
-						Username
-						Password
-						list of uploads
+* User Data:
+	- Unique data per each user
+	- Username
+	- Password
+	- list of uploads
 
-						Manifests (Uploading, Downloading, Updating):
-						Time of upload, who uploaded
-						Time of any updates, who updated, and what was changed
-						Record of downloads
-						SNC files
-						Dataset assosciated with that manifest
+* Manifests (Uploading, Downloading, Updating):
+	- Time of upload, who uploaded
+	- Time of any updates, who updated, and what was changed
+	- Record of downloads
+	- SNC files
+	- Dataset assosciated with that manifest
 
 ##System requirements and Constraints:
 
