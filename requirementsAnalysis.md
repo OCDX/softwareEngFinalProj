@@ -85,5 +85,4 @@ useful to have search tags in the database itself, maybe that is a different typ
 
 |Manifest Data|
 ------------
-| Owner <br> User Accesses <br> time of upload <br> time of last change <br> version <br> dataset (json? not sure)
-<br> SNC files (if present) |
+| Owner <br> User Accesses <br> time of upload <br> time of last change <br> version <br> dataset (json? not sure) <br> SNC files (if present) |
