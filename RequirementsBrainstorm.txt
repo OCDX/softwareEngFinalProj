@@ -38,14 +38,10 @@ Acitivies:
 
 
 Data and Constraints:
-	What limits on the data do we need?
-		Size limits for datasets
-		Only certain formats (?)
-
-	data needs to be in a format that instances can interpret
-
 	Browsing and Searching of manifests:
-		By category, by user
+		-Categories for manifest
+		-Tags (?) to enable better searches
+		-Title and captions for descriptions of manifest
 		
 	User Data:
 		-Unique data per each user
@@ -54,9 +50,11 @@ Data and Constraints:
 			list of uploads
 			
 	Manifests (Uploading, Downloading, Updating):
-		Time of upload, who uploaded
-		Time of any updates, who updated
-		Record of downloads(?) - as in a given dataset has been downloaded x many times
+		-Time of upload, who uploaded
+		-Time of any updates, who updated, and what was changed
+		-Record of downloads 
+		-SNC files
+		-Dataset assosciated with that manifest 
 
 System requirements and Constraints:
 
