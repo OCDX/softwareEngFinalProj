@@ -16,11 +16,6 @@ Acitivies:
 		-The user should be able to click an option for a specific dataset to be able to contribute to it. The method of contribution, should
 		be a link to the data to store, place to upload scripts, place to upload Jupyter Notebooks, docker config file OR link to generate
 		a file for the configuration. 
-	Create Jupyter-Hub instance:
-		-User should be able to launch a generic instance of Jupyter-Hub in order to house the project (and run it I think, might need
-		to clarify this a little). The instance is based on a generic profile by the OCDX engine(idk). 
-	Create Specific Jupyter-Hub instance"
-		-Same as creation of the generic, except this instance is configured according to a provided specification. 
 	Download a Dataset or SNC files:
 		-Displayed data sets and SNC files to the user should have an option available to download said data and files to their local machine.
 	Generate or Upload manifest:
@@ -30,9 +25,7 @@ Acitivies:
 		-Same functionality as contribution to the existing dataset, just offering that option through the interface of Jupyter before they 
 		exit the instance. 
 	(THE USE CASE "SEARCH ON MANIFEST" IS GIVEN BUT I AM NOT SURE HOW IT IS DIFFERENT FROM BROWSE MANIFEST?)
-	Spawn Jupyter-Hub instance:
-		-Create a JH instance based on a specific dataset and/or SNC files. Datasets can be opened independently, SNC must open with
-		its corresponding data. 
+	 
 	Upload New Dataset and Optionally SNC files. 	
 
 
@@ -60,8 +53,6 @@ Data and Constraints:
 			password
 			list of uploads
 			
-	Jupyter-Hub instances:
-	
 	Manifests (Uploading, Downloading, Updating):
 		Time of upload, who uploaded
 		Time of any updates, who updated
@@ -79,7 +70,7 @@ system contraints:
 
 	server must have 24 hour availability to ensure customer access to data, including backup methods in case of an outage
 	
-	the system must be securely implemented in order to protect user identity and possible proxy implementation per JupyterHub
+	the system must be securely implemented in order to protect user identity
 
 	authentic HTTPS server authentication 
 
@@ -87,7 +78,7 @@ system contraints:
 
 	server must be large enough to store data of multiple users and supply enough bandwidth and computing power for users operating concurrently
 
-	implemented in JSON and compatibility with JupyterHub multi-user notebook server
+	implemented in JSON
 
 
 
