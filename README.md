@@ -18,3 +18,10 @@ Need title page
 -date
 
 add change log
+
+add tables for data (these will probably change as we begin work)
+
+diagram out a tentative design for our pages
+
+have a section dedicated to software design ideas (UML, etc)
+
