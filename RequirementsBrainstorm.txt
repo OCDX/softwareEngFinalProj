@@ -56,7 +56,10 @@ Data and Constraints:
 		
 	User Data:
 		-Unique data per each user
-
+			username
+			password
+			list of uploads
+			
 	Jupyter-Hub instances:
 	
 	Manifests (Uploading, Downloading, Updating):
