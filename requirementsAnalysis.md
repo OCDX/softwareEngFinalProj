@@ -72,8 +72,8 @@ Github Repository for the project: https://github.com/jaredwelch1/softwareEngFin
 
 *Tables and their data:
 
-First Header
+|First Header|
 -----------
-content
+|content|
 
 
