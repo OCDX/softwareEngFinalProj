@@ -6,7 +6,7 @@ Users:
 Acitivies:
 	Browse Manifest:
 		-The user should be able to view all of the manifests listed. This should be a webpage feature, drawing from a backend storage device,
-		 and displaying the relevant information pulled in. There should be descriptions assosciated with them, displayed. The interface of
+		 and displaying the relevant information pulled in. There should be descriptions associated with them, displayed. The interface of
 		 this page should be by clicking on corresponding file (button, link, design decided later), and by searching through the files by 
 		 keyword.
 	Contribute To Database for an existing dataset:
@@ -29,8 +29,8 @@ Acitivies:
 	Save:
 		-Same functionality as contribution to the existing dataset, just offering that option through the interface of Jupyter before they 
 		exit the instance. 
-	(THE USE CASE "SEARCH ON MANIFEST" IS GIVEN BUT I AM NOT SURE HOW IT IS DIFFERENT FROM BROWSWE MANIFEST?)
-	Spawn Jupyter-Hub instace:
+	(THE USE CASE "SEARCH ON MANIFEST" IS GIVEN BUT I AM NOT SURE HOW IT IS DIFFERENT FROM BROWSE MANIFEST?)
+	Spawn Jupyter-Hub instance:
 		-Create a JH instance based on a specific dataset and/or SNC files. Datasets can be opened independently, SNC must open with
 		its corresponding data. 
 	Upload New Dataset and Optionally SNC files. 	
@@ -47,15 +47,39 @@ Data:
 Data Constraints:
 	What limits on the data do we need?
 
+	data needs to be in a format that instances can interpret
+
+	shouldn’t be any conflicts between user data
+
+	
+
+	
+
 System requirements:
 
-	need to be a web broswer friendly app/webpage
+	needs to be a user and browser friendly app/webpage
 
-	server to host the web files
+	server to host the web files/scripts/account information
 
-	database to save json and other persistant data
+	database to save json and other persistent data
 
 system contraints:
 
-	what limits do we need on the system for it to function?
+	server must have 24 hour availability to ensure customer access to data, including backup methods in case of an outage
+	
+	the system must be securely implemented in order to protect user identity and possible proxy implementation per JupyterHub
+
+	authentic HTTPS server authentication 
+
+	the system must be connected to the internet in order to communicate from server to client side for implementing instance manifestations
+
+	server must be large enough to store data of multiple users and supply enough bandwidth and computing power for users operating concurrently
+
+	implemented in JSON and compatibility with JupyterHub multi-user notebook server
+
+	
+
+	
+	
+	
 
