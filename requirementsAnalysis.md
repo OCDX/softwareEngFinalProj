@@ -74,7 +74,4 @@ Github Repository for the project: https://github.com/jaredwelch1/softwareEngFin
 
 |User|
 -----------
-| 	Username 
-	Password 
-	IDs for manifests by this user 
-	test |
+| 	Username <br> Password <br> IDs for manifests by this user <br> test |
