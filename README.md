@@ -5,3 +5,16 @@ Link to Professor Goggins repo [here](https://github.com/OCDX/OCDX-Engine/tree/m
 
 Finish requirements anaylysis, make sure no gaps in requirements
 
+Add git hub link to pdf 
+
+Need title page
+
+-software name
+
+-authors
+
+-version 
+
+-date
+
+add change log
