@@ -49,11 +49,14 @@ Data and Constraints:
 
 	data needs to be in a format that instances can interpret
 
-	
+	Browsing and Searching of manifests:
+		
 	User Data:
 		-Unique data per each user
-	
 
+	Jupyter-Hub instances:
+	
+	Manifests (Uploading, Downloading, Updating):
 	
 
 System requirements:
