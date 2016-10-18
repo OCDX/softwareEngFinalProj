@@ -72,8 +72,9 @@ Github Repository for the project: https://github.com/jaredwelch1/softwareEngFin
 
 *Tables and their data:
 
-|First Header|
+|User|
 -----------
-|content|
-
+| Username | 
+| Password |
+| IDs for manifests by this user |
 
