@@ -1,6 +1,4 @@
-#Design First Pass Ideas
-
-* Tables and their data:
+#Tables and their data:
 
 	|User|
 	-----------
