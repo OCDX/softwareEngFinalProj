@@ -58,27 +58,21 @@ Data and Constraints:
 		Time of any updates, who updated
 		Record of downloads(?) - as in a given dataset has been downloaded x many times
 
-System requirements:
+System requirements and Constraints:
 
 	needs to be a user and browser friendly app/webpage
+		-must be available 24 hours 
+		-User interface must be easy to understand and accessible
+		-must have enough stability to support expected volume of users
 
 	server to host the web files/scripts/account information
+		-back up server in case of outtage 
 
 	database to save json and other pertinent data
-
-system contraints:
-
-	server must have 24 hour availability to ensure customer access to data, including backup methods in case of an outage
+		-Must have quick accesses to database and quick lookups to databse information
 	
-	the system must be securely implemented in order to protect user identity
-
-	authentic HTTPS server authentication 
-
-	the system must be connected to the internet in order to communicate from server to client side for implementing instance manifestations
-
-	server must be large enough to store data of multiple users and supply enough bandwidth and computing power for users operating concurrently
-
-	implemented in JSON
-
-
+	Security for data, both user and manifest data
+		-HTTPS webpage security 
+		-Hashed passwords
+		-Backend services to hide database access from outside view
 
