@@ -1,3 +1,20 @@
+#OCDX File Share System
+
+###Jared Welch, Geoffery Husser, Elizabeth Bryan, Zach Dolan, Andrew Stoll
+
+###Version: 1.0
+
+####10/18/16
+
+
+
+
+
+
+
+
+
+
 #Final Project Requirements Analysis
 
 Github Repository for the project: https://github.com/jaredwelch1/softwareEngFinalProj.git
