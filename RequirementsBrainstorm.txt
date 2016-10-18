@@ -10,9 +10,6 @@ Acitivies:
 		 this page should be by clicking on corresponding file (button, link, design decided later), and by searching through the files by 
 		 keyword.
 	Contribute To Database for an existing dataset:
-		(This is a brainstorm, so I feel  it appropriate to put comments such as these. I am not sure what he wants from this, very confused 
-		about the specifics.)
-		
 		-The user should be able to click an option for a specific dataset to be able to contribute to it. The method of contribution, should
 		be a link to the data to store, place to upload scripts, place to upload Jupyter Notebooks, docker config file OR link to generate
 		a file for the configuration. 
@@ -23,19 +20,8 @@ Acitivies:
 		directly. 
 	Save:
 		-Same functionality as contribution to the existing dataset, just offering that option through the interface of Jupyter before they 
-		exit the instance. 
-	(THE USE CASE "SEARCH ON MANIFEST" IS GIVEN BUT I AM NOT SURE HOW IT IS DIFFERENT FROM BROWSE MANIFEST?)
-	 
-	Upload New Dataset and Optionally SNC files. 	
-
-
-	some categories of data (to start thinking about it):
-		Need data for the manifests, including SNC files and dataset files
-		
-		Need user data, for logging in and their account features
-
-		Need organizational data, such as name and version, to organize manifests
-
+		exit the instance. 	 
+	Upload New Dataset and Optionally SNC files
 
 Data and Constraints:
 	Browsing and Searching of manifests:
