@@ -9,7 +9,7 @@ Finish out requirement analysis for the project
 
 -System Requirements
 
-*No system requirements done yet*
+*System requirements updated, probably need to organize it better*
 
 -System constraints
 
