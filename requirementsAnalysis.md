@@ -49,22 +49,22 @@
 
 ##System requirements and Constraints:
 
-						needs to be a user and browser friendly app/webpage
-						must be available 24 hours
-						User interface must be easy to understand and accessible
-						must have enough stability to support expected volume of users
+* needs to be a user and browser friendly app/webpage
+	- must be available 24 hours
+	- User interface must be easy to understand and accessible
+	- must have enough stability to support expected volume of users
 
-						server to host the web files/scripts/account information
-						back up server in case of outtage
+* server to host the web files/scripts/account information
+	- back up server in case of outtage
 
-						database to save json and other pertinent data
-						Must have quick accesses to database and quick lookups to databse information
-						Indexing by category, title, keyword, and user (Thats a little more design, but something to keep in mind)
+* Database to save json and other pertinent data
+	- Must have quick accesses to database and quick lookups to databse information
+	- Indexing by category, title, keyword, and user (Thats a little more design, but something to keep in mind)
 
-						Security for data, both user and manifest data
-						HTTPS webpage security
-						Hashed passwords
-						Backend services to hide database access from outside view
+* Security for data, both user and manifest data
+	- HTTPS webpage security
+	- Hashed passwords
+	- Backend services to hide database access from outside view
 
 
 
