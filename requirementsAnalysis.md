@@ -1,7 +1,9 @@
 #Final Project Requirements Analysis
 
 Github Repository for the project: https://github.com/jaredwelch1/softwareEngFinalProj.git
+##Change log
 
+This will be where we log changes to the requirements as we make them
 
 ##Users:
     
