@@ -34,9 +34,9 @@ Acitivies:
 		-Create a JH instance based on a specific dataset and/or SNC files. Datasets can be opened independently, SNC must open with
 		its corresponding data. 
 	Upload New Dataset and Optionally SNC files. 	
-Data:
 
-	some categories (to start thinking about it):
+
+	some categories of data (to start thinking about it):
 		Need data for the manifests, including SNC files and dataset files
 		
 		Need user data, for logging in and their account features
@@ -44,13 +44,14 @@ Data:
 		Need organizational data, such as name and version, to organize manifests
 
 
-Data Constraints:
+Data and Constraints:
 	What limits on the data do we need?
 
 	data needs to be in a format that instances can interpret
 
-	shouldn’t be any conflicts between user data
-
+	
+	User Data:
+		-Unique data per each user
 	
 
 	
