@@ -2,10 +2,11 @@
 
 
 ##Users:
-    Researchers
-	    Students
-		    Data Scientists
-			    System Administrators
+    
+*Researchers
+*Students
+*Data Scientists
+*System Administrators
 
 ##Activities:
 	Browse Manifest:
