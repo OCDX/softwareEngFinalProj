@@ -3,25 +3,22 @@ Link to Professor Goggins repo [here](https://github.com/OCDX/OCDX-Engine/tree/m
 
 ##TO DO
 
-Finish requirements anaylysis, make sure no gaps in requirements
+* Finish requirements anaylysis, make sure no gaps in requirements
 
-Add git hub link to pdf 
+* Add git hub link to pdf 
 
-Need title page
+* Need title page
 
--software name
+	- software name
+	- authors
+	- version 
+	- date
 
--authors
+* add change log
 
--version 
+* add tables for data (these will probably change as we begin work)
 
--date
+* diagram out a tentative design for our pages
 
-add change log
-
-add tables for data (these will probably change as we begin work)
-
-diagram out a tentative design for our pages
-
-have a section dedicated to software design ideas (UML, etc)
+* have a section dedicated to software design ideas (UML, etc)
 
