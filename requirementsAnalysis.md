@@ -87,9 +87,9 @@ This will be where we log changes to the requirements as we make them
 |-----------|
 | Title <br> contributors <br> SNC search tags <br> related categories|
 
-	**NOTE: this is a first pass, will need to think more and gather more information in this. 
-	For example, it might not be useful to have search tags in the database itself, 
-	maybe that is a different type of data**
+**NOTE: this is a first pass, will need to think more and gather more information in this. 
+For example, it might not be useful to have search tags in the database itself, 
+maybe that is a different type of data**
 
 |Manifest Data|
 |------------|
