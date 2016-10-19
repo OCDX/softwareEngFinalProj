@@ -95,5 +95,9 @@ maybe that is a different type of data**
 |------------|
 | Owner <br> User Accesses <br> time of upload <br> time of last change <br> version <br> dataset (json? not sure) <br> SNC files (if present) |
 
-* A few sketches of our pages we have thought through for our design:
-
+###Pages we have designed and have images of in our repo:
+- Broswing manifests page
+- editing manifests page
+- viewing individual manifest page
+- Log in page (first page you see)
+- User account page
