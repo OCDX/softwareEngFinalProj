@@ -1,6 +1,7 @@
 ## Change Log
 
 ### upcoming (2016/10/19 02:17 +00:00)
+- [22d953f](https://github.com/jaredwelch1/softwareEngFinalProj/commit/22d953fd9a99e13d966a83c689eb6a8da7490eaa) Created CHANGELOG (@zmdolan)
 - [74a5baa](https://github.com/jaredwelch1/softwareEngFinalProj/commit/74a5baad7e24a128ab13807016af3e96d78e580f) update readme, check off page design
 - [da52a34](https://github.com/jaredwelch1/softwareEngFinalProj/commit/da52a3488a05e55ec23e7d9d2dd432b688ba3b2f) png additions... again dammit
 - [b01cd04](https://github.com/jaredwelch1/softwareEngFinalProj/commit/b01cd0499f3e9ad44447d3951f3dca1924eca148) Update README.md (@TheDovaReborn)
