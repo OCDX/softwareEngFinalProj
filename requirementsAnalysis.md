@@ -79,12 +79,11 @@ This will be where we log changes to the requirements as we make them
 
 * Tables and their data:
 	
-	|User |
-	----------------
-	| Username |
-	| Password |
-	| Permission Level |
-	| IDs for manifests by this user |
+	**User** 
+	- Username 
+	- Password 
+	- Permission Level 
+	- IDs for manifests by this user 
 	
 	|Manifest Search Data|
 	-----------
