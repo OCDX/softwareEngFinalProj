@@ -86,7 +86,7 @@ This will be where we log changes to the requirements as we make them
 	- IDs for manifests by this user 
 	
 	|Manifest Search Data|
-	-----------
+	|-----------|
 	| Title <br> contributors <br> SNC search tags <br> related categories|
 
 	**NOTE: this is a first pass, will need to think more and gather more information in this. 
