@@ -12,7 +12,9 @@ Link to Professor Goggins repo [here](https://github.com/OCDX/OCDX-Engine/tree/m
 	- version 
 	- date
 
- - [ ] add change log
+ - [x] add change log
+	
+	*not sure what he means by this, but for now, we have a space for it*
 
  - [x] add tables for data (these will probably change as we begin work)
 
