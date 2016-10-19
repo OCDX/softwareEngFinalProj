@@ -99,3 +99,6 @@ This will be where we log changes to the requirements as we make them
 	|Manifest Data|
 	------------
 	| Owner <br> User Accesses <br> time of upload <br> time of last change <br> version <br> dataset (json? not sure) <br> SNC files (if present) |
+
+* A few sketches of our pages we have thought through for our design:
+
