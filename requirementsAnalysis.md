@@ -77,7 +77,7 @@ This will be where we log changes to the requirements as we make them
 
 ##Design First Pass Ideas
 
-* Tables and their data:
+* Tables and data:
 	
 |User|
 |------| 
