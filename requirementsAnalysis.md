@@ -32,6 +32,8 @@ This will be where we log changes to the requirements as we make them
 
 * Upload New Dataset and Optionally SNC files
 
+* Delete
+	System admin and uploader should be able to delete/remove manifests from system
 ##Data and Constraints:
 * Browsing and Searching of manifests:
 	- Categories for manifest
@@ -42,6 +44,7 @@ This will be where we log changes to the requirements as we make them
 	- Unique data per each user
 	- Username
 	- Password
+	- Permission Level
 	- list of uploads
 
 * Manifests (Uploading, Downloading, Updating):
@@ -60,6 +63,8 @@ This will be where we log changes to the requirements as we make them
 
 * server to host the web files/scripts/account information
 	- back up server in case of outtage
+	- must have enough capacity to handle expected volume of manifests
+	- must be easily upgradeable in case requirements exceed projections
 
 * Database to save json and other pertinent data
 	- Must have quick accesses to database and quick lookups to databse information
@@ -76,7 +81,7 @@ This will be where we log changes to the requirements as we make them
 
 	|User|
 	-----------
-	| 	Username <br> Password <br> IDs for manifests by this user <br> test |
+	| 	Username <br> Password <br> Permission Level<br> IDs for manifests by this user <br> test |
 
 	|Manifest Search Data|
 	-----------
