@@ -78,15 +78,14 @@ This will be where we log changes to the requirements as we make them
 ##Design First Pass Ideas
 
 * Tables and their data:
-	+----------------------------------+
-	|User							   |
-	+==================================+
-	| Username\						   |
-	| Password\						   |
-	| Permission Level\				   |
-	| IDs for manifests by this user   |
-	+----------------------------------+
-
+	
+	|User |
+	----------------
+	| Username |
+	| Password |
+	| Permission Level |
+	| IDs for manifests by this user |
+	
 	|Manifest Search Data|
 	-----------
 	| Title <br> contributors <br> SNC search tags <br> related categories|
