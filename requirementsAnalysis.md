@@ -80,7 +80,7 @@ This will be where we log changes to the requirements as we make them
 * Tables and their data:
 	
 |User|
-|:--:| 
+|------| 
 | Username<br> Password<br> Permission Level<br> IDs for manifests by this user <br> |
 	
 |Manifest Search Data|
