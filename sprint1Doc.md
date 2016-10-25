@@ -15,31 +15,53 @@ your work and describing the process you went through. This is to help show the 
 - [ ] create branches
 
 - [ ] Sprint Documentation
+	
 	Jared 
+	
 	Reviewer:
+
 - [ ] Set up deployment 
+	
 	Zach 
+	
 	Reviewer:
 
 - [ ] Data base creation 
+	
 	Jeff
+	
 	Reviewer:
+
 - [ ] ERD finish 
+	
 	Jeff
 
 	Reviewer:
+
 - [ ] put pictures into requirements 
+	
 	Jared
+
 - [ ] organize repo 
+	
 	Jared 
+	
 	Reviewer:
+
 - [ ] touch up requirements 
+	
 	Jared 
+
 - [ ] drill down into UI functionality 
+	
 	Liz 
+	
 	Reviewer: 
+
 - [ ] begin thinking about UNIT tests?
+	
 	Andrew: 
+	
 	Reviewer
 
 - [ ] organize links to various documents needed for the sprint
