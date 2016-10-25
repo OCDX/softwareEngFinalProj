@@ -1,34 +1,34 @@
 #Original task delegation
 
-	* Jared
+* Jared
 		
-		Sprint Doc 
+	Sprint Doc 
 		
-		Organize Repo
+	Organize Repo
 
-		Pictures into Requirements Doc
+	Pictures into Requirements Doc
 
-		Being requirements touch up
+	Being requirements touch up
 
-	* Liz
+* Liz
 		
-		Drill Down into UI more
+	Drill Down into UI more
 	
-	* Andrew
+* Andrew
 
-		begin thinking about unit test cases
+	begin thinking about unit test cases
 
-	* Zach
+* Zach
 		 
-		set up deployment 
+	set up deployment 
 
-		*created database*
+	*created database*
 
 
-	* Jeff
+* Jeff
 		
-		~~create database~~
+	~~create database~~
 
-		insert dummy data
+	insert dummy data
 
-		create ERDs
+	create ERDs
