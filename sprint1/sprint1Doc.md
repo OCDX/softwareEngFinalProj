@@ -6,7 +6,7 @@ All group members attended
 
 Date: 10/15/2016 
 
-Time: 2:21 PM \
+Time: 2:21 PM 
 
 Things discussed:
 
@@ -23,6 +23,11 @@ Things discussed:
 **As you work, please mark off your particular task. Further, if you can, please create a separate markdown file detailing your work and describing the process you went through. This is to help show the process of the sprint for each task**
 
 ###Task breakdown 
+- [x] Create wiki page
+[link](https://github.com/jaredwelch1/softwareEngFinalProj/wiki)
+Jared
+
+
 - [ ] Sprint Documentation
 	
 	Jared 
