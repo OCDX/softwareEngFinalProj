@@ -80,9 +80,13 @@ Jared
 	
 	Liz 
     * Created initial page design
+
     * Side bar for navigation
+
     * Made a web page folder for storing the pages in the repo
-        Commits:
+        
+        Commits: 
+        [commit 1](https://github.com/jaredwelch1/softwareEngFinalProj/commit/3e14e87a271672910bd67c07902c5004d19c8184#diff-89c839059676db009cc637acb487e6e3)
 	
 	Reviewer: 
 
