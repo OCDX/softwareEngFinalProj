@@ -83,7 +83,7 @@ Jared
 
     * Side bar for navigation
 
-    * Made a web page folder for storing the pages in the repo
+    * Made a [web page folder](https://github.com/jaredwelch1/softwareEngFinalProj/tree/master/Web%20pages) for storing the pages in the repo
         
         Commits: 
         [commit 1](https://github.com/jaredwelch1/softwareEngFinalProj/commit/3e14e87a271672910bd67c07902c5004d19c8184#diff-89c839059676db009cc637acb487e6e3)
