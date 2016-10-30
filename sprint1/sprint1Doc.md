@@ -79,6 +79,10 @@ Jared
 - [ ] drill down into UI functionality 
 	
 	Liz 
+    * Created initial page design
+    * Side bar for navigation
+    * Made a web page folder for storing the pages in the repo
+        Commits:
 	
 	Reviewer: 
 
