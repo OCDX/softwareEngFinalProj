@@ -32,41 +32,38 @@ The first sprint of this project is focused on setting up the overall infrastruc
 **As you work, please mark off your particular task. Further, if you can, please create a separate markdown file detailing your work and describing the process you went through. This is to help show the process of the sprint for each task**
 
 ###Task breakdown 
-- [x] Create wiki page
-[link](https://github.com/jaredwelch1/softwareEngFinalProj/wiki)
-Jared
+- [x] Create wiki page [link](https://github.com/jaredwelch1/softwareEngFinalProj/wiki)
 
+	Member: Jared
+	- Create general wiki page for the project, which details at a high level the sprints, requirements, and work flow
 
 - [x] Sprint Documentation
 	
-	Jared 
+	Member: Jared 
 	* Sprint document created in [this commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/1ec7601b0af2bfce0c5fa9eeb28b2ea0c4a13b00)
 	* Many more commits related to this task, as group members updated the sprint document as they worked throughout the sprint
 
 - [x] Set up deployment 
 	
-	Zach 
+	Member: Zach 
 
 	[link to example page for proof of successful deployment](https://mizzou.tech/)
 	
-	Reviewer:
 
 - [ ] Data base creation 
 	
-	Jeff
+	Member: Jeff
 	
-	Reviewer:
-
 - [ ] ERD finish 
 	
-	Jeff
+	Member: Jeff
 
-	Reviewer:
+
 
 
 - [x] organize repo 
 	
-	Jared
+	Member: Jared
 
 	* Created some new folders to organize the repo.
 
@@ -82,14 +79,11 @@ Jared
 
 - [ ] drill down into UI functionality 
 	
-	Liz 
+	Member: Liz 
 	
-	Reviewer: 
 
 - [ ] begin thinking about UNIT tests?
 	
-	Andrew: 
-	
-	Reviewer
+	Member: Andrew: 
 
 - [ ] organize links to various documents needed for the sprint
