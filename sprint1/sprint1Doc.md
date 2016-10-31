@@ -54,7 +54,11 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	
 	Member: Jeff
 	
-- [ ] ERD finish 
+- [x] ERD finish 
+
+	[commit link](https://github.com/jaredwelch1/softwareEngFinalProj/commit/f291018ef402767578e6166d4d541ebdfbb19fa7)
+
+	[link to ERD diagram for reference](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/SEFPerd.pdf)
 	
 	Member: Jeff
 
@@ -102,4 +106,6 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	
 	[Commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/be4a86a8a3635a01ec1d2c65bcc2590fe4ee62b2)
 
-- [ ] organize links to various documents needed for the sprint
+- [x] organize links to various documents needed for the sprint
+
+	Jared
