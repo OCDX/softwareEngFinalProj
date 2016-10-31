@@ -26,9 +26,9 @@
 
 * Zach
 		 
-	set up deployment 
+	**Set up deployment**
+	- Create Ubuntu server and configure DNS settings for mizzou.tech. Secure the server with SSL certification and HTTPS encrpyption. Configure user accounts, Apache, PHP, MySQL, PHPMyAdmin and create a test database. 
 
-	*created database*
 
 
 * Jeff
