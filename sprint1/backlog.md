@@ -13,6 +13,10 @@
 
 	~~Begin requirements touch up~~
 	*Moved to sprint 2*
+	
+	###**ADDED TASKS**
+	
+	**Create document detailing page designs**
 
 * Liz
 		
