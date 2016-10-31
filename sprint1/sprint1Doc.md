@@ -51,6 +51,24 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	
 
 - [x] Data base creation 
+
+	[relevant commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/4c96a5cc3606886cc53841bfe110d25a5663538d)
+
+	This page [https://mizzou.tech/view.php](https://mizzou.tech/view.php) shows a successful query to our database to show that it exists and has some data. 
+
+	Just for proof, the code for that page can be found here:
+	
+	[link](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/webPages/view.php)
+	
+	The page shows a valid query that is run when the page is loaded, verifying and displaying our data.
+
+	Further, here is a link to the script that was used to create our tables: 
+
+	[link](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/script.sql)
+
+	And here is a link to a png file showing the tables in mysql:
+
+	[link](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/tabledesc.png)
 	
 	Member: Jeff
 	
