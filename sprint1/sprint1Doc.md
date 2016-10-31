@@ -14,9 +14,18 @@ Things discussed:
 
 - Division of those tasks
 
-- Improvement and ideas for requirement analysis
+- Discussion for requirement analysis improvements
 
-- General work flow for each sprint
+- Discuss generic work flow for each sprint
+
+- Necessary data base information 
+ 
+- Page design and user interface ideas
+
+- Plan for completion of sprint and delegation of tasks 
+
+##**Summary of sprint 1**
+The first sprint of this project is focused on setting up the overall infrastructure that will be the backbone for the application. A database and hosting environment will be created to support further expansion and functionality that will take place in remaining sprints. 
 
 ##Tasks for the sprint
 
@@ -28,13 +37,13 @@ Things discussed:
 Jared
 
 
-- [ ] Sprint Documentation
+- [x] Sprint Documentation
 	
 	Jared 
-	
-	Reviewer:
+	* Sprint document created in [this commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/1ec7601b0af2bfce0c5fa9eeb28b2ea0c4a13b00)
+	* Many more commits related to this task, as group members updated the sprint document as they worked throughout the sprint
 
-- [ ] Set up deployment 
+- [x] Set up deployment 
 	
 	Zach 
 	
@@ -52,9 +61,6 @@ Jared
 
 	Reviewer:
 
-- [ ] put pictures into requirements 
-	
-	Jared
 
 - [x] organize repo 
 	
@@ -72,21 +78,9 @@ Jared
 	
 	Reviewer:
 
-- [ ] touch up requirements 
-	
-	Jared 
-
 - [ ] drill down into UI functionality 
 	
 	Liz 
-    * Created initial page design
-
-    * Side bar for navigation
-
-    * Made a [web page folder](https://github.com/jaredwelch1/softwareEngFinalProj/tree/master/Web%20pages) for storing the pages in the repo
-        
-        Commits: 
-        [commit 1](https://github.com/jaredwelch1/softwareEngFinalProj/commit/3e14e87a271672910bd67c07902c5004d19c8184#diff-89c839059676db009cc637acb487e6e3)
 	
 	Reviewer: 
 
