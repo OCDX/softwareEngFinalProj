@@ -70,16 +70,7 @@ The first sprint of this project is focused on setting up the overall infrastruc
 
 	[link](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/tabledesc.png)
 	
-	Member: Geoff
-	
-	[select screenshot](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/DBselect.png)
-
-	[desc screenshot](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/tabledesc.png)
-	
-	[commit link](https://github.com/jaredwelch1/softwareEngFinalProj/commit/4c96a5cc3606886cc53841bfe110d25a5663538d)
-
-	[Link to script used for database table creation](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/script.sql)
-	
+	Member: Geoff	
 	
 	
 - [x] ERD finish 
