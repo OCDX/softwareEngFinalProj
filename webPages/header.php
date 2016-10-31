@@ -1,5 +1,5 @@
 <?php
-	$root = "http://mizzou.tech/";
+	$root = "https://mizzou.tech/";
   //$root = $root = "http://rbryan.devprod.mbsbooks.com/ss-test/class/";
 ?>
 	<!-- header -->
