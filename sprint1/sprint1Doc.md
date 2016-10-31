@@ -79,7 +79,12 @@ The first sprint of this project is focused on setting up the overall infrastruc
 
 - [ ] drill down into UI functionality 
 	
-	Member: Liz 
+	Members: Liz, Jared
+	
+	[Document detailing in depth page design](https://github.com/jaredwelch1/softwareEngFinalProj/commit/2c363f389fe5b16f60b6cd51336364c48810e4f1)
+
+
+	 
 	
 
 - [ ] begin thinking about UNIT tests?
