@@ -58,7 +58,7 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	
 	Member: Jeff
 
-
+	Reviewer: Andrew
 
 
 - [x] organize repo 
@@ -92,8 +92,10 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	 
 	
 
-- [ ] begin thinking about UNIT tests?
+- [x] begin thinking about UNIT tests?
 	
-	Member: Andrew: 
+	Member: Andrew
+	
+	[Unit Testing Doc] (https://github.com/jaredwelch1/softwareEngFinalProj/commit/be4a86a8a3635a01ec1d2c65bcc2590fe4ee62b2)
 
 - [ ] organize links to various documents needed for the sprint
