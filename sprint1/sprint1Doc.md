@@ -50,7 +50,7 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	[link to example page for proof of successful deployment](https://mizzou.tech/)
 	
 
-- [ ] Data base creation 
+- [x] Data base creation 
 	
 	Member: Jeff
 	
