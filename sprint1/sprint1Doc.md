@@ -77,11 +77,13 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	
 	Reviewer:
 
-- [ ] drill down into UI functionality 
+- [x] drill down into UI functionality 
 	
-	Members: Liz, Jared
+	Members: Liz
+- [x] create page design document for details on current design decisions
 	
-	[Document detailing in depth page design](https://github.com/jaredwelch1/softwareEngFinalProj/commit/2c363f389fe5b16f60b6cd51336364c48810e4f1)
+	[commit for adding page desing document](https://github.com/jaredwelch1/softwareEngFinalProj/commit/2c363f389fe5b16f60b6cd51336364c48810e4f1)
+[Link to document itself](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/webPages/pageDesignDoc.md)
 
 
 	 
