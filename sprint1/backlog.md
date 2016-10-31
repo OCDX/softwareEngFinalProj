@@ -35,6 +35,7 @@
 
 	**Insert dummy data**
 	- Inserted data into the https://mizzou.tech/view.php page to display a sample manifest.
+	
 	-[cec3f4c](https://github.com/jaredwelch1/softwareEngFinalProj/commit/cec3f4c5f71ef85ac478225650e5272bdaa8fb84) query dummy data (@zmdolan)
 
 
