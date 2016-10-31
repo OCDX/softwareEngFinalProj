@@ -1,5 +1,9 @@
 <?php include($root."header.php"); ?>
-	  <div id="sidebar" class="sidebar">
+<style>
+table, th, td {
+border: 1px solid black;
+}
+</style>	  <div id="sidebar" class="sidebar">
   		<div class="content">
   			<form action="search.php" method="post">
 				<input type="text" name="searchtext" id="searchtext">
@@ -17,6 +21,11 @@
 		<div class="viewer column two-thirds">
 			<h3>Manifest author</h3>
 			<p>Display all files as a table that are associated with manifest.</p>
+			<?php $conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
+        $printquery = "SELECT * FROM manifest";
+        $result = mysqli_query($conn, $printquery);
+        while ($row = mysqli_fetch_assoc($result)){
+        echo "<table><tr><th>Manifest ID</th><th>Version</th><th>Category</th><th>Last Edit</th><th>Upload Date</th><th>Title</th><th>Owner ID</th><th>Content</th></tr><tr><td>".$row['manifest_id']."</td><td>".$row['version']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['title']."</td><td>".$row['ownerID']."</td><td>".$row['data']."</td></tr></table>";}?>		
 		</div>	
 	</div>
 <?php include($root."footer.php"); ?>
