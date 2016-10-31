@@ -77,13 +77,16 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	
 	Reviewer:
 
-- [x] drill down into UI functionality 
+- [x] drill down into UI functionality
+
+	 Began initial page design. Outlined each page in php file with general flow and text descriptions for each page that display when viewing the page. Mostly an outline for each page for implementation when the time comes. 
 	
 	Members: Liz
 - [x] create page design document for details on current design decisions
 	
 	[commit for adding page desing document](https://github.com/jaredwelch1/softwareEngFinalProj/commit/2c363f389fe5b16f60b6cd51336364c48810e4f1)
-[Link to document itself](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/webPages/pageDesignDoc.md)
+
+	[Link to document itself](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/webPages/pageDesignDoc.md)
 
 
 	 
