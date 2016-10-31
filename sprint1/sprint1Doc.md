@@ -46,6 +46,8 @@ Jared
 - [x] Set up deployment 
 	
 	Zach 
+
+	[link to example page for proof of successful deployment](https://mizzou.tech/)
 	
 	Reviewer:
 
