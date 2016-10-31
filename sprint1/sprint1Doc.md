@@ -85,6 +85,8 @@ The first sprint of this project is focused on setting up the overall infrastruc
 - [x] create page design document for details on current design decisions
 	
 	[commit for adding page desing document](https://github.com/jaredwelch1/softwareEngFinalProj/commit/2c363f389fe5b16f60b6cd51336364c48810e4f1)
+    
+    [adding some small display functionality for searches and displaying user's manifests](https://github.com/jaredwelch1/softwareEngFinalProj/commit/31ba89d3b64870e10eb8f603d2dfd8c636167169)
 
 	[Link to document itself](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/webPages/pageDesignDoc.md)
 
