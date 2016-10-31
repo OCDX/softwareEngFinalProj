@@ -96,6 +96,7 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	
 	Member: Andrew
 	
-	[Unit Testing Doc] (https://github.com/jaredwelch1/softwareEngFinalProj/commit/be4a86a8a3635a01ec1d2c65bcc2590fe4ee62b2)
+	[Unit Testing Doc](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/UnitTesting.md)
+	[Commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/be4a86a8a3635a01ec1d2c65bcc2590fe4ee62b2)
 
 - [ ] organize links to various documents needed for the sprint
