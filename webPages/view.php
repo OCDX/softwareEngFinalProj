@@ -5,8 +5,8 @@
 				<input type="text" name="searchtext" id="searchtext">
 				<input type="submit" value="Search">
 			</form>
-			<a href="http://mizzou.tech/userInfo.php"><h4>Your Account</h4></a>
-			<a href="http://mizzou.tech/create-edit.php"><h4>Manifest Editor</h4></a>
+			<a href="https://mizzou.tech/userInfo.php"><h4>Your Account</h4></a>
+			<a href="https://mizzou.tech/create-edit.php"><h4>Manifest Editor</h4></a>
 			<button id="logout" class="button" onclick="">Log Out</button>
 		</div>
 	</div>
