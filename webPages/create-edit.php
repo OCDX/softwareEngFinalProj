@@ -16,6 +16,12 @@
 		</div>
 		<div class="viewer column two-thirds">
 			<p>Taking user input, files, get date and time. Buttons for update existing or create new.</p>
+			<button id="new" class="button">Create New</button><button id="edit" class="button">Edit this Manifest</button>
+			
+			<p>If edit, show existing fields for maifest and associated files. Present options for uploading new files and removing old ones.
+			If new, present empty fields and upload options for each file. 
+			For both, take timestamp, set as most recent update.</p>
+			
 		</div>	
 	</div>
 <?php include($root."footer.php"); ?>
