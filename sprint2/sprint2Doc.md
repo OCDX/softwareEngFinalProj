@@ -40,14 +40,23 @@
 
 - [ ] update directories 
 
-- [ ] link to requirements feedback
+- [x] link to requirements feedback
+
+	Put the feedback in a markdown file [here]	(https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint2/requirementsFeedback.md)
+
+	[Relevant commit to the repo](https://github.com/jaredwelch1/softwareEngFinalProj/commit/e51a2f54a9294bace16e574ceec806ccc2b8e98c)
+
 	Jared
 	
 - [ ] fix requirements analysis 
+
 	Jared
 
 - [ ] Stub calls (not sure exactly how this will apply?)
+	
 	Liz
 - [ ] Begin organization of UI elements
+
 - [ ] Manage users and roles
+	
 	Andrew
