@@ -38,7 +38,9 @@
 
 - [ ] delete queries
 
-- [ ] update directories 
+- [ ] update directories
+
+	Jared 
 
 - [x] link to requirements feedback
 
@@ -52,11 +54,21 @@
 
 	Jared
 
-- [ ] Stub calls (not sure exactly how this will apply?)
+- [ ] Stub calls (in our case, we just need to organize the pages, and create space for the calls that will be used within those pages)
 	
 	Liz
-- [ ] Begin organization of UI elements
+	
+- [ ] Begin organization of UI elements 
+	
+	* This will require two things: 
+			* Make sure our page design doc reflects the overall lay out of each UI element that will be in place
+			* Make sure that the elements are described in detail with what their purpose is for a user
 
 - [ ] Manage users and roles
-	
+
 	Andrew
+
+	* Create document that outlines what users our system has and their access
+		
+	* Maybe begin log in and log out? Might not need for this sprint
+	
