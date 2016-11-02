@@ -1,4 +1,4 @@
-#Requirements analysis feedback 
+#Requirements analysis feedback from TAs and Professor Goggins
 
 - [ ]  No nonfunctional or functional requirements
 - [ ] No use cases
