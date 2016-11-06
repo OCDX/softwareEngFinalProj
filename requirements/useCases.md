@@ -76,6 +76,7 @@ User clicks to initiate a search.
 - User should be able to view manifests, multiple at a time, with a small subset of manifest information to help identify that manifest.
 - Display should be organized in a way that makes it clear to a user where one manifest begins, where the next begins, and what information is related to each respective manifest.
 - Date uploaded will be the differentiating factor for multiple sets of SNC files for the same data set. Date uploaded is a required column for information that will be displayed withe the manifest.
+
 ####Non-functional Requirements:
 
 - No more than 25 manifests should be displayed at a time. 
@@ -94,7 +95,9 @@ User clicks to initiate a search.
 ####Main Success Scenario:
 
 Up to 25 manifests are displayed relevant to search, with options to download and view respective manifests, with option to view more if user wishes
+
 ####Failed End Condition:
+
 No manifests found for given search, so none are displayed
 
 ####Trigger:
@@ -102,6 +105,7 @@ No manifests found for given search, so none are displayed
 User clicks to initiate a search.
 
 ####Dependent Use Cases:
+
 - Search Manifests
 
 ###**Use Case: Contribute to existing Dataset**
@@ -119,17 +123,28 @@ User clicks to initiate a search.
 - Place to upload scripts (if provided)
 
 ####Non-functional Requirements:
+
 - Redirect to page for contributing to existing dataset should take no more than 5 seconds (provided a decent internet connection)
+
 ####Technical Requirements:
 - Working web server 
+
 ####Pre-conditions:
+
 - User wishes to upload SNC files
+
 ####Main Success Scenario:
+
 - Dataset has been found on server and files have been successfully uploaded to site and connected to respective manifest 
+
 ####Failed End Condition:
+
 - User is unable to upload OR dataset not found on server
+
 ####Trigger:
+
 - User clicks contribute to existing database
+
 ####Dependent Use Cases:
 NONE
 
@@ -144,21 +159,36 @@ NONE
 
 
 ####Functional Requirements:
+
 - provide access to different formats, if applicable, for files to be downloaded
 - display size of download requested
+
 ####Non-functional Requirements:
+
 - Download should allow up to 1GB size 
+
 ####Technical Requirements:
+
 - copying files to local machine
+
 ####Pre-conditions:
+
 - User has searched and selected a given manifest
+
 ####Main Success Scenario:
+
 - Copy of SNC/dataset files are on user local machine
+
 ####Failed End Condition:
+
 - download fails and copy is not made on local machine
+
 ####Trigger:
+
 -  user clicks download manifest 
+
 ####Dependent Use Cases:
+
 - search manifest
 - browse manifest
 
@@ -172,21 +202,36 @@ NONE
 - System Administrators
 
 ####Functional Requirements:
+
 - Buttons to generate manifest and upload manifest
 - include any input fields for all manifest specifications for generation of a new manifest
 - dataset exists and has been contributed 
+
 ####Non-functional Requirements:
+
 - If user opts to generate a manifest, redirect should take less than 10 seconds
 - form for generating a new manifest should take up no more than 70 percent of screen width
+
 ####Technical Requirements:
+
 - database for storing manifest files
+
 ####Pre-conditions:
+
 - user has shared any Dataset and SNC files
+
 ####Main Success Scenario:
+
 - Manifest generated or present, uploaded manifest, dataset, and snc files that are present
+
 ####Failed End Condition:
+
 - user does not have a complete manifest
+
 ####Trigger:
+
 - user clicks upload manifest or create manifest after uploading dataset 
+
 ####Dependent Use Cases:
+
 - upload dataset 
