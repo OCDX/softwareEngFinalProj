@@ -4,17 +4,24 @@ link to repo: https://github.com/jaredwelch1/softwareEngFinalProj/
 
 ###Task discussion from sprint meeting:
 
-	* Requirements analysis fixes
-	* Have all insert, update, delete queries (should be separate files in directory called DML)
-	* stub calls for all interactive UI elements
-		* outline our UI skeleton so to speak; not actual implementation just ensure the plan for its eventual implementation
-	* Begin UI elements for organizations 
-		~~Need clarity for this, maybe UI elements for our pages?~~
-		* document and explain how UI elements will be organized for pages
-	* Management of users/roles 
-		* Detail what each user can do based on role
-	* link to sprint 1 information 
-		* finish requirements analysis
+* Requirements analysis fixes
+* Have all insert, update, delete queries (should be separate files in directory called DML)
+* stub calls for all interactive UI elements
+	
+	* outline our UI skeleton so to speak; not actual implementation just ensure the plan for its eventual implementation
+
+* Begin UI elements for organizations 
+	
+	~~Need clarity for this, maybe UI elements for our pages?~~
+	* document and explain how UI elements will be organized for pages
+
+* Management of users/roles 
+	
+	* Detail what each user can do based on role
+
+* link to sprint 1 information 
+	
+	* finish requirements analysis
 
 ###TASKS 
 
