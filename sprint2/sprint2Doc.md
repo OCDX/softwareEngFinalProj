@@ -1,24 +1,9 @@
 #Sprint 2 Document
 
-##Meeting
+link to repo: https://github.com/jaredwelch1/softwareEngFinalProj/
 
-- Date: 10/31/2016
+###Task discussion from sprint meeting:
 
-- Time: 5:30pm
-
-- In Person 
-
-- All group members attended
-
-- Will update tasks after talking to professor, does not seem to be much left 
-###Topics Discussed
-
-- Thoughts on previous sprint
-
-- Tasks for sprint 2
-
-- Division of tasks
-	
 	* Requirements analysis fixes
 	* Have all insert, update, delete queries (should be separate files in directory called DML)
 	* stub calls for all interactive UI elements
