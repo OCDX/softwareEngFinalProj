@@ -27,8 +27,8 @@ Summary: A user should be able to search available manifests by given keywords. 
 - Valid Display of all relevant datasets to a given search. A user should not be shown irrelevant items to their search, invalid manifests, nor should a user be unable to view manifests that are relevant. For example, if a user searches for manifests based on keyword “twitter”, all manifests related to twitter should be displayed. If any relevant manifests are not displayed, the search itself would not be valid to the user.
 
 - Security should be enforced by the system to protect manifest data and system features from unauthorized access. This will be accomplished through the following methods:
-All searches will query the data, so user input must be sanitized before being queried directly to the database. 
-No user will have access to manifests that they do not have permission for. For example, a user may be able to view a manifest, but not edit if they do have the necessary access to do so. 
+  - All searches will query the data, so user input must be sanitized before being queried directly to the database. 
+  - No user will have access to manifests that they do not have permission for. For example, a user may be able to view a manifest, but not edit if they do have the necessary access to do so. 
 
 ####Non-functional Requirements:
 
