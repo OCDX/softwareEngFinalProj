@@ -54,6 +54,9 @@
 - [ ] fix requirements analysis 
 
 	Jared
+- [ ] Create individual branch jbwy9b (Jared)
+ 
+ Branch: https://github.com/jaredwelch1/softwareEngFinalProj/tree/jbwy9b
 
 - [ ] Stub calls (in our case, we just need to organize the pages, and create space for the calls that will be used within those pages)
 	
