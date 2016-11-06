@@ -2,7 +2,7 @@
 
 Github Repository for the project: https://github.com/jaredwelch1/softwareEngFinalProj.git
 
-![Alt text](/images/BrowseManifests.jpg)
+![Alt text](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/requirements/images/BrowseManifests.png)
 
 
 ##Change log
