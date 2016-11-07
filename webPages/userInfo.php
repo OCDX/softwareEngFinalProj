@@ -63,7 +63,7 @@
 //
 //								foreach($ans AS $row){
 //									echo '<form action = "create-edit.php" method = "POST"><tr>';
-									echo '<td><button type = "submit" class = "btn btn-info" name = "edit">Edit</button></td>';
+//									echo '<td><button type = "submit" class = "btn btn-info" name = "edit">Edit</button></td>';
 //									foreach($row AS $area){
 //										echo '<td>' . $area . '</td>';
 //										echo "<input type = 'hidden' name = $arraylist[$i] value = $area>";

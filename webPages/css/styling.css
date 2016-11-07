@@ -132,6 +132,10 @@ footer{
 	overflow: scroll;
 }
 
+form{
+	float: center;
+}
+
 /* Column structure*/
 .column {
 		  float: left;
