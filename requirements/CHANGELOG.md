@@ -29,6 +29,5 @@ Fixes:
   - page designs inserted into document
   
   - updated tables and added classes
-  
-\newpage
+
   
