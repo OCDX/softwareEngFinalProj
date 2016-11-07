@@ -30,5 +30,5 @@ Fixes:
   
   - updated tables and added classes
   
-/newpage
+\newpage
   
