@@ -36,7 +36,3 @@
   
   - Account Information       ...... Page 14
   
-## Glossary
-
-  Page 15
-  
