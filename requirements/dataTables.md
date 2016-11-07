@@ -18,7 +18,7 @@ maybe that is a different type of data**
 
 Current Iteration of ERD:
 
-![erd](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/erd.png)
+![erd](/images/erd.png)
 
 
 ###Classes
