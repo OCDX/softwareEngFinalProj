@@ -2,22 +2,22 @@
 
 ##Welcome page
 
-![welcome](images/WelcomePage-login.png)
+![welcome](images/WelcomePage-login.png)&nbsp;
 
 ##Browse Manifests (This inludes search)
 
-![browse-manifests](images/BrowseManifests.png)
+![browse-manifests](images/BrowseManifests.png)&nbsp;
 
 ##Manifest Editor
 
-![manifest-editor](images/ManifestEditor.png)
+![manifest-editor](images/ManifestEditor.png)&nbsp; 
 
 ##Manifest Viewer
 
-![Manifest View](images/ManifestEditor.png)
+![Manifest View](images/ManifestEditor.png)&nbsp; 
 
 ##Account Info
 
-![account](images/UserAccountInfo.png)
+![account](images/UserAccountInfo.png)&nbsp; 
 
 
