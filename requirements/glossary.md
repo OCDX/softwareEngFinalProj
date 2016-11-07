@@ -31,3 +31,5 @@
 ##Trigger
 
   The initial action that begins a certain function of the application
+  
+  \pagenumbering{gobble}
