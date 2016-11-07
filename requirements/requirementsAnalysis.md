@@ -1,16 +1,10 @@
-#OCDX File Share System
-
-###Jared Welch, Geoffery Husser, Elizabeth Bryan, Zach Dolan, Andrew Stoll
-
-###Version: 1.0
-
-####10/18/16
-
---------
-
 #Final Project Requirements Analysis
 
 Github Repository for the project: https://github.com/jaredwelch1/softwareEngFinalProj.git
+
+![Alt text](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/requirements/images/BrowseManifests.png)
+
+
 ##Change log
 
 This will be where we log changes to the requirements as we make them
@@ -42,6 +36,8 @@ This will be where we log changes to the requirements as we make them
 
 * Upload New Dataset and Optionally SNC files
 
+* Delete
+	System admin and uploader should be able to delete/remove manifests from system
 ##Data and Constraints:
 * Browsing and Searching of manifests:
 	- Categories for manifest
@@ -52,6 +48,7 @@ This will be where we log changes to the requirements as we make them
 	- Unique data per each user
 	- Username
 	- Password
+	- Permission Level
 	- list of uploads
 
 * Manifests (Uploading, Downloading, Updating):
@@ -70,6 +67,8 @@ This will be where we log changes to the requirements as we make them
 
 * server to host the web files/scripts/account information
 	- back up server in case of outtage
+	- must have enough capacity to handle expected volume of manifests
+	- must be easily upgradeable in case requirements exceed projections
 
 * Database to save json and other pertinent data
 	- Must have quick accesses to database and quick lookups to databse information
@@ -82,20 +81,27 @@ This will be where we log changes to the requirements as we make them
 
 ##Design First Pass Ideas
 
-* Tables and their data:
+* Tables and data:
+	
+|User|
+|------| 
+| Username<br> Password<br> Permission Level<br> IDs for manifests by this user <br> |
+	
+|Manifest Search Data|
+|-----------|
+| Title <br> contributors <br> SNC search tags <br> related categories|
 
-	|User|
-	-----------
-	| 	Username <br> Password <br> IDs for manifests by this user <br> test |
+**NOTE: this is a first pass, will need to think more and gather more information in this. 
+For example, it might not be useful to have search tags in the database itself, 
+maybe that is a different type of data**
 
-	|Manifest Search Data|
-	-----------
-	| Title <br> contributors <br> SNC search tags <br> related categories|
+|Manifest Data|
+|------------|
+| Owner <br> User Accesses <br> time of upload <br> time of last change <br> version <br> dataset (json? not sure) <br> SNC files (if present) |
 
-	**NOTE: this is a first pass, will need to think more and gather more information in this. 
-	For example, it might not be useful to have search tags in the database itself, 
-	maybe that is a different type of data**
-
-	|Manifest Data|
-	------------
-	| Owner <br> User Accesses <br> time of upload <br> time of last change <br> version <br> dataset (json? not sure) <br> SNC files (if present) |
+###Pages we have designed and have images of in our repo:
+- Broswing manifests page
+- editing manifests page
+- viewing individual manifest page
+- Log in page (first page you see)
+- User account page
