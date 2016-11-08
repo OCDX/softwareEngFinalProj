@@ -1,33 +1,6 @@
-#Meeting Details 
-
-In person
-
-All group members attended
-
-Date: 10/15/2016 
-
-Time: 2:21 PM 
-
-Things discussed:
-
-- Tasks for the sprint
-
-- Division of those tasks
-
-- Discussion for requirement analysis improvements
-
-- Discuss generic work flow for each sprint
-
-- Necessary data base information 
- 
-- Page design and user interface ideas
-
-- Plan for completion of sprint and delegation of tasks 
-
-##**Summary of sprint 1**
-The first sprint of this project is focused on setting up the overall infrastructure that will be the backbone for the application. A database and hosting environment will be created to support further expansion and functionality that will take place in remaining sprints. 
-
 ##Tasks for the sprint
+
+[link to github repository]()
 
 **As you work, please mark off your particular task. Further, if you can, please create a separate markdown file detailing your work and describing the process you went through. This is to help show the process of the sprint for each task**
 
