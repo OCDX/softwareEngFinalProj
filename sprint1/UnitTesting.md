@@ -26,9 +26,9 @@ We need to:
 
 - Test that we can select data from all tables
 
-         - Failure cases for this test:
+     - Failure cases for this test:
          
-             - A valid selection on a test row that will exist for each table with expected test values does not return the expected test values. (i.e., we have a row for id 1 that we created with test data and when we query that test row we do not get the data we should)
+          - A valid selection on a test row that will exist for each table with expected test values does not return the expected test values. (i.e., we have a row for id 1 that we created with test data and when we query that test row we do not get the data we should)
              
 - Ensure that foreign keys work properly. (Should be unable to assign a value that does not exist in the linked table.)
 
