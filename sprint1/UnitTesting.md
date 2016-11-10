@@ -133,6 +133,18 @@ This serves the purpose of allowing a person less familiar with the code itself 
 
 Optionally, if we can find volunteers to perform user acceptance tests, they would be given a work flow, as generic as possible, as asked to use the software as they see reasonable. This will allow for a real user to interface with our software in a natural way and reveal any things that may not have been considered through the intial design and testing scenarious. 
 
+Examples of such testing would include:
+
+- Asking a user to perform a manifest download. Allowing them to download a manifest, test that they are able to do so, and see how the user feels about downloading a manifest. (i.e., are they able to easily figure out how to do it)
+
+- Asking a user to search manifests based no a keyword, and testing that the results are consistent with the search entered. This will also similary test if a user is able to easily figure out how to use this feature
+
+- All use cases should have such tests as these in order to ensure that we meet our requirements. 
+
 ##Verification/Validation
+
+- Validation refers to ensuring that our requirements are met by the features of our software. This is accomplished through User Acceptance Testing. Refer to that section for information about how we plan to validate our software.
+
+- Verification refers to ensuring that our software does what it is designed to do. While validation tests that we meet our requirements, verification tests that our software does what we intend it to do, separate from what the requirements ask. Of course, if we have validated our software, verification would ensure that the requirements we meet work correctly. The unit testing and testing suites will ensure we verify our software works. 
 
 
