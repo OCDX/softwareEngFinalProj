@@ -1,33 +1,6 @@
-#Meeting Details 
-
-In person
-
-All group members attended
-
-Date: 10/15/2016 
-
-Time: 2:21 PM 
-
-Things discussed:
-
-- Tasks for the sprint
-
-- Division of those tasks
-
-- Discussion for requirement analysis improvements
-
-- Discuss generic work flow for each sprint
-
-- Necessary data base information 
- 
-- Page design and user interface ideas
-
-- Plan for completion of sprint and delegation of tasks 
-
-##**Summary of sprint 1**
-The first sprint of this project is focused on setting up the overall infrastructure that will be the backbone for the application. A database and hosting environment will be created to support further expansion and functionality that will take place in remaining sprints. 
-
 ##Tasks for the sprint
+
+[link to github repository](https://github.com/jaredwelch1/softwareEngFinalProj)
 
 **As you work, please mark off your particular task. Further, if you can, please create a separate markdown file detailing your work and describing the process you went through. This is to help show the process of the sprint for each task**
 
@@ -51,12 +24,26 @@ The first sprint of this project is focused on setting up the overall infrastruc
 	
 
 - [x] Data base creation 
+
+	[relevant commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/4c96a5cc3606886cc53841bfe110d25a5663538d)
+
+	This page [https://mizzou.tech/view.php](https://mizzou.tech/view.php) shows a successful query to our database to show that it exists and has some data. 
+
+	Just for proof, the code for that page can be found here:
 	
-	Member: Geoff
-	[select screenshot](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/DBselect.png)
-	[desc screenshot](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/tabledesc.png)
-	[commit link](https://github.com/jaredwelch1/softwareEngFinalProj/commit/4c96a5cc3606886cc53841bfe110d25a5663538d)
-	Reviewer: Zach
+	[link](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/webPages/view.php)
+	
+	The page shows a valid query that is run when the page is loaded, verifying and displaying our data.
+
+	Further, here is a link to the script that was used to create our tables: 
+
+	[link](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/script.sql)
+
+	And here is a link to a png file showing the tables in mysql:
+
+	[link](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/sprint1/tabledesc.png)
+	
+	Member: Geoff	
 	
 	
 - [x] ERD finish 

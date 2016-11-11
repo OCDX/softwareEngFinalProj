@@ -2,22 +2,24 @@
 
 use SEFinalProject;
 
-/*table creation*/
-CREATE TABLE user ( 
-ID int NOT NULL AUTO_INCREMENT, 
-last_name varchar(255), 
-first_name varchar(255), 
-email varchar(255), 
-permission_level int, 
+/*table creation -- version 2*/
+CREATE TABLE user (
+ID int NOT NULL AUTO_INCREMENT,
+last_name varchar(255),
+first_name varchar(255),
+email varchar(255),
+permission_level int,
+salt int,
+hashed_password varchar(255),
 PRIMARY KEY (ID));
 
-CREATE TABLE manifest( 
-manifest_id int NOT NULL AUTO_INCREMENT, 
-version int, category VARCHAR(255), 
-last_edit DATE, upload_date DATE, 
-title VARCHAR(255), 
-ownerID int NOT NULL, 
-PRIMARY KEY (manifest_id), 
+CREATE TABLE manifest(
+manifest_id int NOT NULL AUTO_INCREMENT,
+version int, category VARCHAR(255),
+last_edit DATE, upload_date DATE,
+title VARCHAR(255),
+ownerID int NOT NULL,
+PRIMARY KEY (manifest_id),
 FOREIGN KEY (ownerID) REFERENCES user(ID),
 data BLOB NOT NULL);
 
@@ -36,7 +38,7 @@ VALUES ('<int>', '<varchar>', '<varchar>', '<varchar>', '<int>');
 DELETE FROM user WHERE ID = <int>
 
 /*insert data into manifest*/
-insert into manifest (manifest_id, version, category, last_edit, upload_date, title, ownerID, data) 
+insert into manifest (manifest_id, version, category, last_edit, upload_date, title, ownerID, data)
 VALUES ('2', '1', 'test', '2016-10-31', '2016-10-31', 'test2', '1', 'this is also a test');
 
 /*delete manifest. delete by manifest_id*/
