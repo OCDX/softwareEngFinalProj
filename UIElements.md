@@ -3,7 +3,7 @@
 ##Login Page
   The login page is pretty straight forward, with the only major elements being the username and password text boxes and then the login button itself. Entering correct information should direct the user to their user info page. After that, there is the register button, so users can create an account.
   
-##User Registration
+##[User Registration](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/webPages/userregistration.php)
   If the user doesn't have a login already, the user is instructed to register on the login page. That redirects to the register page, where the user is propmpted to enter thier information to create an account.
   
 ##Side Navigation Bar
