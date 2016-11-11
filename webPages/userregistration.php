@@ -53,8 +53,7 @@ This file is drawn directly from my 3380 final project.
 			<?php
 				if(isset($_POST['submit'])) { // Was the form submitted?
 //TODO: Need to check if email has already been used
-//TODO: need to change name of DB and the passwprd for it.
-					$link = mysqli_connect("localhost", "root", "password", "<databaseName>") or die ("Connection Error " . mysqli_error($link));
+					$link = mysqli_connect("localhost", "root", "admin", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
 					$sql = "INSERT INTO user(first_name,last_name,email,salt,hashed_password,permission_level) VALUES (?,?,?,?,?,1)";
 					if ($stmt = mysqli_prepare($link, $sql)) {
             $fname = $_POST['first_name'];

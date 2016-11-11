@@ -37,7 +37,7 @@ It also assumes that we're using sessions and that the variables userid and user
 				<?php
 					if(isset($_POST['submit'])) { // Was the form submitted?
 						//connect to DB
-						$link = mysqli_connect("localhost", "root", "password", "lab8") or die ("Connection Error " . mysqli_error($link));
+						$link = mysqli_connect("localhost", "root", "admin", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
 						//Set up statement
 						$sql = "SELECT `user`.`salt`, `user`.`hashed_password`, `user`.`ID`, `user`.`permission_level` FROM `user` WHERE `user`.`email`=?;";
 						//if it prepares
