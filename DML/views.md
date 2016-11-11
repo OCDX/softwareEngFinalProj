@@ -40,4 +40,3 @@ SELECT * FROM `manifest` WHERE `ownerID` = ? ORDER BY `upload_date`
 
 SELECT * FROM `manifest` WHERE `version` = ?
 
- - List item
