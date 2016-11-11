@@ -1,0 +1,7 @@
+#UI Elements
+
+##Login Page
+  The login page is pretty straight forward, with the only major elements being the username and password text boxes and then the login button itself. Entering correct information should direct the user to their user info page. After that, there is the register button, so users can create an account.
+  
+## Side Navigation Bar
+  All of the pages have a side bar in commom for navigation. The top of the side bar has a search box and corresponding button. After that is the user account button. It links to the user info page. Then there is the manifest editor button, which goes to the page where the user can create new maifests and edit the manifests that they have made. Finally, there is a logout button, which destroys the session that is created upon login and then redirects to the login page.
