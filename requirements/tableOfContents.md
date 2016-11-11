@@ -2,13 +2,13 @@
 
 ##Use Cases
 
-  - search manifest             ...... Page 1
+  search manifest             ...... Page 1
   
-  - browse manifest             ...... Page 3
+  browse manifest             ...... Page 3
   
-  - download dataset            ...... Page 5
-  
-  - generate or upload manifest ...... Page 6
+  download dataset            ...... Page 5
+
+  generate or upload manifest ...... Page 6
   
 ## System Requirements         
 
@@ -36,3 +36,4 @@
   
   - Account Information       ...... Page 14
   
+\pagenumbering{gobble}
