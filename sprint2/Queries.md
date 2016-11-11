@@ -6,25 +6,37 @@
 
 SELECT * FROM `user`
 
---View all items in manifest:
+--View all items in manifest (newest first selected):
 
 SELECT * FROM `manifest` ORDER BY `upload_date` DESC
+
+--View all items in manifest (oldest first selected):
+
+SELECT * FROM `manifest` ORDER BY `upload_date`
 
 --View manifests from specific manifest id:
 
 SELECT * FROM `manifest` WHERE `manifest_id` = ?
 
---View manifests from specific category:
+--View manifests from specific category (newest first selected):
 
 SELECT * FROM `manifest` WHERE `category` = ? ORDER BY `upload_date` DESC
+
+--View manifests from specific category (oldest first selected):
+
+SELECT * FROM `manifest` WHERE `category` = ? ORDER BY `upload_date`
 
 --View manifests from specific date:
 
 SELECT * FROM `manifest` WHERE `upload_date` = ? ORDER BY `upload_date` DESC
 
---View manifests written by specific users:
+--View most recent manifests written by specific users:
 
 SELECT * FROM `manifest` WHERE `ownerID` = ? ORDER BY `upload_date` DESC
+
+--View oldest manifests written by specific users:
+
+SELECT * FROM `manifest` WHERE `ownerID` = ? ORDER BY `upload_date`
 
 --View previous editions of a manifest:
 
@@ -42,7 +54,7 @@ INSERT INTO `manifest`(`manifest_id`, `version`, `category`, `last_edit`, `uploa
 
 --Insert a new user's registration data:
 
-INSERT INTO `user`(`ID`, `last_name`, `first_name`, `email`, `permission_level`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])
+INSERT INTO `user` (`ID`, `salt`, `hashed_password`, `permission_level`, `email`, `first_name`, `last_name`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])
 
 
 ----------
@@ -82,7 +94,7 @@ DELETE FROM `user` WHERE `ID` = ?
 ----------
 **LOGGING IN**
 
-SELECT `ID`, `password` FROM `user` WHERE `ID` =  ?
+SELECT `salt`, `hashed_password`, `permission_level` FROM `user` WHERE `ID`=?
 
 ----------
 **INDEXING**
