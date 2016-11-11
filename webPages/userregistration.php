@@ -4,27 +4,7 @@ This file is drawn directly from my 3380 final project.
 //TODO: Styling needs to change to match the rest of the site.
 -->
 
-<?php
-	if (!isset($_SERVER['HTTP']) || !$_SERVER['HTTPS']) { // if request is not secure, redirect to secure url
-	   $url = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-	   header('Location: ' . $url);
-	    //exit;
-
-      /* TODO: should we check to see if an active session is in progress and prevent
-      logged in users from registering? */
-	}
-	error_reporting(E_ALL);
-	session_start();
-?>
 <?php include($root."header.php"); ?>
-<html>
-	<head>
-		<!--  I USE BOOTSTRAP BECAUSE IT MAKES FORMATTING/LIFE EASIER -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"><!-- Optional theme -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script><!-- Latest compiled and minified JavaScript -->
-	</head>
-	<body>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 col-xs-3"></div>

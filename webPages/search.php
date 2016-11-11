@@ -18,6 +18,7 @@
 				<input checked = "check" type = "radio" name = "radios" value = 0>Title
 				<input type = "radio" name = "radios" value = 1>Author
 				<input type = "radio" name = "radios" value = 2>Keyword
+				<input type = "radio" name = "radios" value = 3>Category
 				<input type="submit" value="Search">
 			</form>
 		</div>
@@ -34,10 +35,9 @@
 //					$pick = $_POST['radios'];
 //					$searcher = $_POST['userinput'] . '%';
 //
-//
 //					switch($pick){
 //						case '0':
-//							if($stmt = mysqli_prepare($conn, "SELECT * from <table> WHERE title LIKE ?")){
+//							if($stmt = mysqli_prepare($conn, "SELECT * from manifest WHERE title LIKE ?")){
 //								mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
 //								mysqli_stmt_execute($stmt);
 //								mysqli_stmt_bind_result($stmt, $obj_field);

@@ -4,9 +4,14 @@
 	   $url = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	   header('Location: ' . $url);
 	    //exit;
+	    
+	   /* TODO: should we check to see if an active session is in progress and prevent
+	    logged in users from registering? */
 	}
+	error_reporting(E_ALL);
+	session_start();
+	
 	$root = "https://mizzou.tech/";
-  //$root = $root = "http://rbryan.devprod.mbsbooks.com/ss-test/class/";
 ?>
 	<!-- header -->
 	 <!DOCTYPE html>
