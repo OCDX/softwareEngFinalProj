@@ -32,21 +32,27 @@ This file is drawn directly from my 3380 final project.
 			</div>
 			<?php
 				if(isset($_POST['submit'])) { // Was the form submitted?
-//TODO: Need to check if email has already been used
+
+					if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+						exit("Invalid email address");
 					$link = mysqli_connect("localhost", "root", "admin", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
+					$select = mysql_query("SELECT `email` FROM `user` WHERE `email` = '".$_POST['email']."'") or exit(mysql_error());
+					if(mysql_num_rows($select))
+						exit("This email is already being used");
+				
 					$sql = "INSERT INTO user(first_name,last_name,email,salt,hashed_password,permission_level) VALUES (?,?,?,?,?,1)";
 					if ($stmt = mysqli_prepare($link, $sql)) {
-            $fname = $_POST['first_name'];
-            $lname = $_POST['last_name'];
+					$fname = $_POST['first_name'];
+					$lname = $_POST['last_name'];
 						$email = $_POST['email'];
 						$salt = mt_rand();
 						$hpass = password_hash($salt.$_POST['password'], PASSWORD_BCRYPT)  or die("bind param");
 						mysqli_stmt_bind_param($stmt, "sssis", $fname, $lname, $email, $salt, $hpass) or die("bind param");
 						if(mysqli_stmt_execute($stmt)) {
-							echo "<h4>Success</h4>";
-              //TODO: add header to send to next page upon completion. Login page, perhaps?
+							
+							header('Location: userInfo.php');
 						} else {
-							echo "<h4>Failed</h4>";
+							exit("failed");
 						}
 						$result = mysqli_stmt_get_result($stmt);
 					} else {
