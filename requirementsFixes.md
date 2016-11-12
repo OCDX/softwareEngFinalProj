@@ -12,7 +12,7 @@
 
 - [ ] Need to add table of contents
 
-- [ ] need glossary 
+- [ ] Need glossary 
 
 - [ ] Need to update design work as we add to it (ERD for example)
 

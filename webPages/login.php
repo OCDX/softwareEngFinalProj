@@ -1,4 +1,14 @@
 <?php include($root."header.php"); ?>
+
+<!-- STUB CALLS 
+	Sections of code in this document will include:
+		calls to open the connection to the database: openConnection()
+		display login form: login()
+		take user input and parse and clean it: prepare()
+		check it against database records: checkUser()
+		display successful login and redirect: success()
+		display unsuccessful login: fail()-->
+
 <!--
 This is code that my group from 3380 used to ensure that the user was always using https instead of http.
 Granted, we may not really be worried about secure transfer of data. I do remember Zach making a certificate
