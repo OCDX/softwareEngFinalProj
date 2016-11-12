@@ -1,4 +1,13 @@
 <?php include($root."header.php"); ?>
+
+<!-- STUB CALLS
+	Sections of code in this document will include:
+		calls to open the connection to the database: openConnection()
+		display search form: searchForm()
+		take in user input and clean and parse it: prepare()
+		compare user input to database: search
+		display search results: results() -->
+
 	<div id="sidebar" class="sidebar">
   		<div class="content">
   			<form action="search.php" method="post">
