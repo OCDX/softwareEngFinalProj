@@ -1,6 +1,14 @@
 <?php include($root."header.php"); 
 	$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database"); ?>
 	
+	<!-- STUB CALLS
+		Sections of code in this document will include:
+			calls to open the connection to the database: openConnection()
+			search for user information: getUser()
+			display user information: showUser()
+			get user's manifests: userManifests()
+			display manifests as table: displayManifests() -->
+	
 	<div id="sidebar" class="sidebar">
   		<div class="content">
   			<form action="search.php" method="post">

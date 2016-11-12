@@ -1,4 +1,11 @@
 <?php include($root."header.php"); ?>
+
+<!-- STUB CALLS
+	Sections of code in this document will include:
+	calls to open the connection to the database: openConnection()
+	search database for specific mainfest: search()
+	display information related to the manifest: display() -->
+
 <style>
 table, th, td {
 border: 1px solid black;

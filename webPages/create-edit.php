@@ -1,4 +1,14 @@
 <?php include($root."header.php"); ?>
+
+<!-- STUB CALLS
+	Sections of code in this document will include:
+		calls to open the connection to the database: openConnection()
+		displaying the proper form for the user to fill out: chooseForm()
+		parsing and cleaning user input from the main forms: prepare()
+		posting changes to existing fields in the database: editEntry()
+		creating new data to place in the database: newEntry()
+		placing data in the database: loadData()-->
+		
 	<script>	
 				function formNewFctn(i){
 					if(i == 1)
