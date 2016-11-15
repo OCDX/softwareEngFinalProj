@@ -15,3 +15,5 @@ Every time new features are finished, we will run our test script to see what pa
 Below is the screen shot for the current tester. 
 
 Tests: Version 1.0
+
+![Image](JmeterOutput1.0.PNG)
