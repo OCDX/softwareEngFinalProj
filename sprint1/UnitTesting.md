@@ -1,14 +1,8 @@
-#Unit Testing
+Testing
 
 ##Procedure
 
-Tests need to occur whenever "big" changes happen to source code. Since "big" is subjective, tests should also be conducted the night before the end of any sprint/on a weekly basis (Sunday nights).
-
-Tests related to the web application definitely need to occur every week, whereas tests on the database only need to occur whenever changes are made to the structure of the tables, which should be stable by the end of sprint 2. New SQL queries will have to be tested in the database environment before use in webpages, but this will occur on a need basis.
-
-If any test should produce unexpected results, the entire group needs to be made aware of the issue via the #issues channel on Slack and the issues tab on github. The problem will be assigned to the person who has worked the most with the area raising the issue. 
-
------------------------
+Testing will need to occur at every stage of new features, and along with those features, tests should be made to test those things before they are added to the software. These tests will remain recorded to be retested when newer changes are added. 
 
 
 ###Database Tests
@@ -101,6 +95,18 @@ The plan for our regression testing is as follows
 
 - Following all new features being finished and integrated into the application, a series of both unit tests and manual workflow tests (such as clicking all buttons for example) will be conducted. All tests that are created during the work for that sprint, uplon successful completion of that function, will then be added to the already existing regression tests. By creating a specific suite of tests, and both adding and maintening those tests as we progress, we can esnure that previously tested functionality will be tested again at ever iteration of the application.
 
+- Workflow: 
+
+* Test login
+
+* test search works and displays results
+
+* test clicking a displayed manifest result leads user to that manifest page
+
+* Test download and upload of manifest
+
+* Test user account infor
+
 ##Integration Testing
 
 Our plan for integration testing is to organize our tests by 3 main categories:
@@ -127,24 +133,27 @@ Further specifying testing groups within our larger classification will allow us
 
 ##User acceptance Testing
 
-As part of our testing workflow, we have manual tests which will be performed by those of us working on the software. However, to ensure as close to an accurate user test as possible, we will have those members who did not actively work on the function being tests perform user acceptance tests.
+As part of our testing workflow, we have tests in place to ensure things are working as expected. However, when the product is finished by us, we will still need to verfiy the users of the software are satisfied with the work. The end user for our purpose will be those who will be using the Manifest sharing site. We will have them test the software and verify that it works for their needs
 
-This serves the purpose of allowing a person less familiar with the code itself to test it, using their natural thought process and expectations of the software without having knowledge of the specific design will allow for more diverse viewpoints on the software and hopefully expose issues that otherwise would go unnoticed. 
+* We will list use cases and document how to access that funcionality. Then the end user will test the software live, attempting to use it to be all the use ca
 
-Optionally, if we can find volunteers to perform user acceptance tests, they would be given a work flow, as generic as possible, as asked to use the software as they see reasonable. This will allow for a real user to interface with our software in a natural way and reveal any things that may not have been considered through the intial design and testing scenarious. 
+* The system should be thoroughly tested, from creating a new user, logging in, creating a manifest, uploading files for that manifest, then searching for that manifest, then editing, then downloading. All of those should be possible for every new user, and verified working with the live testing. 
 
-Examples of such testing would include:
+* Take feedback from the end user. If they are not satisfied, make the improvements required. If they are satisifed, but would like quality of life fixes for the next project version release, they will be noted for future development. 
 
-- Asking a user to perform a manifest download. Allowing them to download a manifest, test that they are able to do so, and see how the user feels about downloading a manifest. (i.e., are they able to easily figure out how to do it)
+##Unit Testing
 
-- Asking a user to search manifests based no a keyword, and testing that the results are consistent with the search entered. This will also similary test if a user is able to easily figure out how to use this feature
+We have a document, [linked here](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/testing/readme.md), that outlines our procedure and plans for unit tests. We will use unit tests to test our application on the smallest level on functionality. We will try to create unit tests for basic features, such as valid log in cases, valid queries, and other low level, single step functionaltiy such as those will be covered as best as we can by unit testing. Refer to the document for more specific details. 
 
-- All use cases should have such tests as these in order to ensure that we meet our requirements. 
+##Edge Cases
+
+Edge cases refer to those situations which only occur rarely, which may be hard to think of through the traditional manner of testing. Edge cases should test the boundaries of our application, trying to find as many weaknesses in the software which are due to mishandling some behavior that is traditionally not common in the work flow. In other words, edge case testing is important as it is designed to test the software outside of the obvious testing. Regression testing and integeration testing will not be exhaustive, and it is up to us to think of and test edge cases in our software.
+
+Our plan for approaching test cases is to try our best to test the high end and low end of our functions and methods. If the extreme cases work, we can be reasonably confident that it will also cover those cases within the bounds of the upper and lower ends. A good similie is boundary conditions. We will try to found the furthest acceptable boundary, and test those boundaries, in order to try to cover all the edge case behavior as effectively as possible. 
 
 ##Verification/Validation
 
-- Validation refers to ensuring that our requirements are met by the features of our software. This is accomplished through User Acceptance Testing. Refer to that section for information about how we plan to validate our software.
+- Validation refers to ensuring that our requirements are met by the features of our software. This is accomplished through User Acceptance Testing. Ulimately, the end User is who we must go to for Validation of the software. Their feedback will determine whether we meet the end user's requirements.
 
-- Verification refers to ensuring that our software does what it is designed to do. While validation tests that we meet our requirements, verification tests that our software does what we intend it to do, separate from what the requirements ask. Of course, if we have validated our software, verification would ensure that the requirements we meet work correctly. The unit testing and testing suites will ensure we verify our software works. 
-
+- Verification refers to ensuring that our software does what it is designed to do. While validation tests that we meet our requirements, verification tests that our software does what we intend it to do, separate from what the requirements asked. This is covered by regression testing, integration testing, and unit testing. 
 
