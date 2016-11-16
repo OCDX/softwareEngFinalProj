@@ -4,7 +4,7 @@
 			<div class="column full">
 				<div class="content">
 					<!-- login form -->
-					<form action="indextest.php" method="post"><h2>Login</h2>
+					<form action="index.php" method="post"><h2>Login</h2>
 						<p>Username: <input placeholder="email" type="text" name="email" id="username"><br>
 						   Password: &nbsp; <input placeholder="password" type="password" name="password" id="password"><br>
 						   <button id="login" class="loginbtn" type="submit" name="submit">Log In</button></p>
