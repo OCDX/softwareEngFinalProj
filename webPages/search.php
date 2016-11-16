@@ -37,7 +37,12 @@
 			<p>Display results in table form. Title, author, date, files associated.</p>
 			<div class="scroll-container">
 				<div class="scroll-box">
-					<?php 
+					<?php if ($_SESSION['email'] == NULL){
+                        echo "<h2> You must be signed into view this contect</h2>";
+                        header('Refresh: 3; URL=index.php');
+                        }
+                        else {
+
 						$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
 					
 					//this is the display results for case 0, repeat for each case, edit the table names and sql queries per result
@@ -103,4 +108,4 @@
 			</div>
 		</div>	
 	</div>
-<?php include_once("footer.php"); ?>
+<?php include_once("footer.php");} ?>
