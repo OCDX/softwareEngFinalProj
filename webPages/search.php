@@ -16,7 +16,9 @@
 			</form>
 			<a href="https://mizzou.tech/userInfo.php"><h4>Your Account</h4></a>
 			<a href="https://mizzou.tech/create-edit.php"><h4>Manifest Editor</h4></a>
-			<button id="logout" class="button">Log Out</button>
+			<form action="logout.php">
+			<button id="logout" class="button" onclick="">Log Out</button>
+            </form>
 		</div>
 	</div>
 	<div class="content column full">
