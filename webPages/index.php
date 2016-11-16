@@ -6,7 +6,7 @@
 					<!-- login form -->
 					<form action="indextest.php" method="post"><h2>Login</h2>
 						<p>Username: <input placeholder="email" type="text" name="email" id="username"><br>
-						   Password: <input placeholder="password" type="password" name="password" id="password"><br>
+						   Password: &nbsp; <input placeholder="password" type="password" name="password" id="password"><br>
 						   <button id="login" class="loginbtn" type="submit" name="submit">Log In</button></p>
 					</form>
                     <?php
