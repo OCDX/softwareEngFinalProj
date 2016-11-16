@@ -30,11 +30,17 @@ border: 1px solid black;
 		<div class="viewer column two-thirds">
 			<h3>Manifest author</h3>
 			<p>Display all files as a table that are associated with manifest.</p>
-			<?php $conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
+			<?php
+			 if ($_SESSION['email'] == NULL){
+                        echo "<h2> You must be signed into view this contect</h2>";
+                        header('Refresh: 3; URL=index.php');
+                        }
+			else {
+			$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
         $printquery = "SELECT * FROM manifest";
         $result = mysqli_query($conn, $printquery);
         while ($row = mysqli_fetch_assoc($result)){
         echo "<table><tr><th>Manifest ID</th><th>Version</th><th>Category</th><th>Last Edit</th><th>Upload Date</th><th>Title</th><th>Owner ID</th><th>Content</th></tr><tr><td>".$row['manifest_id']."</td><td>".$row['version']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['title']."</td><td>".$row['ownerID']."</td><td>".$row['data']."</td></tr></table>";}?>		
 		</div>	
 	</div>
-<?php include_once("footer.php"); ?>
+<?php include_once("footer.php");} ?>
