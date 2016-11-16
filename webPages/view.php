@@ -1,4 +1,4 @@
-<?php include($root."header.php"); ?>
+<?php include_once("header.php"); ?>
 
 <!-- STUB CALLS
 	Sections of code in this document will include:
@@ -18,7 +18,9 @@ border: 1px solid black;
 			</form>
 			<a href="https://mizzou.tech/userInfo.php"><h4>Your Account</h4></a>
 			<a href="https://mizzou.tech/create-edit.php"><h4>Manifest Editor</h4></a>
+            <form action="logout.php">
 			<button id="logout" class="button" onclick="">Log Out</button>
+            </form>
 		</div>
 	</div>
 	<div class="content column full">
@@ -35,4 +37,4 @@ border: 1px solid black;
         echo "<table><tr><th>Manifest ID</th><th>Version</th><th>Category</th><th>Last Edit</th><th>Upload Date</th><th>Title</th><th>Owner ID</th><th>Content</th></tr><tr><td>".$row['manifest_id']."</td><td>".$row['version']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['title']."</td><td>".$row['ownerID']."</td><td>".$row['data']."</td></tr></table>";}?>		
 		</div>	
 	</div>
-<?php include($root."footer.php"); ?>
+<?php include_once("footer.php"); ?>

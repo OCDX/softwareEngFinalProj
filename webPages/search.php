@@ -1,4 +1,4 @@
-<?php include($root."header.php"); ?>
+<?php include_once("header.php"); ?>
 
 <!-- STUB CALLS
 	Sections of code in this document will include:
@@ -101,4 +101,4 @@
 			</div>
 		</div>	
 	</div>
-<?php include($root."footer.php"); ?>
+<?php include_once("footer.php"); ?>

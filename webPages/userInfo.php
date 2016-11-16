@@ -1,4 +1,4 @@
-<?php include($root."header.php"); 
+<?php include_once("header.php"); 
 	$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database"); ?>
 	
 	<!-- STUB CALLS
@@ -17,7 +17,9 @@
 			</form>
 			<a href="userInfo.php"><h4>Your Account</h4></a>
 			<a href="create-edit.php"><h4>Manifest Editor</h4></a>
-			<a href="logout.php"><h4>Log Out</h4></a>
+			<form action="logout.php">
+			<button id="logout" class="button" onclick="">Log Out</button>
+            </form>
 		</div>
 	</div>
 	<div class="content column full">
@@ -46,4 +48,4 @@
 			</div>
 		</div>	
 	</div>
-<?php include($root."footer.php"); ?>
+<?php include_once("footer.php"); ?>

@@ -4,7 +4,7 @@ This file is drawn directly from my 3380 final project.
 //TODO: Styling needs to change to match the rest of the site.
 -->
 
-<?php include($root."header.php"); ?>
+<?php include_once("header.php"); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 col-xs-3"></div>
@@ -35,7 +35,7 @@ This file is drawn directly from my 3380 final project.
 
 					if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
 						exit("Invalid email address");
-					$link = mysqli_connect("localhost", "root", "admin", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
+					$link = mysqli_connect("localhost", "admin", "CS4320FG7", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
 					$select = mysql_query("SELECT `email` FROM `user` WHERE `email` = '".$_POST['email']."'") or exit(mysql_error());
 					if(mysql_num_rows($select))
 						exit("This email is already being used");
