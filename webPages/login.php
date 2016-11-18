@@ -17,18 +17,15 @@
 
 
 
-<?php include 'header.php'; ?> 
+<?php 
 
+include 'header.php'; 
 
-<!--
+//This is code that my group from 3380 used to ensure that the user was always using https instead of http.
+//Granted, we may not really be worried about secure transfer of data. I do remember Zach making a certificate
+//for the site, though.
 
-This is code that my group from 3380 used to ensure that the user was always using https instead of http.
-Granted, we may not really be worried about secure transfer of data. I do remember Zach making a certificate
-for the site, though.
-
--->
-<?php
-	if (!isset($_SERVER['HTTP']) || !$_SERVER['HTTPS']) { // if request is not secure, redirect to secure url
+if (!isset($_SERVER['HTTP']) || !$_SERVER['HTTPS']) { // if request is not secure, redirect to secure url
 	   $url = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 	   //header('Location: ' . $url);
 	    //exit;
