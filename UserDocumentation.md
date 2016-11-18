@@ -11,95 +11,95 @@ functionality.
 
 ###Creating an account
 
-    Before a user can begin using any features of the site, they must have an existing account with the site itself. The initial page a
-    user will be directed to will be the login page, which will have a button for starting the account creation process.
+Before a user can begin using any features of the site, they must have an existing account with the site itself. The initial page a
+user will be directed to will be the login page, which will have a button for starting the account creation process.
     
-    (SCREEN SHOT WILL GO HERE)
+(SCREEN SHOT WILL GO HERE)
     
-    Clicking create account will take a user to this page:
+Clicking create account will take a user to this page:
     
-    (SCREEN SHOT ACCOUNT CREATION)
+(SCREEN SHOT ACCOUNT CREATION)
     
-    In order to create an account, simply fill out all required fields and click "Create account". This will create a new user account 
-    assosciated with the given information provided. Account creation will only succeed if all required fields are provided
-    with valid information. 
+In order to create an account, simply fill out all required fields and click "Create account". This will create a new user account 
+assosciated with the given information provided. Account creation will only succeed if all required fields are provided
+with valid information. 
 
-    All features following account creation wil assume a created account, otherwise, those features will be off limits.
+All features following account creation wil assume a created account, otherwise, those features will be off limits.
     
 ###Logging in
 
-    After an account is created, a user may log in at the homepage. Filling out the required fields and pressing login will begin a check
-    on the provided username and password, redirecting a user to the search page for searching for manifests. 
+After an account is created, a user may log in at the homepage. Filling out the required fields and pressing login will begin a check
+on the provided username and password, redirecting a user to the search page for searching for manifests. 
     
-    (SCREEN SHOT OF LOGIN WITH EXAMPLE)
+(SCREEN SHOT OF LOGIN WITH EXAMPLE)
     
-    Invalid login information will display an error message.
+Invalid login information will display an error message.
     
 ###Searching Manifests
 
-    Searching manifests begins with entering valid search terms in the provided search input field
+Searching manifests begins with entering valid search terms in the provided search input field
     
-    (SCREEN SHOT SHOWING WHERE IT IS)
+(SCREEN SHOT SHOWING WHERE IT IS)
 
-    After entering valid search data, pressing "Search" will initiate the search. Results from the search will be displayed in the 
-    manifest view, in the main area of the search page. 
+After entering valid search data, pressing "Search" will initiate the search. Results from the search will be displayed in the 
+manifest view, in the main area of the search page. 
     
-    (SCREEN SHOT SHOWING EXAMPLE OF SEARCHED MANIFESTS)
+(SCREEN SHOT SHOWING EXAMPLE OF SEARCHED MANIFESTS)
     
-    Clicking on a manifest row will redirect to the manifest view page for that manifest. 
+Clicking on a manifest row will redirect to the manifest view page for that manifest. 
     
 ###Editing Manifest
 
-    Starting at a view page for a particular manifest, editing that manifest can be start by clicking "Edit Manifest". 
+Starting at a view page for a particular manifest, editing that manifest can be start by clicking "Edit Manifest". 
     
-    (SCREEN SHOT SHOWING WHERE THIS IS)
+(SCREEN SHOT SHOWING WHERE THIS IS)
     
-    Clicking manifest will allow the user to edit the manifest file and/or the related dataset files for that manifest. When changes are
-    finished, clicking "Save Edits" will save the edits that have been made to the manifest to the server. 
+Clicking manifest will allow the user to edit the manifest file and/or the related dataset files for that manifest. When changes are
+finished, clicking "Save Edits" will save the edits that have been made to the manifest to the server. 
     
-    (SCREEN SHOT FOR SAVE EDITS)
+(SCREEN SHOT FOR SAVE EDITS)
     
 ###Uploading Manifest/Create Manifest
 
-    When a new manifest is desired to be uploaded, along with the dataset files assosciated, a user must click "Create New" on the 
-    manifest search page. 
+When a new manifest is desired to be uploaded, along with the dataset files assosciated, a user must click "Create New" on the 
+manifest search page. 
 
-    (SCREEN SHOT SHOWING THIS)
+(SCREEN SHOT SHOWING THIS)
     
-    Creating a new manifest will redirect to the manifest creation page. 
+Creating a new manifest will redirect to the manifest creation page. 
     
-    To upload the dataset files, click "Upload Dataset files"
+To upload the dataset files, click "Upload Dataset files"
     
-    (SCREEN SHOT OF THIS UPLOAD)
+(SCREEN SHOT OF THIS UPLOAD)
     
-    To upload an existing manifest file of the desired format, simply click "Upload existing manifest file"
+To upload an existing manifest file of the desired format, simply click "Upload existing manifest file"
     
-    (SCREEN SHOT OF THIS)
+(SCREEN SHOT OF THIS)
     
-    If desired, the user has the ability to create a new manifest file, generated by the site, by clicking "Create New Manifest" 
+If desired, the user has the ability to create a new manifest file, generated by the site, by clicking "Create New Manifest" 
     
-    (SCREEN SHOT OF CREATE BUTTON)
+(SCREEN SHOT OF CREATE BUTTON)
     
-    This will open up a manifest form. Once all required fields have been filled with valid information, pressing "Create" 
-    at the bottom of the form will generate a manifest file to be uploaded.
+This will open up a manifest form. Once all required fields have been filled with valid information, pressing "Create" 
+at the bottom of the form will generate a manifest file to be uploaded.
     
-    (SCREEN SHOT OF FORM)
+(SCREEN SHOT OF FORM)
 
-    (SCREEN SHOT OF BUTTON)
+(SCREEN SHOT OF BUTTON)
     
-    (SCREEN SHOT SHOWING GENERATED FILE)
+(SCREEN SHOT SHOWING GENERATED FILE)
     
 ###View/Change Account information
 
-    Pressing "Account Information" will redirect to the account information page. This button is located in the header for all pages,
-    and can be found here:
+Pressing "Account Information" will redirect to the account information page. This button is located in the header for all pages,
+and can be found here:
     
-    (SCREEN SHOT SHOWING WHERE BUTTON IS)
+(SCREEN SHOT SHOWING WHERE BUTTON IS)
     
-    Once at the account information page, current account information will be displayed in text fields. Editing the information in
-    these fields and then pressing "Save info" will update your account with the new information. 
+Once at the account information page, current account information will be displayed in text fields. Editing the information in
+these fields and then pressing "Save info" will update your account with the new information. 
     
-    (SCREEN OF ACCOUNT FORM AND SUBMITTING)
+(SCREEN OF ACCOUNT FORM AND SUBMITTING)
     
  
     
