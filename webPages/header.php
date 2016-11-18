@@ -66,11 +66,17 @@
                         <li>
                             <a href="userInfo.php"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
-			<?php if ($_SESSION['permission_level'] == 1){echo "
-			<li class='divider'></li>
-			<li>
-			<a href='userregistration.php'><i class='fa fa-fw fa-user'></i> Admin Panel</a>
-			</li>";}?>
+			<?php 
+
+            if (isset($_SESSION['permission_level'])){
+                if ($_SESSION['permission_level'] == 1){
+                    echo 
+                    "<li class='divider'></li>
+    			     <li>
+    			         <a href='userregistration.php'><i class='fa fa-fw fa-user'></i> Admin Panel</a>
+    			     </li>";
+            }
+            ;}?>
                         <li class="divider"></li>
                         <li>
                             <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>

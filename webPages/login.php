@@ -65,17 +65,21 @@ for the site, though.
 							$userid = $row[2];
 							$usertype = $row[3];
 							//if password is correct
-							if(password_verify($salt.$_POST['password'], $hpass)) {
-								echo "<h2>Login Sucessfull!</h2>";
-								// Use session variables
-								$_SESSION['userid'] = $userid;
-								$_SESSION['permission_level'] = $usertype;
-								//goIndex();  //TODO determine function name to send to next page.
+
+							//first check if session for password exists
+							if (isset($_SESSION['password']) && isset($_SESSION['userid']) && isset($_SESSION['permission_level'])) {
+								if(password_verify($salt.$_POST['password'], $hpass)) {
+									echo "<h2>Login Sucessfull!</h2>";
+									// Use session variables
+									$_SESSION['userid'] = $userid;
+									$_SESSION['permission_level'] = $usertype;
+									//goIndex();  //TODO determine function name to send to next page.
+								}
+								else
+									echo "<h2>Login Failed!</h2>";
+							} else { //if it fails to prepare
+								die("prepare failed");
 							}
-							else
-								echo "<h2>Login Failed!</h2>";
-						} else { //if it fails to prepare
-							die("prepare failed");
 						}
 					}
 				
