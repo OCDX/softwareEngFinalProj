@@ -63,7 +63,7 @@
                         <i class="fa fa-user"></i>
                         
                         <?php 
-                            if (isset($_POST['email'])){
+                            if (isset($_SESSION['email'])){
                                 echo $_SESSION['email'];
                             };
                         ?>
