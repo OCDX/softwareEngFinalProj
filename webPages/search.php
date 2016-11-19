@@ -1,5 +1,4 @@
-<?php include_once("header.php");
- ?>
+<?php include_once("header.php");?>
 	<div class="content column full">
 		<div class="page-head">
 			<h2>Search</h2>
@@ -74,7 +73,7 @@
 										echo '</table><h1>' . $number . ' Rows</h1>';
 									}
 									break;
-									case 1:
+								case 1:
 									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE ownerID LIKE ?")){
 										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
 										mysqli_stmt_execute($stmt);
@@ -119,7 +118,7 @@
 										echo '</table><h1>' . $number . ' Rows</h1>';
 									}
 									break;
-									case 0:
+								case 2:
 									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE category LIKE ?")){
 										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
 										mysqli_stmt_execute($stmt);
@@ -164,10 +163,11 @@
 										echo '</table><h1>' . $number . ' Rows</h1>';
 									}
 									break;
-								}
-							?>
-						</div>
-					</div>
-				</div>	
+							}
+						}
+					?>
+				</div>
 			</div>
+		</div>	
+	</div>
 <?php include_once("footer.php");} ?>
