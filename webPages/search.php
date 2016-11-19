@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 <?php include_once("header.php");?>
+=======
+<?php  
+	if ( !isset($_SESSION['email'])){
+        header('Location:  login.php', TRUE, 302);
+    }
+
+    include 'header.php'; 
+?>
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Edit A Manifest</title>
+>>>>>>> master
 	<div class="content column full">
 		<div class="page-head">
 			<h2>Search</h2>
@@ -15,10 +32,17 @@
 			<div class="scroll-container">
 				<div class="scroll-box">
 					<?php  if ($_SESSION['email'] == NULL){
+<<<<<<< HEAD
                         		echo "<h1>Error: You must be signed in to view this content</h1>";
                         		echo "<meta http-equiv='refresh' content='0;url=index.php'>";
                         	} 
 							else {
+=======
+                        	echo "<h1>Error: You must be signed in to view this content</h1>";
+                        	echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+                        } 
+						else {
+>>>>>>> master
 							$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
 					
 							//this is the display results for case 0, repeat for each case, edit the table names and sql queries per result
@@ -26,7 +50,12 @@
 							if(isset($_POST['Search'])){
 								$pick = $_POST['radios'];
 								$searcher = $_POST['search'] . '%';
+<<<<<<< HEAD
 							}					
+=======
+					
+							}										
+>>>>>>> master
 							switch($pick){						
 								case 0:
 									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE title LIKE ?")){

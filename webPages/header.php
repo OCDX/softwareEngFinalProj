@@ -2,14 +2,22 @@
 <html lang="en">
 <?php session_start(); ?>
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-    <title>CS4320 Final Project</title>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -51,16 +59,32 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><?php echo " ".$_SESSION['email']?><b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"></i>
+                        
+                        <?php 
+                            if (isset($_SESSION['email'])){
+                                echo $_SESSION['email'];
+                            };
+                        ?>
+                    
+                    <b class="caret"></b></a>
+                    
                     <ul class="dropdown-menu">
                         <li>
                             <a href="userInfo.php"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
-			<?php if ($_SESSION['permission_level'] == 1){echo "
-			<li class='divider'></li>
-			<li>
-			<a href='userregistration.php'><i class='fa fa-fw fa-user'></i> Admin Panel</a>
-			</li>";}?>
+			<?php 
+
+            if (isset($_SESSION['permission_level'])){
+                if ($_SESSION['permission_level'] == 1){
+                    echo 
+                    "<li class='divider'></li>
+    			     <li>
+    			         <a href='userregistration.php'><i class='fa fa-fw fa-user'></i> Admin Panel</a>
+    			     </li>";
+            }
+            ;}?>
                         <li class="divider"></li>
                         <li>
                             <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>

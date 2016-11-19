@@ -1,38 +1,38 @@
-<?php include_once('header.php'); ?>
+<?php  
+	if ( !isset($_SESSION['email'])){
+        header('Location:  login.php', TRUE, 302);
+    }
 
-<!-- STUB CALLS
-	Sections of code in this document will include:
-		calls to open the connection to the database: openConnection()
-		displaying the proper form for the user to fill out: chooseForm()
-		parsing and cleaning user input from the main forms: prepare()
-		posting changes to existing fields in the database: editEntry()
-		creating new data to place in the database: newEntry()
-		placing data in the database: loadData()-->
+    include 'header.php'; 
+?>
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Edit A Manifest</title>
 		
-	<script>	
-				function formNewFctn(i){
-					if(i == 1)
-						document.getElementById("new").style.display=block;
-					else
-						document.getElementById("new").style.display=none;
-				}
+	<script type="text/javascript">
+		function formNewFctn(i){
+			if(i == 1)
+				document.getElementById("new").style.display=block;
+			else					
+				document.getElementById("new").style.display=none;
+			}
 	
-				function formEditFctn(i){
-					if(i == 1)
-						document.getElementById("edit").style.display=block;
-					else
-						document.getElementById("edit").style.display=none;
-				}
-			</script>
-<?php if ($_SESSION['email'] == NULL){
-                        echo "<h1>Error: You must be signed in to view this content</h1>";
-                        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
-                        }
-else {
-	echo"
+		function formEditFctn(i){
+			if(i == 1)
+				document.getElementById("edit").style.display=block;
+			else
+				document.getElementById("edit").style.display=none;
+		}
+	</script>
+</head>
+
+<body>
 			<h2>Manifest Editor</h2>
-		</div>
-		<div class='viewer column two-thirds'>
+			<div class='viewer column two-thirds'>
 			<p>Taking user input, files, get date and time. Buttons for update existing or create new.
 			If edit, show existing fields for maifest and associated files. Present options for uploading new files and removing old ones.
 			If new, present empty fields and upload options for each file. 
