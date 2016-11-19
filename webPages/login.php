@@ -109,9 +109,4 @@ It also assumes that we're using sessions and that the variables userid and user
 		</div>
 	 </div>
 	</body>
-
-
-<?php include'footer.php'; ?>
-
-
 <html>
