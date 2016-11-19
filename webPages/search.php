@@ -5,13 +5,6 @@
 
     include 'header.php'; 
 ?>
-
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Edit A Manifest</title>
->>>>>>> master
 	<div class="content column full">
 		<div class="page-head">
 			<h2>Search</h2>
@@ -172,10 +165,8 @@
 										}
 										break;
 								}
-							}
 						?>
 					</div>
 				</div>
 			</div>	
 		</div>
-<?php include_once("footer.php");} ?>
