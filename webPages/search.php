@@ -30,7 +30,7 @@
 							}					
 							switch($pick){						
 								case 0:
-									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest WHERE title LIKE ?")){
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE title LIKE ?")){
 										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
 										mysqli_stmt_execute($stmt);
 										mysqli_stmt_bind_result($stmt, $obj_field);
@@ -75,7 +75,7 @@
 									}
 									break;
 									case 1:
-									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest WHERE ownerID LIKE ?")){
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE ownerID LIKE ?")){
 										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
 										mysqli_stmt_execute($stmt);
 										mysqli_stmt_bind_result($stmt, $obj_field);
@@ -120,7 +120,7 @@
 									}
 									break;
 									case 0:
-									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest WHERE category LIKE ?")){
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE category LIKE ?")){
 										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
 										mysqli_stmt_execute($stmt);
 										mysqli_stmt_bind_result($stmt, $obj_field);
