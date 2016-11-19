@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
 <style>
@@ -90,8 +89,8 @@ span.psw {
     </div>
                     <?php
 	session_start();
-	if ( isset($_SESSION['email'])){
-	 echo "<meta http-equiv='refresh' content='0;url=view.php'>";
+	if ($_SESSION['email'] != NULL){
+	echo "<meta http-equiv='refresh' content='0;url=view.php'>";
 	}
 	else{
         if(isset($_POST['submit'])){ // was the form submitted?
