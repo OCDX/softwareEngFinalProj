@@ -7,8 +7,7 @@
 				<input type="text" name="search" id="search">
 				<input checked = "check" type = "radio" name = "radios" value = 0>Title
 				<input type = "radio" name = "radios" value = 1>Author
-				<input type = "radio" name = "radios" value = 2>Keyword
-				<input type = "radio" name = "radios" value = 3>Category
+				<input type = "radio" name = "radios" value = 2>Category
 				<input type="submit" value="Search">
 			</form>
 		</div>
@@ -31,7 +30,7 @@
 							}					
 							switch($pick){						
 								case 0:
-									if($stmt = mysqli_prepare($conn, "SELECT * from manifest WHERE title LIKE ?")){
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest WHERE title LIKE ?")){
 										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
 										mysqli_stmt_execute($stmt);
 										mysqli_stmt_bind_result($stmt, $obj_field);
@@ -48,11 +47,100 @@
 											foreach($row as $c=> $num){
 												$section[$c]=$num;
 											}
-
 											$ans[] = $section;
 										}
 
-										$arraylist = array(<table fields>);
+										$arraylist = array("category", "last_edit", "title", "ownerID");
+										echo '<table class = "table table-hover">';
+										echo '<table class = "table table-hover">';
+										echo '<tr><th></th><th></th>';
+										foreach($arraylist AS $col){
+											echo '<th>' . $col . '</th>';
+										}
+										echo '</tr>';
+										$number = 0;
+										$i =0 ;
+										foreach($ans AS $row){
+											foreach($row AS $area){
+												echo '<td>' . $area . '</td>';
+												echo "<input type = 'hidden' name = $arraylist[$i] value = $area>";
+												$i++;
+											}
+											echo '</tr>';
+											$number++;
+											$i=0;
+											echo '</form>';
+										}
+										echo '</table><h1>' . $number . ' Rows</h1>';
+									}
+									break;
+									case 1:
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest WHERE ownerID LIKE ?")){
+										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
+										mysqli_stmt_execute($stmt);
+										mysqli_stmt_bind_result($stmt, $obj_field);
+								
+										call_user_func_array(array($sec, "bind_result"), $setter);
+
+										$data = $stmt->result_metadata();
+										while($fetcher = $data->fetch_field()){
+											$answer[] = &$row[$fetcher->name];
+										}
+										call_user_func_array(array($stmt, 'bind_result'), $answer);
+		
+										while($stmt->fetch()){
+											foreach($row as $c=> $num){
+												$section[$c]=$num;
+											}
+											$ans[] = $section;
+										}
+
+										$arraylist = array("category", "last_edit", "title", "ownerID");
+										echo '<table class = "table table-hover">';
+										echo '<table class = "table table-hover">';
+										echo '<tr><th></th><th></th>';
+										foreach($arraylist AS $col){
+											echo '<th>' . $col . '</th>';
+										}
+										echo '</tr>';
+										$number = 0;
+										$i =0 ;
+										foreach($ans AS $row){
+											foreach($row AS $area){
+												echo '<td>' . $area . '</td>';
+												echo "<input type = 'hidden' name = $arraylist[$i] value = $area>";
+												$i++;
+											}
+											echo '</tr>';
+											$number++;
+											$i=0;
+											echo '</form>';
+										}
+										echo '</table><h1>' . $number . ' Rows</h1>';
+									}
+									break;
+									case 0:
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest WHERE category LIKE ?")){
+										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
+										mysqli_stmt_execute($stmt);
+										mysqli_stmt_bind_result($stmt, $obj_field);
+								
+										call_user_func_array(array($sec, "bind_result"), $setter);
+
+										$data = $stmt->result_metadata();
+										while($fetcher = $data->fetch_field()){
+											$answer[] = &$row[$fetcher->name];
+										}
+										call_user_func_array(array($stmt, 'bind_result'), $answer);
+		
+										while($stmt->fetch()){
+											foreach($row as $c=> $num){
+												$section[$c]=$num;
+											}
+											$ans[] = $section;
+										}
+
+										$arraylist = array("category", "last_edit", "title", "ownerID");
 										echo '<table class = "table table-hover">';
 										echo '<table class = "table table-hover">';
 										echo '<tr><th></th><th></th>';
@@ -82,4 +170,4 @@
 					</div>
 				</div>	
 			</div>
-<?php include($root."footer.php");} ?>
+<?php include_once("footer.php");} ?>
