@@ -1,186 +1,51 @@
-/**************Typography*************/
-h1, h2, h3, h4, h5, body{
-  font-family: "Arial Black", Gadget, sans-serif;
-  font-weight: 700;
-  margin: 0;
+@import "bourbon";
+
+body {
+	background: #eee !important;	
 }
 
-h1{
-	color: #ffcc00;
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-h2{
-	color: #000000;
-}
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
 
-h3{
-	color: #000000;
-}
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
 
-p{
-	color: #000000;
-	font-weight:200;
-}
+	.checkbox {
+	  font-weight: normal;
+	}
 
-/***************Styling*************/
-header{
-	position: fixed;
-	background-color: #000000;
- 	top: 0;
-  	width: 100%;
-  	border-bottom: 5px solid #ffcc00;
-  	-webkit-transition: all 0.4s ease-in-out;
-  	 -moz-transition: all 0.4s ease-in-out;
-  	 	  transition: all 0.4s ease-in-out;
-}
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
 
-.content{
-	margin-left: 15%;
-	margin-right: 15%;
-}
+		&:focus {
+		  z-index: 2;
+		}
+	}
 
-body{
-	margin-top: 60px;
-}
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
 
-.sidebar{
-	background-color: #ffcc00;
-	border-right: 5px solid #000000;
-	border-top: 5px solid #000000;
-	margin-top: 50px;
-	height: 100%;
-    width: 15%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-.sidebar a {
-    padding: 8px 8px 8px 32px;
-    color: #000000;
-}
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
 
-.sidebar input[type=text]{
-	width:90%
-}
-
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
-form{
-	float: center;
-}
-
-footer{
-	
-}
-
-/*************Button CSS*************/
-.button {
-    background-color: #ffcc00;
-    border: 3px solid #000000;
-    color: #000000;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 10px 10px 10px;
-    box-shadow: 0 6px #999;
-    font-size: 15px;
-    margin-top: 30px;
-    border-radius: 8px;
-}
-
-.loginbtn{
-	background-color: #ffcc00;
-    border: 3px solid #000000;
-    color: #000000;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px 10px 10px 10px;
-    box-shadow: 0 5px #999;
-    font-size: 15px;
-    border-radius: 8px;
-}
-
-.button > a{
-	color: #000000;
-	font-weight:200;
-}
-
-.button > a:hover {
-	color: #ffcc00;
-}
-
-.button > a:active{
-	color: #000000;
-}
-
-.button:hover {
-	background-color: #000000;
-	color: #ffcc00;
-}
-
-.button:active {
-  background-color: #ffcc00;
-  color: #000000;
-  box-shadow: 0 3px #666;
-  transform: translateY(4px);
-}
-
-.loginbtn:hover {
-	background-color: #000000;
-	color: #ffcc00;
-}
-
-.loginbtn:active {
-  background-color: #ffcc00;
-  color: #000000;
-  box-shadow: 0 3px #666;
-  transform: translateY(4px);
-}
-
-/*Submit button*/
-input[type=submit]{
-	background-color: #ffcc00;
-    border: 1px solid #000000;
-    color: #000000;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 5px 5px 5px 5px;
-    box-shadow: 0 2px #999;
-    font-size: 12px;
-    margin-top: 5px;
-    border-radius: 8px;
-}
-/*************Scroll Box**********/
-.scroll-container{
-	width: 100%;
-	height: 350px;
-}
-
-.scroll-box{
-	width: 100%
-	height: 349px;
-	overflow: scroll;
-}
-
-/*************Column structure*************/
-.column {
-		  float: left;
-		  padding-left: 1rem;
-		  padding-right: 1rem;
-}
-.column.full { width: 100%; }
-.column.two-thirds { width: 66.7%; }
-.column.half { width: 50%; }
-.column.third { width: 33.3%; }
-.column.fourth { width: 25%; }
-.column.three-fourths { width: 75%; }
-.column.fifth { width: 20%; }
-.column.sixth { width: 16.5%; }
-.column.five-sixths { width: 83%; }
