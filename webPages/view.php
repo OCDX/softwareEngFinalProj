@@ -1,13 +1,17 @@
+<?php  
+	if ( !isset($_SESSION['email'])){
+        header('Location:  login.php', TRUE, 302);
+    }
+
+    include 'header.php'; 
+?>
+
+
 <!DOCTYPE HTML>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Login</title>
-<?php 
-
-include 'header.php'; 
-
-?>
+	<title>View Manifest</title>
 </head>
 
 <body>
@@ -50,6 +54,6 @@ include 'header.php';
 	        	</table>";
 	        }}
     ?>	
-    	
+
 </body>
 </html>

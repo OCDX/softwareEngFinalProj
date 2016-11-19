@@ -1,5 +1,17 @@
-<?php include($root."header.php");
- ?>
+<?php  
+	if ( !isset($_SESSION['email'])){
+        header('Location:  login.php', TRUE, 302);
+    }
+
+    include 'header.php'; 
+?>
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Edit A Manifest</title>
 	<div class="content column full">
 		<div class="page-head">
 			<h2>Search</h2>

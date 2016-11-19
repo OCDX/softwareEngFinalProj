@@ -10,6 +10,8 @@
 			document.getElementById("create").onclick= function(){
 				location.hfref = "www.google.com";
 			};
+
+			console.log("test");
 		}
 
 
@@ -90,12 +92,12 @@ if (!isset($_SERVER['HTTP']) || !$_SERVER['HTTPS']) { // if request is not secur
 					<!-- login form -->
 					<form action="" method="post"><h2>Login</h2>
 						<!-- In order to not break any styling, id is left as username -->
-						<p>Username: <input type="text" name="email" id="username"><br>
-						   Password: <input type="password" name="password" id="password"><br>
-							
-						   <button id="login" class="loginbtn" type="submit" name="submit">Log In</button>
-						   <button class="loginbtn" id="create" type="submit"> Creat Account </button>
+						<p>
+							Username: <input type="text" name="email" id="username"><br>
+						   	Password: <input type="password" name="password" id="password"><br>
 						</p>
+						<button id="login" class="loginbtn" type="submit" name="submit">Log In</button>
+						<button class="loginbtn" id="create" type="submit"> Creat Account </button>
 					</form>
 				</div>
 				<!--
