@@ -29,76 +29,157 @@
 			<div class="scroll-container">
 				<div class="scroll-box">
 					<?php  if ($_SESSION['email'] == NULL){
-                        echo "<h1>Error: You must be signed in to view this content</h1>";
-                        echo "<meta http-equiv='refresh' content='0;url=index.php'>";
+                        	echo "<h1>Error: You must be signed in to view this content</h1>";
+                        	echo "<meta http-equiv='refresh' content='0;url=index.php'>";
                         } 
-			else {
-						$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
+						else {
+							$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
 					
-					//this is the display results for case 0, repeat for each case, edit the table names and sql queries per result
+							//this is the display results for case 0, repeat for each case, edit the table names and sql queries per result
 						
-					if(isset($_POST['Search'])){
-						$pick = $_POST['radios'];
-						$searcher = $_POST['search'] . '%';
+							if(isset($_POST['Search'])){
+								$pick = $_POST['radios'];
+								$searcher = $_POST['search'] . '%';
 					
-					}					
-	/*				switch($pick){						
-						case 0:
-							if($stmt = mysqli_prepare($conn, "SELECT * from manifest WHERE title LIKE ?")){
-								//mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
-								//mysqli_stmt_execute($stmt);
-								//mysqli_stmt_bind_result($stmt, $obj_field);
+							}										
+							switch($pick){						
+								case 0:
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE title LIKE ?")){
+										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
+										mysqli_stmt_execute($stmt);
+										mysqli_stmt_bind_result($stmt, $obj_field);
 								
+										call_user_func_array(array($sec, "bind_result"), $setter);
 
-							
+										$data = $stmt->result_metadata();
+										while($fetcher = $data->fetch_field()){
+											$answer[] = &$row[$fetcher->name];
+										}
+										call_user_func_array(array($stmt, 'bind_result'), $answer);
+		
+										while($stmt->fetch()){
+											foreach($row as $c=> $num){
+												$section[$c]=$num;
+											}
+											$ans[] = $section;
+										}
 
-								call_user_func_array(array($sec, "bind_result"), $setter);
-
-								$data = $stmt->result_metadata();
-								while($fetcher = $data->fetch_field()){
-									$answer[] = &$row[$fetcher->name];
-								}
-								call_user_func_array(array($stmt, 'bind_result'), $answer);
-
-								while($stmt->fetch()){
-									foreach($row as $c=> $num){
-											$section[$c]=$num;
+										$arraylist = array("category", "last_edit", "title", "ownerID");
+										echo '<table class = "table table-hover">';
+										echo '<table class = "table table-hover">';
+										echo '<tr><th></th><th></th>';
+										foreach($arraylist AS $col){
+											echo '<th>' . $col . '</th>';
+										}
+										echo '</tr>';
+										$number = 0;
+										$i =0 ;
+										foreach($ans AS $row){
+											foreach($row AS $area){
+												echo '<td>' . $area . '</td>';
+												echo "<input type = 'hidden' name = $arraylist[$i] value = $area>";
+												$i++;
+											}
+											echo '</tr>';
+											$number++;
+											$i=0;
+											echo '</form>';
+										}
+										echo '</table><h1>' . $number . ' Rows</h1>';
 									}
+									break;
+								case 1:
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE ownerID LIKE ?")){
+										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
+										mysqli_stmt_execute($stmt);
+										mysqli_stmt_bind_result($stmt, $obj_field);
+								
+										call_user_func_array(array($sec, "bind_result"), $setter);
 
-									$ans[] = $section;
-								}
+										$data = $stmt->result_metadata();
+										while($fetcher = $data->fetch_field()){
+											$answer[] = &$row[$fetcher->name];
+										}
+										call_user_func_array(array($stmt, 'bind_result'), $answer);
+		
+										while($stmt->fetch()){
+											foreach($row as $c=> $num){
+												$section[$c]=$num;
+											}
+											$ans[] = $section;
+										}
 
-								$arraylist = array(<table fields>);
-								echo '<table class = "table table-hover">';
-								echo '<table class = "table table-hover">';
-									echo '<tr><th></th><th></th>';
-									foreach($arraylist AS $col){
-										echo '<th>' . $col . '</th>';
+										$arraylist = array("category", "last_edit", "title", "ownerID");
+										echo '<table class = "table table-hover">';
+										echo '<table class = "table table-hover">';
+										echo '<tr><th></th><th></th>';
+										foreach($arraylist AS $col){
+											echo '<th>' . $col . '</th>';
+										}
+										echo '</tr>';
+										$number = 0;
+										$i =0 ;
+										foreach($ans AS $row){
+											foreach($row AS $area){
+												echo '<td>' . $area . '</td>';
+												echo "<input type = 'hidden' name = $arraylist[$i] value = $area>";
+												$i++;
+											}
+											echo '</tr>';
+											$number++;
+											$i=0;
+											echo '</form>';
+										}
+										echo '</table><h1>' . $number . ' Rows</h1>';
 									}
+									break;
+								case 2:
+									if($stmt = mysqli_prepare($conn, "SELECT category, last_edit, title, ownerID from manifest as man INNER JOIN user u on (man.ownerID = u.ID) WHERE category LIKE ?")){
+										mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
+										mysqli_stmt_execute($stmt);
+										mysqli_stmt_bind_result($stmt, $obj_field);
+								
+										call_user_func_array(array($sec, "bind_result"), $setter);
 
-									echo '</tr>';
-								$number = 0;
-								$i =0 ;
+										$data = $stmt->result_metadata();
+										while($fetcher = $data->fetch_field()){
+											$answer[] = &$row[$fetcher->name];
+										}
+										call_user_func_array(array($stmt, 'bind_result'), $answer);
+		
+										while($stmt->fetch()){
+											foreach($row as $c=> $num){
+												$section[$c]=$num;
+											}
+											$ans[] = $section;
+										}
 
-								foreach($ans AS $row){
-									foreach($row AS $area){
-										echo '<td>' . $area . '</td>';
-										echo "<input type = 'hidden' name = $arraylist[$i] value = $area>";
-										$i++;
+										$arraylist = array("category", "last_edit", "title", "ownerID");
+										echo '<table class = "table table-hover">';
+										echo '<table class = "table table-hover">';
+										echo '<tr><th></th><th></th>';
+										foreach($arraylist AS $col){
+											echo '<th>' . $col . '</th>';
+										}
+										echo '</tr>';
+										$number = 0;
+										$i =0 ;
+										foreach($ans AS $row){
+											foreach($row AS $area){
+												echo '<td>' . $area . '</td>';
+												echo "<input type = 'hidden' name = $arraylist[$i] value = $area>";
+												$i++;
+											}
+											echo '</tr>';
+											$number++;
+											$i=0;
+											echo '</form>';
+										}
+										echo '</table><h1>' . $number . ' Rows</h1>';
 									}
-
-									echo '</tr>';
-									$number++;
-									$i=0;
-									echo '</form>';
-
-								}
-
-								echo '</table><h1>' . $number . ' Rows</h1>';
+									break;
 							}
-
-							break;
-						}*/
+						}
 					?>
 				</div>
 			</div>
