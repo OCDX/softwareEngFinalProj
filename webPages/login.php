@@ -7,11 +7,12 @@
 	<script type="text/javascript">
 
 		function loadPage(){
-			document.getElementById("create").onclick= function(){
-				location.hfref = "www.google.com";
+			var button = document.getElementById("create");
+			console.log(button);
+			button.onclick = function(){
+				window.location = "userregistration.php";
+				//alert('test');
 			};
-
-			console.log("test");
 		}
 
 
@@ -96,9 +97,9 @@ if (!isset($_SERVER['HTTP']) || !$_SERVER['HTTPS']) { // if request is not secur
 							Username: <input type="text" name="email" id="username"><br>
 						   	Password: <input type="password" name="password" id="password"><br>
 						</p>
-						<button id="login" class="loginbtn" type="submit" name="submit">Log In</button>
-						<button class="loginbtn" id="create" type="submit"> Creat Account </button>
 					</form>
+					<button id="login" class="loginbtn" type="submit" name="submit">Log In</button>
+					<button class="loginbtn" id="create"> Create Account </button>
 				</div>
 				<!--
 Again, this is borrowed code from my 3380 final project.

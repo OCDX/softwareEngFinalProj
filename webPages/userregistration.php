@@ -1,15 +1,19 @@
-<!--
-This file is drawn directly from my 3380 final project.
+<?php  
+	if ( !isset($_SESSION['email'])){
+        header('Location:  login.php', TRUE, 302);
+    }
 
-//TODO: Styling needs to change to match the rest of the site.
--->
+    include 'header.php'; 
+?>
 
-<?php include_once("header.php");
-	if ($_SESSION['permission_level'] != 1){
-	 echo "<meta http-equiv='refresh' content='0;url=view.php'>";
-	}		
- ?>
 
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Register An Account</title>
+</head>
+<body>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 col-xs-3"></div>
@@ -65,4 +69,4 @@ ini_set('display_errors', 1);
 				}
 			?>
 		</div>
-	<?php include_once("footer.php");?>
+</body>
