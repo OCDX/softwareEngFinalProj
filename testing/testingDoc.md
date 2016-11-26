@@ -157,3 +157,41 @@ Our plan for approaching test cases is to try our best to test the high end and 
 
 - Verification refers to ensuring that our software does what it is designed to do. While validation tests that we meet our requirements, verification tests that our software does what we intend it to do, separate from what the requirements asked. This is covered by regression testing, integration testing, and unit testing. 
 
+##Testing Procedure
+
+- Login Testing
+
+    * Test valid username/valid password
+    
+        - should result in successful login
+        
+    * Test valid username/invalid passwordt
+    
+        - should result in error message to user
+        
+    * Test invalid username, valid password
+    
+        - should result in error message to user
+        
+    * Test invalid username/invalid password
+    
+        - should result in error message to user
+        
+- Logout testing
+
+    * Test logging out actually logs user out and ends session
+    
+        - logout, then attempt to go through pages. All should redirect to login, and not allow user to see content
+        
+- Account creation testing 
+
+    * Test valid completion of account creation form and valid submission
+    
+        - should result in new account created, tested by logging in with it after account creation. 
+        
+    * Test invalid form completion, attempt submit, verify it fails and database doesn't get any new information
+    
+        - should result in error message to user, should also verify that database is unchanged 
+        
+    * Test 
+
