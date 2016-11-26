@@ -157,7 +157,9 @@ Our plan for approaching test cases is to try our best to test the high end and 
 
 - Verification refers to ensuring that our software does what it is designed to do. While validation tests that we meet our requirements, verification tests that our software does what we intend it to do, separate from what the requirements asked. This is covered by regression testing, integration testing, and unit testing. 
 
-##Testing Procedure
+##Testing Workflow 
+
+Most of our tests are integration tests, performed by using the software for its intended purpose, through its own UI elements, to ensure those elements work and each functional requirement is satisfied. For clarity, some testing groups are organized based on the functionality they are testing, relative to the requirements document we put together. This ensures our testing covers verification and validation. We must further test validity with performing a demo for the perspective client requesting the software. 
 
 - Login Testing
 
