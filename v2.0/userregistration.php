@@ -1,15 +1,15 @@
-<?php  
-    include 'header.php'; 
-?>
+<!--
+This file is drawn directly from my 3380 final project.
 
+//TODO: Styling needs to change to match the rest of the site.
+-->
 
-<!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Register An Account</title>
-</head>
-<body>
+<?php include_once("header.php");
+	if ($_SESSION['permission_level'] != 1){
+	 echo "<meta http-equiv='refresh' content='0;url=view.php'>";
+	}		
+ ?>
+
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4 col-xs-3"></div>
@@ -40,7 +40,7 @@ ini_set('display_errors', 1);
 				if(isset($_POST['submit'])) { // Was the form submitted?
 					//if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
 					//	exit("Invalid email address");
-					$link = mysqli_connect("localhost", "root", "CS4320FG7", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
+					$link = mysqli_connect("localhost", "admin", "CS4320FG7", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
 					//$select = mysqli_query($link, "SELECT email FROM user WHERE email = ".$_POST['email']."") or exit(mysql_error());
 					//if(mysql_num_rows($select))
 					//	exit("This email is already being used");
@@ -65,4 +65,4 @@ ini_set('display_errors', 1);
 				}
 			?>
 		</div>
-</body>
+	<?php include_once("footer.php");?>
