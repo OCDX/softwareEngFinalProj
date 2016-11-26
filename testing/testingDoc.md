@@ -193,5 +193,41 @@ Our plan for approaching test cases is to try our best to test the high end and 
     
         - should result in error message to user, should also verify that database is unchanged 
         
-    * Test 
+- Account Session Management
+
+    * Test that no pages other than login are accessible when not logged in as a user
+    
+    * Test that once logged in, you can access all the pages that a user should be able to access 
+    
+        - This will be tested using the web page map we have, to ensure all pages are tested
+        
+    * Verify account information page reflects the current user 
+    
+- Manifest searching tests
+
+    * For the following tests, we will need to ensure proper test data is in our database to ensure the tests are correctly set up
+    
+    TEST DATA:
+    
+    - Manifest(s) searchable by keyword 'test'
+    
+    - Manifests searchable by keyword 'test' with a date earlier or later than the previous manifest mentioned
+    
+    
+    TEST CASES:
+    
+    - Search for 'test' manifests.
+    
+        * Enter 'test' into search field and press search. Expected outcome: all manifests with 'test' as a keyword will populate
+        the table, showing their preview information in a tabular and organized output 
+        
+    - Order search results
+    
+        * After performing search on 'test', attempt to organize the table by the date, using the sorting tabs. Expected outcome:
+        Search results organize properly based on their descending/ascending dates (depending on requested ordering)
+       
+   - Redirect to respective manifest view page 
+   
+       * After performing a search on 'test', click on a given manifest and ensure it redirects to its **own** manifest view, with all the same details as the preview showed. 
+   
 
