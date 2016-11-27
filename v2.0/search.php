@@ -92,4 +92,3 @@
 			</div>
 		</div>	
 	</div>
-<?php include($root."footer.php");} ?>
