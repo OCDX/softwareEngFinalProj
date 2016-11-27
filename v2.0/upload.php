@@ -12,3 +12,6 @@
 <text>Otherwise, you can generate a manifest file.</text>
 <button>Generate Manifest File</button>
 </div>
+<div>
+	<button>Upload Dataset and Manifest File</button>
+</div>
