@@ -232,4 +232,38 @@ Most of our tests are integration tests, performed by using the software for its
    
        * After performing a search on 'test', click on a given manifest and ensure it redirects to its **own** manifest view, with all the same details as the preview showed. 
    
+- Manifest Upload tests
 
+    - navigate to upload screen, click upload manifest and files, try to upload a file.
+    
+        * Success message should display for a valid upload. Expected outcome from valid upload: Can find the uploaded files and download them, to verify same file was uploaded as can be downloaded after an upload.
+        
+    - Provide manifest file
+    
+        * Expected outcome: Valid manifest provided, upload succeeds, manifest information is absorbed from file for upload to database
+        
+        * Failure: test that uploading an invalid manifest file results in a failure to upload the manifest itself
+        
+    - Create manifest file
+    
+        * Expected success (assuming form filled out completeley) when clicking generate manifest: Manifest file is created and assosciated with the respective dataset files. 
+        
+        * Also, test here that not filling out form correctly does not allow for file creation. Try to submit invalid form.
+        Expected outcome: Failure to generate a valid manifest file error message to user
+        
+     - Upload dataset files
+     
+         * Attempt to upload dataset/SNC files. 
+             
+             1. Valid files: Expect successful upload
+             
+             2. Invalid file type: Expect error message to user
+             
+             3. If valid files uploaded, and a manifest created, then test that after successful addition of a new manifest that the files uploaded match the ones kept by the server 
+             
+- Manifest download tests
+
+    - Test ability to download manifest files and dataset files
+    
+        * Click download for manifest file and dataset file. Expected behavior: when download requested, file successfully downloads to local machine. 
+        
