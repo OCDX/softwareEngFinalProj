@@ -13,12 +13,12 @@ functionality.
 
 Before a user can begin using any features of the site, they must have an existing account with the site itself. The initial page a
 user will be directed to will be the login page, which will have a button for starting the account creation process.
-    
-(SCREEN SHOT WILL GO HERE)
+
+![image login](/UserDocImages/acct_creation_button.PNG)
     
 Clicking create account will take a user to this page:
     
-(SCREEN SHOT ACCOUNT CREATION)
+![image login](/UserDocImages/acct_creation_form.PNG)
     
 In order to create an account, simply fill out all required fields and click "Create account". This will create a new user account 
 assosciated with the given information provided. Account creation will only succeed if all required fields are provided
@@ -31,16 +31,14 @@ All features following account creation wil assume a created account, otherwise,
 After an account is created, a user may log in at the homepage. Filling out the required fields and pressing login will begin a check
 on the provided username and password, redirecting a user to the search page for searching for manifests. 
     
-(SCREEN SHOT OF LOGIN WITH EXAMPLE)
+![login example](/UserDocImages/login_example.PNG)
     
 Invalid login information will display an error message.
     
 ###Searching Manifests
 
 Searching manifests begins with entering valid search terms in the provided search input field
-    
-(SCREEN SHOT SHOWING WHERE IT IS)
-
+    ![search page](/UserDocImages/search_page.PNG)
 After entering valid search data, pressing "Search" will initiate the search. Results from the search will be displayed in the 
 manifest view, in the main area of the search page. 
     
