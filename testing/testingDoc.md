@@ -305,15 +305,44 @@ The header is used in several pages, but the code is the same, so it can be test
 
 Test clicking the user profile tab displays the menu items 1. Profile 2. Admin Panel (for admin account only) 3. Log out
 
-* Profile
+1. Profile
      
 test redirects to user account page
     
-* Admin pane;
+2. Admin panel
     
 test redirects to account creation page
     
-* log out
+3. log out
     
 test redirects to log in page AND no longer able to access user only pages
     
+####Manifest Creation/Upload
+
+- Create 
+
+Test clicking create will take supplied form data and create manifest file
+
+- Upload
+
+Open file browser to select a file for upload when user presses
+
+- Upload Dataset Files
+
+Open file browser to select a local file
+
+####Sidebar 
+
+- dashboard
+
+test redirects to homepage
+
+- Manifest editor
+
+test redirects to page for editing a manifest
+
+- manifest search
+
+test redirects to search page
+
+
