@@ -1,4 +1,12 @@
-<?php include "header.php" ?>
+<?php 
+
+if ( !isset($_SESSION['email'])){
+        header('Location:  index.php', TRUE, 302);
+    }
+	
+include "header.php"; 
+
+?>
 
 <div>
 	<text>Add Dataset/SNC files (zip file if more than one file included)<text>
