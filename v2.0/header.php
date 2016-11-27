@@ -81,7 +81,7 @@
                         <a href="search.php"><i class="fa fa-fw fa-table"></i> Manifest Search</a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-fw fa-edit"></i> Upload New Dataset </a>
+                        <a href="upload.php"><i class="fa fa-fw fa-edit"></i> Upload New Dataset </a>
                     <li>
                 </ul>
             </div>
