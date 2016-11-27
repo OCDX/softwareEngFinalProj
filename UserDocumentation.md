@@ -86,6 +86,10 @@ at the bottom of the form will generate a manifest file to be uploaded.
 (SCREEN SHOT OF BUTTON)
     
 (SCREEN SHOT SHOWING GENERATED FILE)
+
+Clicking "Upload Dataset and Manifest File" will (if all required files are supplied) upload your new dataset to the server. 
+
+![upload_dataset](/UserDocImages/upload_complete.PNG)
    
     
  
