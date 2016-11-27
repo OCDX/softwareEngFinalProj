@@ -88,18 +88,7 @@ at the bottom of the form will generate a manifest file to be uploaded.
 (SCREEN SHOT OF BUTTON)
     
 (SCREEN SHOT SHOWING GENERATED FILE)
-    
-###View/Change Account information
-
-Pressing "Account Information" will redirect to the account information page. This button is located in the header for all pages,
-and can be found here:
-    
-(SCREEN SHOT SHOWING WHERE BUTTON IS)
-    
-Once at the account information page, current account information will be displayed in text fields. Editing the information in
-these fields and then pressing "Save info" will update your account with the new information. 
-    
-(SCREEN OF ACCOUNT FORM AND SUBMITTING)
+   
     
  
     
