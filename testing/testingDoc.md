@@ -267,7 +267,7 @@ Most of our tests are integration tests, performed by using the software for its
     
         * Click download for manifest file and dataset file. Expected behavior: when download requested, file successfully downloads to local machine. 
         
-User Interface Testing:
+###User Interface Testing:
 
 This section is dedicated to all UI functionality not tested by integration testing. These tests are one dimensional, simple tests, to determine whether the functions of the UI such as page navigation work as intended.
 
@@ -305,15 +305,15 @@ The header is used in several pages, but the code is the same, so it can be test
 
 Test clicking the user profile tab displays the menu items 1. Profile 2. Admin Panel (for admin account only) 3. Log out
 
-    * Profile
+* Profile
      
-    test redirects to user account page
+test redirects to user account page
     
-    * Admin pane;
+* Admin pane;
     
-    test redirects to account creation page
+test redirects to account creation page
     
-    * log out
+* log out
     
-    test redirects to log in page AND no longer able to access user only pages
+test redirects to log in page AND no longer able to access user only pages
     
