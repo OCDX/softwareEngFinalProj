@@ -305,15 +305,15 @@ The header is used in several pages, but the code is the same, so it can be test
 
 Test clicking the user profile tab displays the menu items 1. Profile 2. Admin Panel (for admin account only) 3. Log out
 
-1. Profile
+- Profile
      
 test redirects to user account page
     
-2. Admin panel
+- Admin panel
     
 test redirects to account creation page
     
-3. log out
+- log out
     
 test redirects to log in page AND no longer able to access user only pages
     
