@@ -48,14 +48,14 @@ Clicking on a manifest row will redirect to the manifest view page for that mani
     
 ###Editing Manifest
 
-Starting at a view page for a particular manifest, editing that manifest can be start by clicking "Edit Manifest". 
-    
-(SCREEN SHOT SHOWING WHERE THIS IS)
-    
-Clicking manifest will allow the user to edit the manifest file and/or the related dataset files for that manifest. When changes are
-finished, clicking "Save Edits" will save the edits that have been made to the manifest to the server. 
-    
-(SCREEN SHOT FOR SAVE EDITS)
+Going to a view page for a manifest begins with clicking "View" for a specific manifest. This will take you to a page with the data for that manifest. In order to edit the manifest data, simply change the fields desired and press "submit" and your changes will be saved. 
+
+Clicking "view":
+
+View for a manifest:
+
+Saving changes: 
+
     
 ###Uploading Dataset and Uploading a Manifest File/Creating Manifest
 
