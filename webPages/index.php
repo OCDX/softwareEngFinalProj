@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <style>
@@ -42,9 +40,12 @@ button {
 
 img.avatar {
     width: 75px;
-    
+
 }
 
+.registerForm{
+    float: left;
+}
 .container {
     padding: 16px;
 }
@@ -79,55 +80,55 @@ span.psw {
 
     <label><b>Password</b></label>
     <input placeholder="password" type="password" name="password" id="password">
-        
+
     <button id="login" class="loginbtn" type="submit" name="submit">Log In</button>
   </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn" action="userregistration.php">User Registration</button>
-  </div>
-<!--  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn" action="userregistration.php">User Registration</button>
-    <button type="button" class="cancelbtn" name="forgot">Forgot Password?</button>
-  </div>-->
 </form>
 
-<form action="userResetPW.php" method="post">
+
+<form class="registerForm" action="userregistration.php"  method="post">
 <div class="container" style="background-color:#f1f1f1">
     <button class="cancelbtn" onClick="window.location='userregistration.php';">User Registration</button>
+   <!-- <button class="cancelbtn" onClick="window.location='userResetPW.php';">Forgot Password?</button>-->
+  </div>
+</form>
+<form action="userResetPW.php"  method="post">
+<div class="container" style="background-color:#f1f1f1">
+    <!--<button class="cancelbtn" onClick="window.location='userregistration.php';">User Registration</button>-->
     <button class="cancelbtn" onClick="window.location='userResetPW.php';">Forgot Password?</button>
   </div>
 </form>
 
     </div>
+
                     <?php
-	session_start();
-	if ( isset($_SESSION['email'])){
-	 echo "<meta http-equiv='refresh' content='0;url=view.php'>";
-	}
-	else{
+        session_start();
+        if ($_SESSION['email'] != NULL){
+        echo "<meta http-equiv='refresh' content='0;url=view.php'>";
+        }
+        else{
         if(isset($_POST['submit'])){ // was the form submitted?
           $link = mysqli_connect("localhost", "admin", "CS4320FG7", "SEFinalProject") or die ("connection Error " . mysqli_error($link));
           $sql = "SELECT salt, hash, permission_level FROM user WHERE email=?";
           if($stmt = mysqli_prepare($link, $sql)) {
-						$user = $_POST['email'];
-						$password = $_POST['password'];
-						mysqli_stmt_bind_param($stmt, "s", $user) or die("bind param");
-						if(mysqli_stmt_execute($stmt)){
-							mysqli_stmt_bind_result($stmt, $salt ,$hpass, $uType);
-							if(mysqli_stmt_fetch($stmt)){
-								if(password_verify($salt.$password, $hpass)){
-									$_SESSION["email"] = $user;
-									$_SESSION["permission_level"] = $uType;
-									//echo "<h4>Session started</h4>";
-									echo "<script> window.location.assign('view.php'); </script>";
-								} else {
-									echo "<h4>Login failed</h4><br>wrong username or password...";
-								}
-							} 
-						
-							
-						}
+                                                $user = $_POST['email'];
+                                                $password = $_POST['password'];
+                                                mysqli_stmt_bind_param($stmt, "s", $user) or die("bind param");
+                                                if(mysqli_stmt_execute($stmt)){
+                                                        mysqli_stmt_bind_result($stmt, $salt ,$hpass, $uType);
+                                                        if(mysqli_stmt_fetch($stmt)){
+                                                                if(password_verify($salt.$password, $hpass)){
+                                                                        $_SESSION["email"] = $user;
+                                                                        $_SESSION["permission_level"] = $uType;
+                                                                        //echo "<h4>Session started</h4>";
+                                                                        echo "<script> window.location.assign('view.php'); </script>";
+                                                                } else {
+                                                                        echo "<h4>Login failed</h4><br>wrong username or password...";
+                                                                }
+                                                        }
+
+
+                                                }
         }
 }}
        ?>
