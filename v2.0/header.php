@@ -80,6 +80,9 @@
                     <li>
                         <a href="search.php"><i class="fa fa-fw fa-table"></i> Manifest Search</a>
                     </li>
+                    <li>
+                        <a href="upload.php"><i class="fa fa-fw fa-edit"></i> Upload New Dataset </a>
+                    <li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

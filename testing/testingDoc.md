@@ -157,3 +157,192 @@ Our plan for approaching test cases is to try our best to test the high end and 
 
 - Verification refers to ensuring that our software does what it is designed to do. While validation tests that we meet our requirements, verification tests that our software does what we intend it to do, separate from what the requirements asked. This is covered by regression testing, integration testing, and unit testing. 
 
+##Testing Workflow 
+
+Most of our tests are integration tests, performed by using the software for its intended purpose, through its own UI elements, to ensure those elements work and each functional requirement is satisfied. For clarity, some testing groups are organized based on the functionality they are testing, relative to the requirements document we put together. This ensures our testing covers verification and validation. We must further test validity with performing a demo for the perspective client requesting the software. 
+
+- Login Testing
+
+    * Test valid username/valid password
+    
+        - should result in successful login
+        
+    * Test valid username/invalid passwordt
+    
+        - should result in error message to user
+        
+    * Test invalid username, valid password
+    
+        - should result in error message to user
+        
+    * Test invalid username/invalid password
+    
+        - should result in error message to user
+        
+- Logout testing
+
+    * Test logging out actually logs user out and ends session
+    
+        - logout, then attempt to go through pages. All should redirect to login, and not allow user to see content
+        
+- Account creation testing 
+
+    * Test valid completion of account creation form and valid submission
+    
+        - should result in new account created, tested by logging in with it after account creation. 
+        
+    * Test invalid form completion, attempt submit, verify it fails and database doesn't get any new information
+    
+        - should result in error message to user, should also verify that database is unchanged 
+        
+- Account Session Management
+
+    * Test that no pages other than login are accessible when not logged in as a user
+    
+    * Test that once logged in, you can access all the pages that a user should be able to access 
+    
+        - This will be tested using the web page map we have, to ensure all pages are tested
+        
+    * Verify account information page reflects the current user 
+    
+- Manifest searching tests
+
+    * For the following tests, we will need to ensure proper test data is in our database to ensure the tests are correctly set up
+    
+    TEST DATA:
+    
+    - Manifest(s) searchable by keyword 'test'
+    
+    - Manifests searchable by keyword 'test' with a date earlier or later than the previous manifest mentioned
+    
+    
+    TEST CASES:
+    
+    - Search for 'test' manifests.
+    
+        * Enter 'test' into search field and press search. Expected outcome: all manifests with 'test' as a keyword will populate
+        the table, showing their preview information in a tabular and organized output 
+        
+    - Order search results
+    
+        * After performing search on 'test', attempt to organize the table by the date, using the sorting tabs. Expected outcome:
+        Search results organize properly based on their descending/ascending dates (depending on requested ordering)
+       
+   - Redirect to respective manifest view page 
+   
+       * After performing a search on 'test', click on a given manifest and ensure it redirects to its **own** manifest view, with all the same details as the preview showed. 
+   
+- Manifest Upload tests
+
+    - navigate to upload screen, click upload manifest and files, try to upload a file.
+    
+        * Success message should display for a valid upload. Expected outcome from valid upload: Can find the uploaded files and download them, to verify same file was uploaded as can be downloaded after an upload.
+        
+    - Provide manifest file
+    
+        * Expected outcome: Valid manifest provided, upload succeeds, manifest information is absorbed from file for upload to database
+        
+        * Failure: test that uploading an invalid manifest file results in a failure to upload the manifest itself
+        
+    - Create manifest file
+    
+        * Expected success (assuming form filled out completeley) when clicking generate manifest: Manifest file is created and assosciated with the respective dataset files. 
+        
+        * Also, test here that not filling out form correctly does not allow for file creation. Try to submit invalid form.
+        Expected outcome: Failure to generate a valid manifest file error message to user
+        
+     - Upload dataset files
+     
+         * Attempt to upload dataset/SNC files. 
+             
+             1. Valid files: Expect successful upload
+             
+             2. Invalid file type: Expect error message to user
+             
+             3. If valid files uploaded, and a manifest created, then test that after successful addition of a new manifest that the files uploaded match the ones kept by the server 
+             
+- Manifest download tests
+
+    - Test ability to download manifest files and dataset files
+    
+        * Click download for manifest file and dataset file. Expected behavior: when download requested, file successfully downloads to local machine. 
+        
+###User Interface Testing:
+
+This section is dedicated to all UI functionality not tested by integration testing. These tests are one dimensional, simple tests, to determine whether the functions of the UI such as page navigation work as intended.
+
+It is broken down by page.
+
+####Login:
+
+- Login button
+
+test pressing this attempts to login with form information
+
+- User Registration
+
+test redirects to user registration page
+
+- Forgot password
+
+test redirects to password recovery page
+
+####Browse Manifests/Search manifests page
+
+- Manifest display
+
+test that clicking a manifest row redirects to manifest page
+
+- Search
+
+test that pressing search initiates a search
+
+####Header
+
+The header is used in several pages, but the code is the same, so it can be tested once.
+
+- Profile Tab
+
+Test clicking the user profile tab displays the menu items 1. Profile 2. Admin Panel (for admin account only) 3. Log out
+
+- Profile
+     
+test redirects to user account page
+    
+- Admin panel
+    
+test redirects to account creation page
+    
+- log out
+    
+test redirects to log in page AND no longer able to access user only pages
+    
+####Manifest Creation/Upload
+
+- Create 
+
+Test clicking create will take supplied form data and create manifest file
+
+- Upload
+
+Open file browser to select a file for upload when user presses
+
+- Upload Dataset Files
+
+Open file browser to select a local file
+
+####Sidebar 
+
+- dashboard
+
+test redirects to homepage
+
+- Manifest editor
+
+test redirects to page for editing a manifest
+
+- manifest search
+
+test redirects to search page
+
+

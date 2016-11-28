@@ -29,7 +29,8 @@
 						$pick = $_POST['radios'];
 						$searcher = $_POST['search'] . '%';
 					
-					}					
+					}	
+				}				
 	/*				switch($pick){						
 						case 0:
 							if($stmt = mysqli_prepare($conn, "SELECT * from manifest WHERE title LIKE ?")){
@@ -92,4 +93,3 @@
 			</div>
 		</div>	
 	</div>
-<?php include($root."footer.php");} ?>
