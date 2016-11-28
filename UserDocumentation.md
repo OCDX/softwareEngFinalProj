@@ -91,7 +91,11 @@ Clicking "Upload Dataset and Manifest File" will (if all required files are supp
 
 ![upload_dataset](/UserDocImages/upload_complete.PNG)
    
-    
+#Download Manifest/Dataset files
+
+To download files from a manifest, simply press "download" next to the file you want. This will allow you to download that file locally.
+
+(Shot of download button in manifest view)
  
     
     
