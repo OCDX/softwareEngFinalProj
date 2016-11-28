@@ -1,6 +1,6 @@
 <?php 
-
-if ( !isset($_SESSION['email'])){
+session_start();
+if ($_SESSION["email"] == NULL){
         header('Location:  index.php', TRUE, 302);
     }
 	
