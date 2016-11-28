@@ -78,15 +78,24 @@ span.psw {
 
     <label><b>Password</b></label>
     <input placeholder="password" type="password" name="password" id="password">
-        
+            
     <button id="login" class="loginbtn" type="submit" name="submit">Log In</button>
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
+<!--  <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn" action="userregistration.php">User Registration</button>
+    <button type="button" class="cancelbtn" name="forgot">Forgot Password?</button>
+  </div>-->
+</form>
+
+<form action="userResetPW.php" method="post">
+<div class="container" style="background-color:#f1f1f1">
+    <button class="cancelbtn" onClick="window.location='userregistration.php';">User Registration</button>
+    <button class="cancelbtn" onClick="window.location='userResetPW.php';">Forgot Password?</button>
   </div>
 </form>
     </div>
+
                     <?php
 	session_start();
 	if ($_SESSION['email'] != NULL){

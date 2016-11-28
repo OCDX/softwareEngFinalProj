@@ -27,14 +27,15 @@ function generateRandomString($length = 10) {
 
  if(isset($_POST['submit'])) { // Was the form submitted?
           $randomString =  generateRandomString();
-	  if ($_POST['username'] == $_SESSION['email']){
+	  $salt = mt_rand();
+          $hpass = password_hash($salt.$randomString, PASSWORD_BCRYPT)  or die("bind param");
           $email = $_POST['username'];
           $link = mysqli_connect('localhost', 'admin', 'CS4320FG7', 'SEFinalProject') or die ("Connection Error " . mysqli_error($link));
 
-          $sql = "UPDATE user SET hash = '$randomString' WHERE email = '$email'";
+          $sql = "UPDATE user SET hash = '$hpass', salt = '$salt' WHERE email = '$email'";
           if (mysqli_query($link, $sql)) {
                 echo "Record updated successfully";
-
+		
                 $message = "Hello $email.\r\nYour new password is: $randomString\r\nIf you did not request this please contact a system administrator immediately.";
 
                 // In case any of our lines are larger than 70 characters, we should use wordwrap()
@@ -47,8 +48,7 @@ function generateRandomString($length = 10) {
                 echo "Error updating record: " . mysqli_error($link);
           }
 
-        }
+        
 }
-else {echo "you can't reset other people's passwords";}
 ?>
 

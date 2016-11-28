@@ -16,9 +16,9 @@ for the site, though.
 		header('Location: view.php');
 	}
 
-	function goForgot(){
+	/*function goForgot(){
 		header('Location: userResetPW.php');
-	}
+	}*/
 ?>
 	<div class="clearfix">
 		<div class="row clearfix">
@@ -43,7 +43,7 @@ It also assumes that we're using sessions and that the variables userid and user
 				<?php
 					if(isset($_POST['submit'])) { // Was the form submitted?
 						//connect to DB
-						$link = mysqli_connect("localhost", "root", "admin", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
+						$link = mysqli_connect("localhost", "admin", "CS4320FG7", "SEFinalProject") or die ("Connection Error " . mysqli_error($link));
 						//Set up statement
 						$sql = "SELECT `user`.`salt`, `user`.`hash`, `user`.`ID`, `user`.`permission_level` FROM `user` WHERE `user`.`email`=?;";
 						//if it prepares
@@ -72,7 +72,8 @@ It also assumes that we're using sessions and that the variables userid and user
 								// Use session variables
 								$_SESSION['userid'] = $userid;
 								$_SESSION['permission_level'] = $usertype;
-								//goIndex();  //TODO determine function name to send to next page.
+							//	goView();  //TODO determine function name to send to next page.
+								header('Location: view.php');
 							}
 							else
 								echo "<h2>Login Failed!</h2>";
@@ -81,9 +82,9 @@ It also assumes that we're using sessions and that the variables userid and user
 						}
 					}
 
-					if(isset($_POST['forgot'])){
+					/*if(isset($_POST['forgot'])){
 						goForgot();
-					}
+					}*/
 				?>
 			 </div>
 		</div>
