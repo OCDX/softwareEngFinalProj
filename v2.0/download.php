@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/master
 <?php
 $conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
 
