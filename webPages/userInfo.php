@@ -1,21 +1,12 @@
-<?php include($root."header.php"); 
+<?php  
+	if ( !isset($_SESSION['email'])){
+        header('Location:  login.php', TRUE, 302);
+    }
+
+    include 'header.php'; 
 	$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database"); ?>
-	
-	<div id="sidebar" class="sidebar">
-  		<div class="content">
-  			<form action="search.php" method="post">
-				<input type="text" name="search" id="search">
-				<input type="submit" value="Search">
-			</form>
-			<a href="userInfo.php"><h4>Your Account</h4></a>
-			<a href="create-edit.php"><h4>Manifest Editor</h4></a>
-			<a href="logout.php"><h4>Log Out</h4></a>
-		</div>
-	</div>
+?>
 	<div class="content column full">
-		<div class="page-head">
-			<h2><?php echo $fname." ".$lname;?>: Your info</h2>
-		</div>
 		<div class="maifestList column two-thirds">
 			<h3>Your Manifests</h3>
 			<p>Display list of manifests as a table, up to so many items. Anything beyond will be scrolled to, in a scroll container.
@@ -31,11 +22,12 @@
         				
 						$result = mysqli_query($conn, $printquery);
        					while ($row = mysqli_fetch_assoc($result)){
-				        	echo "<table><tr><th>Manifest ID</th><th>Version</th><th>Category</th><th>Last Edit</th><th>Upload Date</th><th>Title</th><th>Owner ID</th><th>Content</th></tr><tr><td>".$row['manifest_id']."</td><td>".$row['version']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['title']."</td><td>".$row['ownerID']."</td><td>".$row['data']."</td></tr></table>";
+				        	echo "<div class='table-responsive'><table class='table table-striped table-hover table-boredered'><tr><th>Manifest ID</th><th>Version</th><th>Category</th><th>Last Edit</th><th>Upload Date</th><th>Title</th><th>Owner ID</th><th>Content</th></tr><tr><td>".$row['manifest_id']."</td><td>".$row['version']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['title']."</td><td>".$row['ownerID']."</td><td>".$row['data']."</td></tr></table></div";
        					}
 					?>
 				</div>
 			</div>
 		</div>	
 	</div>
-<?php include($root."footer.php"); ?>
+</body>
+</html>
