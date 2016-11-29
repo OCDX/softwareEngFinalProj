@@ -32,26 +32,20 @@ else {
 	echo"
 			<h2>Manifest Editor</h2>
 		</div>
+		<div>
+		<button>Download Dataset/SNC files (Zip if more than one)</button>
+				<button>Download manifest file</button>
+		</div>
 		<div class='viewer column two-thirds'>
-			<p>Taking user input, files, get date and time. Buttons for update existing or create new.
-			If edit, show existing fields for maifest and associated files. Present options for uploading new files and removing old ones.
-			If new, present empty fields and upload options for each file. 
-			For both, take timestamp, set as most recent update.</p>
-			<button id='newBtn' class='button' onclick='formNewFctn(1)'>Create New</button><button id='edit' class='button' onclick='formEditFctn(1)'>Edit Manifest</button>
-			
 			<div id='new'>
 				<form action='create-edit.php' method='POST'>
-					<p>Title of Manifest</p>
+					<h3>Title of Manifest</h3>
 					<input type='text' id='title' name='title'>
-					<p>Version</p>
+					<h3>Version</h3>
 					<input type='text' id='manifestVersion' name='manifestVersion'>
-					<p>Description</p>
-					<input type='text' id='description' name='description'>
-					<p>Category</p>
+					<h3>Category</h3>
 					<input type='text' id='category' name='category'>
-					<p>Keywords</p>
-					<input type='text' id='keyword' name='keyword'>
-					<p>Script</p>
+					<h3>Script</h3>
 					<input type='file' id='script' name='script'>
 										
 					<br>
