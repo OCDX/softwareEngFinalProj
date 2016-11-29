@@ -159,6 +159,12 @@ Our plan for approaching test cases is to try our best to test the high end and 
 
 ##Testing Workflow 
 
+###Unit Testing
+
+Unit tests, designed to test the low level one dimensional functions of software, did not seem to be very applicable to our application. While we understand the purpose and usefulness of unit testing, our testing plan does not include unit tests. 
+
+###Integration Tests
+
 Most of our tests are integration tests, performed by using the software for its intended purpose, through its own UI elements, to ensure those elements work and each functional requirement is satisfied. For clarity, some testing groups are organized based on the functionality they are testing, relative to the requirements document we put together. This ensures our testing covers verification and validation. We must further test validity with performing a demo for the perspective client requesting the software. 
 
 - Login Testing
@@ -345,4 +351,22 @@ test redirects to page for editing a manifest
 
 test redirects to search page
 
+
+###Regression Testing Plan
+
+These features were working and should be checked when updates are made:
+
+1. Login should work for valid username and password, and fail otherwise
+
+2. User should be able to create an account
+
+3. User should be able to view all pages once logged in 
+
+4. Those users not logged in should not be able to see any pages other than create account
+
+5. Search should work
+
+6. View manifest should display the manifests in the database currently 
+
+7. All buttons on sidebar and header should work properly 
 
