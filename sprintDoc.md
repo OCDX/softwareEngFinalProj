@@ -1,4 +1,3 @@
-\pagebreak
 
 #Sprint Documentation 
 
@@ -307,19 +306,25 @@ This section is dedicated to the tasks that were inherited from the previous spr
 
     [link to testing page](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/testing/testingDoc.md)
 
-- [x] Allow file uploads (Zach) (**BACKLOG**)
+- [x] Allow file uploads (Zach)
+
+    * [link to commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/721c642794f0cd7ccb3fc95907c53dfffe68e32b)
 
 - [x] Get log in working on database (Zach)
 
     * Login at: https://mizzou.tech/v2.0/
 
-    * Username : admin@missoui.edu
+    * Username : admin@missouri.edu
 
     * Password : CS4320FG7
 
-- [x] Get session variables for login working (Geoff)
+    * [link to commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/53e08fa9cf2d5ac737cab2182aca8033ff8fe627)
 
-[link to code](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/login.php)
+- [x] Get session variables for login working (Geoff/Zach)
+
+    * [link to Geoff commit](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/login.php)
+
+    * [link to Zach commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/554923e787c610fe2b1241b28d63668c55499ee1)
 
 - [x] link an example manifest for reference (Jared)
 
@@ -327,8 +332,7 @@ This section is dedicated to the tasks that were inherited from the previous spr
 
 - [X] draft user documentation (Jared)
 
-    * [Link to User Documentation Draft]
-(https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/UserDocumentation.md)
+    * [Link to User Documentation Draft](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/UserDocumentation.md)
 
     * [Commit for draft creation](https://github.com/jaredwelch1/softwareEngFinalProj/commit/cedfdaab9978987b832779423f1e0a8f04e85371)
 
@@ -341,12 +345,12 @@ This section is dedicated to the tasks that were inherited from the previous spr
 - [X] clean up styling (Liz)
     
     * [Completely updated webpages from 2.0](https://github.com/jaredwelch1/softwareEngFinalProj/commit/9f4da5c04f240bf6aebd4c54a329b6c3c39c1abf) Special thanks to Zach for his help
-    
+
     * [Web page folder](https://github.com/jaredwelch1/softwareEngFinalProj/tree/master/v2.0)
 
 - [x] creating account (Andrew)
 
-    * [Link to Code] (https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/userregistration.php)
+    * [Link to Code](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/userregistration.php)
 
     * [Commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/dff0db003c33937c946ea60202a00ebdaef56426)
 
@@ -370,4 +374,65 @@ This section is dedicated to the tasks that were inherited from the previous spr
 
 ###Sprint 3 Backlog Tasks 
 
-- [ ] Fix testing based on feedback from sprint 2
+- [x] Fix testing based on feedback from sprint 2 (see tasks)
+
+##Sprint 4
+
+[meeting details](https://github.com/jaredwelch1/softwareEngFinalProj/wiki/Sprint-4-Meeting)
+
+###Tasks for sprint 4
+
+- [x] Need a way to create account without logging in (Geoff)
+       
+[Link commit 1](https://github.com/jaredwelch1/softwareEngFinalProj/commit/4f714b8772a473896e0ec201e56079db902d52b3)
+       
+[Link commit 2](https://github.com/jaredwelch1/softwareEngFinalProj/commit/89011cb504b3a9e9d245b8caad9dd65030337e8e)
+
+- [ ] View manifest/edit manifest
+
+- [x] begin feature Download files after they have been uploaded (Geoff)
+       * Currently in progress, although not working in it's entirety
+       * [commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/f2be6b1c470b109eb04edd6a592daf1d7c334bad) (geoffbranch commit)
+
+
+- [x] add feature Generate a manifest file/upload manifest file ([Liz branch](https://github.com/jaredwelch1/softwareEngFinalProj/tree/erbmt9-sprint4)) 
+    
+    * [commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/3938d4a2be74470191a37ff1c718bc1c513a08b2)
+    
+    * [commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/9f6f65602ad43f31dc56ecdee0e7673613591355)
+
+    * Create form, include searchable terms
+
+    * Write to file to create basic manifest in JSON format
+
+- [x] upload manifest and dataset to server (Liz) 
+    
+    * [commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/2b359dc58a9b4ea6fab48d4c15c6ac56df791f91)
+
+    * Insert files into tables
+
+- [x] search (Jared) 
+ 
+    * [Code for the current search page](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/search.php)
+
+- [x] Finish User Documentation (Jared)
+
+[Link to user documentation](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/UserDocumentation.md)
+
+- [x] Finish Up testing document (Jared)
+
+[link to testing document](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/testing/testingDoc.md)
+
+[link to testing workflow (this is the actual tests)](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/testing/testingDoc.md#testing-workflow)
+
+- [x] Implement deployment plan and document it (Jared)
+
+    * [Link to README containing deployment instructions](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/README.md)
+
+###Sprint 4 backlog tasks:
+
+- [ ] Fix issues from sprint 3 feedback
+
+- [x] Account information page (Part of UI and Query tasks, but just to be clear so we don't forget)(Andrew) 
+   
+    * [commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/8d2cf8b2d40b49d520253aeded9e662e58688dcd)
