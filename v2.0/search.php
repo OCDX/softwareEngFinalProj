@@ -4,11 +4,7 @@
 		<div class="page-head">
 			<h2>Search</h2>
 			<form action="search.php" method="post">
-				<input type="text" name="search" id="search">
-				<input checked = "check" type = "radio" name = "radios" value = 0>Title
-				<input type = "radio" name = "radios" value = 1>Author
-				<input type = "radio" name = "radios" value = 2>Keyword
-				<input type = "radio" name = "radios" value = 3>Category
+				<input type="text" name="search" id="search">	
 				<input type="submit" value="Search">
 			</form>
 		</div>
@@ -21,73 +17,35 @@
                         echo "<meta http-equiv='refresh' content='0;url=index.php'>";
                         } 
 			else {
-						$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
-					
-					//this is the display results for case 0, repeat for each case, edit the table names and sql queries per result
 						
-					if(isset($_POST['Search'])){
-						$pick = $_POST['radios'];
+					if(isset($_POST['search'])){
+						$link = mysqli_connect("localhost", "admin", "CS4320FG7", "SEFinalProject") or die ("error");
+
 						$searcher = $_POST['search'] . '%';
-					
+						$query = "SELECT * FROM manifest WHERE category LIKE '".$searcher."';";
+						$result = mysqli_query($link, $query);
+						if ($result){
+							echo"<table class='table table-bordered table-hover table-striped'>
+								<tr>
+								<th>Manifest ID</th>
+								<th>Version</th>
+								<th>Category</th>
+								<th>Last Edit</th>
+								<th>Upload Date</th>
+								<th>Title</th>
+							</tr>";
+					        
+					        while ($row = mysqli_fetch_assoc($result)){
+					        	echo "<tr><td>".$row['manifest_id']."</td><td>".$row['version']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['title']."</td><td><a class='manifest'>View</a></td></tr>";
+					        }
+					       	
+					    	echo"</table>";
+					    } else {
+					    	echo"<text>Search did not return results";
+					    }
+						
 					}	
 				}				
-	/*				switch($pick){						
-						case 0:
-							if($stmt = mysqli_prepare($conn, "SELECT * from manifest WHERE title LIKE ?")){
-								//mysqli_stmt_bind_param($stmt, 's', htmlspecialchars($searcher));
-								//mysqli_stmt_execute($stmt);
-								//mysqli_stmt_bind_result($stmt, $obj_field);
-								
-
-							
-
-								call_user_func_array(array($sec, "bind_result"), $setter);
-
-								$data = $stmt->result_metadata();
-								while($fetcher = $data->fetch_field()){
-									$answer[] = &$row[$fetcher->name];
-								}
-								call_user_func_array(array($stmt, 'bind_result'), $answer);
-
-								while($stmt->fetch()){
-									foreach($row as $c=> $num){
-											$section[$c]=$num;
-									}
-
-									$ans[] = $section;
-								}
-
-								$arraylist = array(<table fields>);
-								echo '<table class = "table table-hover">';
-								echo '<table class = "table table-hover">';
-									echo '<tr><th></th><th></th>';
-									foreach($arraylist AS $col){
-										echo '<th>' . $col . '</th>';
-									}
-
-									echo '</tr>';
-								$number = 0;
-								$i =0 ;
-
-								foreach($ans AS $row){
-									foreach($row AS $area){
-										echo '<td>' . $area . '</td>';
-										echo "<input type = 'hidden' name = $arraylist[$i] value = $area>";
-										$i++;
-									}
-
-									echo '</tr>';
-									$number++;
-									$i=0;
-									echo '</form>';
-
-								}
-
-								echo '</table><h1>' . $number . ' Rows</h1>';
-							}
-
-							break;
-						}*/
 					?>
 				</div>
 			</div>
