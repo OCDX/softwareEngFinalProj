@@ -109,28 +109,30 @@ span.psw {
         else{
         if(isset($_POST['submit'])){ // was the form submitted?
           $link = mysqli_connect("localhost", "admin", "CS4320FG7", "SEFinalProject") or die ("connection Error " . mysqli_error($link));
-          $sql = "SELECT salt, hash, permission_level FROM user WHERE email=?";
+          $sql = "SELECT salt, hash, permission_level, ID FROM user WHERE email=?";
           if($stmt = mysqli_prepare($link, $sql)) {
-                                                $user = $_POST['email'];
-                                                $password = $_POST['password'];
-                                                mysqli_stmt_bind_param($stmt, "s", $user) or die("bind param");
-                                                if(mysqli_stmt_execute($stmt)){
-                                                        mysqli_stmt_bind_result($stmt, $salt ,$hpass, $uType);
-                                                        if(mysqli_stmt_fetch($stmt)){
-                                                                if(password_verify($salt.$password, $hpass)){
-                                                                        $_SESSION["email"] = $user;
-                                                                        $_SESSION["permission_level"] = $uType;
-                                                                        //echo "<h4>Session started</h4>";
-                                                                        echo "<script> window.location.assign('view.php'); </script>";
-                                                                } else {
-                                                                        echo "<h4>Login failed</h4><br>wrong username or password...";
-                                                                }
-                                                        }
+            $user = $_POST['email'];
+            $password = $_POST['password'];
+            mysqli_stmt_bind_param($stmt, "s", $user) or die("bind param");
+            if(mysqli_stmt_execute($stmt)){
+              mysqli_stmt_bind_result($stmt, $salt ,$hpass, $uType, $id);
+              if(mysqli_stmt_fetch($stmt)){
+                if(password_verify($salt.$password, $hpass)){
+                  $_SESSION["email"] = $user;
+                  $_SESSION["permission_level"] = $uType;
+                  $_SESSION["userid"] = $id;
+                  //echo "<h4>Session started</h4>";
+                  echo "<script> window.location.assign('view.php'); </script>";
+                } else {
+                    echo "<h4>Login failed</h4><br>wrong username or password...";
+                }
+              }
 
 
-                                                }
+            }
         }
-}}
+      }
+}
        ?>
     </body>
 </html>
