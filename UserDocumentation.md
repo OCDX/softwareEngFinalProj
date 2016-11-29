@@ -38,7 +38,9 @@ Invalid login information will display an error message.
 ###Searching Manifests
 
 Searching manifests begins with entering valid search terms in the provided search input field
-    ![search page](/UserDocImages/search_page.PNG)
+    
+![search page](/UserDocImages/search_page.PNG)
+
 After entering valid search data, pressing "Search" will initiate the search. Results from the search will be displayed in the 
 manifest view, in the main area of the search page. 
     
@@ -48,14 +50,10 @@ Clicking on a manifest row will redirect to the manifest view page for that mani
     
 
 ###Editing Manifest
-
+ 
 Going to a view page for a manifest begins with clicking "View" for a specific manifest. This will take you to a page with the data for that manifest. In order to edit the manifest data, simply change the fields desired and press "submit" and your changes will be saved. 
 
-![manifest view](/UserDocImages/view_manifest.PNG)
-
-View for a manifest:
-
-Saving changes: 
+![manifest view](/UserDocImages/view_manifest1.PNG)
 
     
 ###Uploading Dataset and Uploading a Manifest File/Creating Manifest
@@ -93,9 +91,11 @@ Clicking "Upload Dataset and Manifest File" will (if all required files are supp
    
 #Download Manifest/Dataset files
 
-To download files from a manifest, simply press "download" next to the file you want. This will allow you to download that file locally.
+To download files from a manifest, simply press "download dataset/SNC files" for the dataset files or "download manifest" for a manifest file download. This will allow you to download that file locally.
 
-(Shot of download button in manifest view)
+![download](/UserDocImages/view_manifest1.PNG)
+
+
  
     
     
