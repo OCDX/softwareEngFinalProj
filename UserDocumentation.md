@@ -42,7 +42,7 @@ Searching manifests begins with entering valid search terms in the provided sear
 After entering valid search data, pressing "Search" will initiate the search. Results from the search will be displayed in the 
 manifest view, in the main area of the search page. 
     
-(SCREEN SHOT SHOWING EXAMPLE OF SEARCHED MANIFESTS)
+![search_example](/UserDocImages/search_example.PNG)
     
 Clicking on a manifest row will redirect to the manifest view page for that manifest. 
     
@@ -50,7 +50,7 @@ Clicking on a manifest row will redirect to the manifest view page for that mani
 
 Going to a view page for a manifest begins with clicking "View" for a specific manifest. This will take you to a page with the data for that manifest. In order to edit the manifest data, simply change the fields desired and press "submit" and your changes will be saved. 
 
-Clicking "view":
+![manifest view](/UserDocImages/view_manifest.PNG)
 
 View for a manifest:
 
