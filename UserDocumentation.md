@@ -4,8 +4,7 @@
 
 This guide is designed to be a guide for a user without any prior experience with the software to use for reference for how to utilize
 the features offerred by our software. It is designed in a workflow assuming a user has not ever used the software before. For easy 
-reference, a table of contents is provided to access individual features, should a user need specific instructions for a certain 
-functionality. 
+reference, each section includes a title for the tutorial for that feature.
 
 ##Instructions
 
