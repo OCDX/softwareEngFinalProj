@@ -21,7 +21,7 @@
         $result = mysqli_query($conn, $printquery);
         echo"<table class='table table-bordered table-hover table-striped'>
 			<tr>
-				<th>Manifest ID (weedasdf)</th>
+				<th>Manifest ID</th>
 				<th>Version</th>
 				<th>Category</th>
 				<th>Last Edit</th>
