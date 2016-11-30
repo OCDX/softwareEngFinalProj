@@ -21,15 +21,15 @@
         $result = mysqli_query($conn, $printquery);
         echo"<table class='table table-bordered table-hover table-striped'>
 			<tr>
-				<th>Manifest ID</th>
+				<th>Title</th>
 				<th>Version</th>
 				<th>Category</th>
 				<th>Last Edit</th>
 				<th>Upload Date</th>
-				<th>Title</th>
+				
 			</tr>";
         while ($row = mysqli_fetch_assoc($result)){
-        echo "<tr><td>".$row['manifest_id']."</td><td>".$row['version']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['title']."</td><td><a class='manifest'>View</a></td></tr>";
+        echo "<tr><td>".$row['title']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['version']."</td><td><a class='manifest'>View</a></td></tr>";
         }
         echo"</table>";
     }
