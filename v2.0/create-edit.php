@@ -45,8 +45,8 @@ else {
 					<input type='text' id='manifestVersion' name='manifestVersion'>
 					<h3>Category</h3>
 					<input type='text' id='category' name='category'>
-					<h3>Script</h3>
-					<input type='file' id='script' name='script'>
+					<h3>Upload new File</h3>
+					<input type='file' name='upload new File'>
 										
 					<br>
 					<input type='submit' value='Submit'>
