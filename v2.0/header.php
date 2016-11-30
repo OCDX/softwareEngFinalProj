@@ -98,11 +98,6 @@
                         <h1 class="page-header">
                             Manifests
                         </h1>
-                        <ol class="breadcrumb">
-                            <li class="active">
-                                <i class="fa fa-dashboard"></i> Overview
-                            </li>
-                        </ol>
                     </div>
                 </div>
          

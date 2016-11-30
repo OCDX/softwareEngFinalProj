@@ -1,4 +1,4 @@
-<?php include($root."header.php");
+<?php include "header.php";
  ?>
 	<div class="content column full">
 		<div class="page-head">
@@ -25,26 +25,45 @@
 						$query = "SELECT * FROM manifest WHERE category LIKE '".$searcher."';";
 						$result = mysqli_query($link, $query);
 						if ($result){
+							if ($row = mysqli_fetch_assoc($result)){
 							echo"<table class='table table-bordered table-hover table-striped'>
 								<tr>
-								<th>Manifest ID</th>
+								<th>Title</th>
 								<th>Version</th>
 								<th>Category</th>
 								<th>Last Edit</th>
 								<th>Upload Date</th>
-								<th>Title</th>
 							</tr>";
+
+					        echo
+					        "<tr>
+						        <td>".$row['title']."</td>
+						        <td>".$row['version']."</td>
+						        <td>".$row['category']."</td>
+						        <td>".$row['last_edit']."</td>
+						        <td>".$row['upload_date']."</td>
+						        <td><a class='manifest'>View</a></td>
+					        </tr>";
+
+
 					        
 					        while ($row = mysqli_fetch_assoc($result)){
-					        	echo "<tr><td>".$row['manifest_id']."</td><td>".$row['version']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['title']."</td><td><a class='manifest'>View</a></td></tr>";
+					        	echo 
+					        		"<tr>
+						        		<td>".$row['title']."</td>
+						        		<td>".$row['version']."</td>
+						        		<td>".$row['category']."</td>
+						        		<td>".$row['last_edit']."</td>
+						        		<td>".$row['upload_date']."</td>
+						        		<td><a class='manifest'>View</a></td>
+					        		</tr>";
 					        }
-					       	
-					    	echo"</table>";
-					    } else {
-					    	echo"<text>Search did not return results";
-					    }
-						
-					}	
+					    
+					       	} else {
+					    	echo"<text>Search did not return results</text>";
+					    	}
+					    } 
+					}		
 				}				
 					?>
 				</div>

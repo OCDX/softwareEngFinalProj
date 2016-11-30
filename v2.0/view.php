@@ -26,10 +26,17 @@
 				<th>Category</th>
 				<th>Last Edit</th>
 				<th>Upload Date</th>
-				
 			</tr>";
         while ($row = mysqli_fetch_assoc($result)){
-        echo "<tr><td>".$row['title']."</td><td>".$row['category']."</td><td>".$row['last_edit']."</td><td>".$row['upload_date']."</td><td>".$row['version']."</td><td><a class='manifest'>View</a></td></tr>";
+        echo 
+        	"<tr>
+	            <td>".$row['title']."</td>
+	            <td>".$row['version']."</td>
+	            <td>".$row['category']."</td>
+	            <td>".$row['last_edit']."</td>
+	            <td>".$row['upload_date']."</td>
+	            <td><a class='manifest'>View</a></td>
+            </tr>";
         }
         echo"</table>";
     }
@@ -37,6 +44,5 @@
 ?>		
 	</div>	
 	</div>
-<?php include_once("footer.php");?>
 </body>
 </html>
