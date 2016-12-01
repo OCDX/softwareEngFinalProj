@@ -21,12 +21,23 @@ div#uploadPanel{
 div#NewData{
 	overflow: hidden;
 	width: 350px;
+	padding-left: 10px;
 }
 
 input.fileInput{
 	margin-top: 5px;
 	margin-bottom: 5px;
 	border: 2px solid black;
+}
+input.inputField{
+	margin-bottom: 5px;
+}
+
+button#createManifestFile{
+	margin-top: 10px;
+}
+button.exit{
+	margin-left: -10px;
 }
 </style>
 <script src="jquery-3.1.1.min.js"></script>
@@ -36,14 +47,16 @@ input.fileInput{
 		var form = document.getElementById("NewData");
 
 		var html = 
-			"<button>X</button>" +
+			"<button class='exit' onclick='closeForm();'>X</button>" +
 			"<p>Title of Manifest</p>" +
-			"<input type='text' id='title' name='title'>" +
+			"<input type='text' id='title' name='title' class='inputField'>" +
 			"<text class='errorText' id='titleError'></text>" +
 			"<p>Version</p>" +
-			"<input type='text' id='manifestVersion' name='manifestVersion'>" +
+			"<input type='text' id='manifestVersion' name='manifestVersion' class='inputField'>" +
+			"<text class='errorText' id='versionError'></text>" +
 			"<p>Category</p>" +
-			"<input type='text' id='category' name='category'>" +				
+			"<input type='text' id='category' name='category' class='inputField'>" +				
+			"<text class='errorText' id='categoryError'></text>" +
 			"<button id='createManifestFile' onclick='createManifestFile();'>Generate & Download Manifest File</button>" +
 			"<text></text>";
 
@@ -52,33 +65,54 @@ input.fileInput{
 		return false;
 	}
 
+	function closeForm(){
+		document.getElementById("NewData").innerHTML = '';
+	}
+
 	function createManifestFile(){
 		$title = $( 'input#title');
 		$version = $('input#manifestVersion');
 		$category = $('input#category');
-		
+		var count = 0;
+
 		if ($title.val().length < 6) {
-			$('text#titleError').text("(min 8 characters)");
+			$('text#titleError').text("(min 6 characters)");
+			count++;
 		} else {
 			$('text#titleError').text("");
 		}
+		if ($version.val().length < 1) {
+			$('text#versionError').text("(must be filled out)");
+			count++
+		} else {
+			$('text#versionError').text("");
+		}
 
+		if ($category.val().length < 6) {
+			$('text#categoryError').text("(min 6 characters)");
+			count++;
+		} else {
+			$('text#categoryError').text("");
+		}
+		
+		if (count == 0){
 
-		// $.ajax({
-		// 			type: "POST",
-		// 			url: "handleLogin.php",
-		// 			data: {
-		// 					'action': 'login', 
-		// 					'user' : $('#userInput').val(), 
-		// 					'pass' : $('#passwordInput').val()
-		// 				},
-		// 	success: function(data){
-		// 		$('#errorTest').html(data);
-		// 	},
-		// 	error: function(XMLHttpRequest, textStatus, errorThown){
-		// 		console.log("error occurred with ajax");
-		// 	}
-		// });
+			$.ajax({
+						type: "POST",
+						url: "create_manifest.php",
+						data: {
+								'title': $title.val(), 
+								'category' : $category.val(), 
+								'version' : $version.val()
+							},
+				success: function(data){
+					console.log(data);
+				},
+				error: function(XMLHttpRequest, textStatus, errorThown){
+					console.log("error occurred with ajax");
+				}
+			});
+		}
 	}
 </script>
 <div id="displayContainer">
