@@ -7,6 +7,7 @@ if ($_SESSION["email"] == NULL){
 include "header.php"; 
 
 ?>
+
 <style type="text/css">
 
 div.displayContainer{
@@ -62,11 +63,13 @@ button.exit{
 
 		var text = document.createElement('input');
 		form.innerHTML = html;
+		$('div#genButtonDiv').html('');
 		return false;
 	}
 
 	function closeForm(){
 		document.getElementById("NewData").innerHTML = '';
+		$('div#genButtonDiv').html('<button onclick= "showForm(); return false;">Generate Manifest File</button>');
 	}
 
 	function createManifestFile(){
@@ -101,12 +104,17 @@ button.exit{
 						type: "POST",
 						url: "create_manifest.php",
 						data: {
-								'title': $title.val(), 
-								'category' : $category.val(), 
-								'version' : $version.val()
+								'manifest' : 
+									'{' +
+										'"manifest": {' +
+											'"title":"' + $title.val() +'",' +
+											'"category":"' + $category.val() +'",' +
+											'"version":"' + $version.val() + '"' +
+										'}' + 
+									'}' 
 							},
 				success: function(data){
-					console.log(data);
+         			window.open('download_manifest.php'); // will open new tab on window.onload
 				},
 				error: function(XMLHttpRequest, textStatus, errorThown){
 					console.log("error occurred with ajax");
@@ -127,7 +135,9 @@ button.exit{
 			<input type="file" class="fileInput" id="manifestFile">
 			<h3>If you need a manifest files</h3>
 			<br>
+			<div id="genButtonDiv">
 			<button onclick= "showForm(); return false;">Generate Manifest File</button>
+			</div>
 		</form>
 	</div>
 	<div id='NewData'>
