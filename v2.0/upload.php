@@ -133,7 +133,7 @@ button.exit{
 			<input type='text' id='keyword' name='keyword'></div> -->
 			<h3>Upload Manifest.json</h3>
 			<input type="file" class="fileInput" id="manifestFile">
-			<h3>If you need a manifest files</h3>
+			<h3>If you need a manifest file</h3>
 			<br>
 			<div id="genButtonDiv">
 			<button onclick= "showForm(); return false;">Generate Manifest File</button>
