@@ -1,5 +1,27 @@
 <?php include "header.php";
  ?>
+<script src="jquery-3.1.1.min.js"></script>
+
+
+<script type="text/javascript">
+	
+	$.extend(
+	{
+	    redirectPost: function(location, args)
+	    {
+	        var form = '';
+	        $.each( args, function( key, value ) {
+	            form += '<input type="hidden" name="'+key+'" value="'+value+'">';
+	        });
+	        $('<form action="'+location+'" method="POST">'+form+'</form>').appendTo('body').submit();
+	    }
+	});
+
+	function sendID(id) {
+		var redirect = 'create-edit.php';
+		$.redirectPost(redirect, {'id' : id});
+	}
+</script> 
 	<div class="content column full">
 		<div class="page-head">
 			<h2>Search</h2>
@@ -42,8 +64,12 @@
 						        <td>".$row['category']."</td>
 						        <td>".$row['last_edit']."</td>
 						        <td>".$row['upload_date']."</td>
-						        <td><a class='manifest'>View</a></td>
+						        <td><button class='manifest' onClick='sendID(" . $row['manifest_id'].");'>View</button></td>
 					        </tr>";
+
+					        //So, I need to pass manifest data to the next page, so that view can query for it. Obvious choice is the manifest ID (no security risk?)
+					        //Send forward the manifest ID to php script, it will query and return data.
+					        //Then ajax call, on success, return then redirect to view 
 
 
 					        
@@ -55,7 +81,7 @@
 						        		<td>".$row['category']."</td>
 						        		<td>".$row['last_edit']."</td>
 						        		<td>".$row['upload_date']."</td>
-						        		<td><a class='manifest'>View</a></td>
+						        		 <td><button class='manifest' onClick='sendID(" . $row['manifest_id'].");'>View</button></td>
 					        		</tr>";
 					        }
 					    
