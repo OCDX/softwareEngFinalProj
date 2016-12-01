@@ -11,6 +11,8 @@
 
     <title>CS4320 Final Project</title>
 
+    <script src="jquery.redirect.js"></script
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
