@@ -2,11 +2,10 @@
 	if ($_POST['manifest']){
 		$contents = $_POST['manifest'];
 
-		$file = fopen("manifest.json", "w");
-		fclose($file);
-		file_put_contents("manifest.json", $contents);
-
-		$attachment_location = "manifest.json";
+		$file = fopen("files/manifest.json", "w");
+		fwrite($file, $contents);
+		fclose($file);	
+		$attachment_location = "files/manifest.json";
 
 		if (file_exists($attachment_location)) {
 			header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
@@ -19,5 +18,7 @@
 		} else {
 			print('error');
 		}
+	} else {
+		print('no post sent');
 	}
 ?>

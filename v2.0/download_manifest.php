@@ -1,6 +1,5 @@
 <?php
-$attachment_location = "manifest.json";
-
+$attachment_location = "files/manifest.json";
 		if (file_exists($attachment_location)) {
 			header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
 			header("Content-Length:".filesize($attachment_location));
