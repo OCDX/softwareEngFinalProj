@@ -180,17 +180,55 @@ button.exit{
                     
                     if(move_uploaded_file($file_tmp, $file_destination)) {
                         
-                       echo "<div class='alert alert-success alert-dismissable' style='position: fixed; right:10%'>
-                    <strong>Success!</strong>Your files have been uploaded!
-                        </div>";
+                     
                         
-                       $uploadcheck = true; 
+                       $uploadcheck1 = true; 
                     }
                 }
             }
         }
  
     }
+	if(isset($_FILES['manifestfile']))
+	{
+        $file = $_FILES['manifestfile'];
+        $file_name = $file['name'];
+        $file_tmp = $file['tmp_name'];
+        $file_size = $file['size'];
+        $file_error = $file['error'];
+        //check extension
+        
+        $file_ext = explode('.', $file_name);
+        $file_ext = strtolower(end($file_ext));
+        $allowed = array('json');
+        
+        if(in_array($file_ext, $allowed)) {
+            if($file_error === 0){
+                if(file_size <= 150000000){
+                    
+                    $file_destination = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
+                    
+                    if(move_uploaded_file($file_tmp, $file_destination)) {
+                        
+                     
+                        
+                       $uploadcheck2 = true; 
+                    }
+                }
+            }
+        }
+ if ($uploadcheck1 == true && $uploadcheck2 == true){
+  echo "<div class='alert alert-success alert-dismissable' style='position: fixed; right:10%'>
+                    <strong>Success!</strong>Your files have been uploaded!
+                        </div>";
+}
+else {
+    echo "<div class='alert alert-danger alert-dismissable' style='position: fixed; right:10%'>
+                    <strong>Error!</strong>Your files are either a non-supported format or over 15mb!
+                        </div>";
+}
+    }
+
 		// $title = $_POST['title'];
 		// $version = $_POST['manifestVersion'];
 		// $category = $_POST['category'];
