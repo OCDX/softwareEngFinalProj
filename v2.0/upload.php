@@ -1,3 +1,6 @@
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <?php 
 session_start();
 if ($_SESSION["email"] == NULL){
@@ -28,7 +31,9 @@ div#NewData{
 input.fileInput{
 	margin-top: 5px;
 	margin-bottom: 5px;
-	border: 2px solid black;
+	border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 5px;
 }
 input.inputField{
 	margin-bottom: 5px;
@@ -123,29 +128,107 @@ button.exit{
 		}
 	}
 </script>
+
 <div id="displayContainer">
 	<div id="uploadPanel">
-		<form action='upload.php' method='$_POST'>
+		<form action='upload.php' method='post' enctype="multipart/form-data">
+            <input type="text" class="form-control" placeholder="Title" name="title" required>
+            <br>
+            <input type="text" class="form-control" placeholder="Category" name="category" required>
 			<h3>Add Dataset/SNC files</h3>
-			<input class="fileInput" type="file" id="dataset">
-			<button class="plusButton">Add File Upload+</button>
+			<input class="fileInput" type="file" name="datasetfile" id="datasetfile" required>
+			<h3>Upload Manifest.json</h3>
+            <br>
+			<input type="file" class="fileInput" name="manifestfile" id="manifestFile">
+            <br>
+            
+            <button type="submit" name="submit" class="plusButton">Submit Manifest</button>
 			<!-- <p>Keyword</p>
 			<input type='text' id='keyword' name='keyword'></div> -->
-			<h3>Upload Manifest.json</h3>
-			<input type="file" class="fileInput" id="manifestFile">
-			<h3>If you need a manifest file</h3>
+			
+			<h3>Or</h3>
 			<br>
 			<div id="genButtonDiv">
-			<button onclick= "showForm(); return false;">Generate Manifest File</button>
+			<button onclick= "showForm(); return false;">Generate Manifest JSON</button>
 			</div>
 		</form>
 	</div>
 	<div id='NewData'>
 	</div>
 </div>
+<div id="alertspace">
+</div>
 <?php
-	if(isset($_POST))
+	if(isset($_FILES['datasetfile']))
 	{
+        $file = $_FILES['datasetfile'];
+        $file_name = $file['name'];
+        $file_tmp = $file['tmp_name'];
+        $file_size = $file['size'];
+        $file_error = $file['error'];
+        //check extension
+        
+        $file_ext = explode('.', $file_name);
+        $file_ext = strtolower(end($file_ext));
+        $allowed = array('txt', 'json', 'rtf', 'snc', 'pdf');
+        
+        if(in_array($file_ext, $allowed)) {
+            if($file_error === 0){
+                if(file_size <= 150000000){
+                    mkdir('uploads/'.$_SESSION['email'].'/'.$_POST['title'], 0755, true);
+                    $file_destination = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
+                    
+                    if(move_uploaded_file($file_tmp, $file_destination)) {
+                        
+                     
+                        
+                       $uploadcheck1 = true; 
+                    }
+                }
+            }
+        }
+ 
+    }
+	if(isset($_FILES['manifestfile']))
+	{
+        $file = $_FILES['manifestfile'];
+        $file_name = $file['name'];
+        $file_tmp = $file['tmp_name'];
+        $file_size = $file['size'];
+        $file_error = $file['error'];
+        //check extension
+        
+        $file_ext = explode('.', $file_name);
+        $file_ext = strtolower(end($file_ext));
+        $allowed = array('json');
+        
+        if(in_array($file_ext, $allowed)) {
+            if($file_error === 0){
+                if(file_size <= 150000000){
+                    
+                    $file_destination = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
+                    
+                    if(move_uploaded_file($file_tmp, $file_destination)) {
+                        
+                     
+                        
+                       $uploadcheck2 = true; 
+                    }
+                }
+            }
+        }
+ if ($uploadcheck1 == true && $uploadcheck2 == true){
+  echo "<div class='alert alert-success alert-dismissable' style='position: fixed; right:10%'>
+                    <strong>Success!</strong>Your files have been uploaded!
+                        </div>";
+}
+else {
+    echo "<div class='alert alert-danger alert-dismissable' style='position: fixed; right:10%'>
+                    <strong>Error!</strong>Your files are either a non-supported format or over 15mb!
+                        </div>";
+}
+    }
+
 		// $title = $_POST['title'];
 		// $version = $_POST['manifestVersion'];
 		// $category = $_POST['category'];
@@ -154,6 +237,7 @@ button.exit{
 		// $lastEdit = date("Y-m-d");
 		// $manifestFile = $_POST['manifest'];
 				
+        if ($uploadcheck == true) {
 		$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
 		$ownerID = mysqli_prepare($conn, "SELECT ID from user WHERE email LIKE ?");
 		mysqli_stmt_bind_param($ownerID, "s", $_SESSION['email']);
