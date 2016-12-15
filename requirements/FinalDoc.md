@@ -1191,7 +1191,7 @@ These features were working and should be checked when updates are made:
 
 9. Download the newly uploaded manifest, should get back the files correctly
 
-
+\newpage
 
 #Glossary
 
@@ -1226,5 +1226,3 @@ These features were working and should be checked when updates are made:
 ##Trigger
 
   The initial action that begins a certain function of the application
-  
-  \pagenumbering{gobble}
