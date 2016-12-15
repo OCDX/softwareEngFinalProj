@@ -1,5 +1,3 @@
-/pageBreak
-
 #Requirements Analysis 
 
 ##Use Cases and Requirements
@@ -308,6 +306,10 @@ NONE
 #Link to Live Version of Site
 
 [Group 7 Website](https://mizzou.tech/softwareEngFinalProj/v2.0/)
+
+#Link to User Documentation(Guide for using the website)
+
+[User Guide](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/UserDocumentation.md)
 
 #Deployment Instructions for this Application
 

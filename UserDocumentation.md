@@ -45,7 +45,7 @@ manifest view, in the main area of the search page.
     
 ![search_example](/UserDocImages/search_example.PNG)
     
-Clicking on a manifest row will redirect to the manifest view page for that manifest. 
+Clicking on Select will redirect to the manifest view page for that manifest. 
     
 
 ###Editing Manifest
