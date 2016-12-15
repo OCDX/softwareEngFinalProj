@@ -1,6 +1,6 @@
 <?php include_once("header.php"); ?>
-<script src="jquery-3.1.1.min.js"></script>
-<script type="text/javascript">
+<!--<script src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">-->
 $.extend(
 	{
 	    redirectPost: function(location, args)
