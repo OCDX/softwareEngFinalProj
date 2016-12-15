@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 09, 2016 at 12:59 AM
+-- Generation Time: Dec 15, 2016 at 01:20 AM
 -- Server version: 5.7.16-0ubuntu0.16.04.1
 -- PHP Version: 5.6.27-1+deb.sury.org~xenial+1
 
@@ -32,7 +32,7 @@ CREATE TABLE `dataset_files` (
   `fileType` varchar(30) NOT NULL,
   `manifestID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
-  `filePath` varchar(30) NOT NULL
+  `filePath` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -49,8 +49,15 @@ CREATE TABLE `manifest` (
   `upload_date` date DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `ownerID` int(11) NOT NULL,
-  `manifest_path` varchar(30) NOT NULL
+  `manifest_path` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `manifest`
+--
+
+INSERT INTO `manifest` (`manifest_id`, `version`, `category`, `last_edit`, `upload_date`, `title`, `ownerID`, `manifest_path`) VALUES
+(12345, 1, 'Puppies', '2016-12-13', '2016-12-13', 'Cute Puppies, and how to pet them', 9, '/uploads/admin@missouri.edu/test/');
 
 -- --------------------------------------------------------
 
@@ -84,7 +91,10 @@ INSERT INTO `user` (`ID`, `salt`, `hash`, `last_name`, `first_name`, `email`, `p
 (23, '71666802', '$2y$10$FmdwFEjMOPk7dV9zQDV6ke9CIT6UQKcmG4dt/So00wHo28ZGqP/sy', '', '', 'testtest@test.com', 0),
 (25, '1722840512', '$2y$10$2GRnlGSmifRmWXTwO1KVZuQzHpRMrs63s5aEDihuKgYOhRbVxIW6G', 'welch', 'jared', 'test1@test.com', 0),
 (26, '779744794', '$2y$10$3oZ5yZ1qiBAajaeg4qP77O2vZj1MF4.au.hX8Vku9OgvISQXtvscG', 'Good', 'Andrew\'s', 'google@gmail.com', 0),
-(27, '1540165561', '$2y$10$H4TVzVpuj/Gv62oyTt5V6eU3I62FOUuPWJvyf5sJlIIroSx/TwUjS', 'builder', 'bob', 'bobthebuilder@missouri.edu', 0);
+(27, '1540165561', '$2y$10$H4TVzVpuj/Gv62oyTt5V6eU3I62FOUuPWJvyf5sJlIIroSx/TwUjS', 'builder', 'bob', 'bobthebuilder@missouri.edu', 0),
+(29, '830944050', '$2y$10$TuxhoPU4MSfIApF3HQyndOaVJtgNjJ1nGKtFRbOmRI7ddvI25dOBe', 'Dolan', 'Zach', 'zmdolan@gmail.com', 0),
+(30, '1991415065', '$2y$10$CbNDd3.JDrvf8yo9Tn.AUegPlDNM9yFyqb2eOld5C4MsYKMDhHUx6', 'Dolan', 'Zach', 'zmd989@missouri.edu', 0),
+(31, '1844651676', '$2y$10$/C9DTGWcwmycsT6tXN82A.mxHlLPWaGRHxZ8qQ8J7JvJjETpfZJjC', 'testarino', 'joe', 'joetest@missouri.edu', 0);
 
 --
 -- Indexes for dumped tables
@@ -127,12 +137,12 @@ ALTER TABLE `dataset_files`
 -- AUTO_INCREMENT for table `manifest`
 --
 ALTER TABLE `manifest`
-  MODIFY `manifest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `manifest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12346;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- Constraints for dumped tables
 --
