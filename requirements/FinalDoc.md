@@ -812,12 +812,13 @@ This section is dedicated to the tasks that were inherited from the previous spr
  
    [link to download page](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/create-edit.php)
 
-
     * Delete a manifest if you are the owner of it (Liz)
 
     * Edit existing manifest information (Andrew)
 
 - Create a Finalized document with sprint information/ requirements/ changelog/ links to user doc. 
+
+- *ALL TASKS UNFINISHED FROM THIS SPRINT SHOULD ONLY PENALIZE THOSE GROUP MEMBERS WHO DID NOT COMPLETE THEIR TASK FOR THE FINAL SPRINT*
 
 #Testing
 
