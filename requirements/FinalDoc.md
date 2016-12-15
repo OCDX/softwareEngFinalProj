@@ -813,6 +813,7 @@ This section is dedicated to the tasks that were inherited from the previous spr
     [link to download page](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/create-edit.php)
 
     * Delete a manifest if you are the owner of it (Liz)
+    [page containing delete](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/create-edit.php)
 
     * Edit existing manifest information (Andrew)
 
