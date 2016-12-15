@@ -810,7 +810,7 @@ This section is dedicated to the tasks that were inherited from the previous spr
 
     * Download files from a manifest (Jared)
  
-   [link to download page](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/create-edit.php)
+    [link to download page](https://github.com/jaredwelch1/softwareEngFinalProj/blob/master/v2.0/create-edit.php)
 
     * Delete a manifest if you are the owner of it (Liz)
 
