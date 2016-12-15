@@ -792,7 +792,7 @@ This section is dedicated to the tasks that were inherited from the previous spr
    
     * [commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/8d2cf8b2d40b49d520253aeded9e662e58688dcd)
 
-###Tasks Remaining (sprint 5):
+##Tasks Remaining (sprint 5):
 
 - Update ERD with new data (Andrew)
 
