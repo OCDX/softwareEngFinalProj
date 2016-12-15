@@ -92,7 +92,7 @@ Clicking "Submit" will (if all required files are supplied) upload your new data
 
 To download files from a manifest, simply press "download dataset file" for the dataset file or "download manifest" for a manifest file download. This will allow you to download that file locally.
 
-![download](/UserDocImages/view_manifest1.PNG)
+![download](/UserDocImages/download.PNG)
 
 
  
