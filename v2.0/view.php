@@ -1,4 +1,22 @@
 <?php include_once("header.php"); ?>
+<script src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+$.extend(
+	{
+	    redirectPost: function(location, args)
+	    {
+	        var form = '';
+	        $.each( args, function( key, value ) {
+	            form += '<input type="hidden" name="'+key+'" value="'+value+'">';
+	        });
+	        $('<form action="'+location+'" method="POST">'+form+'</form>').appendTo('body').submit();
+	    }
+	});
+
+	function sendID(id) {
+		var redirect = 'create-edit.php';
+		$.redirectPost(redirect, {'id' : id});
+	}</script>
 
 <!-- STUB CALLS
 	Sections of code in this document will include:
@@ -35,7 +53,7 @@
 	            <td>".$row['category']."</td>
 	            <td>".$row['last_edit']."</td>
 	            <td>".$row['upload_date']."</td>
-	            <td><a class='manifest'>View</a></td>
+	            <td><button class='manifest' onClick='sendID(" . $row['manifest_id'].");'>View</button></td>
             </tr>";
         }
         echo"</table>";

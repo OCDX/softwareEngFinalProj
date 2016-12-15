@@ -159,10 +159,12 @@ button.exit{
 <div id="alertspace">
 </div>
 <?php
+
 	if(isset($_FILES['datasetfile']))
 	{
         $file = $_FILES['datasetfile'];
         $file_name = $file['name'];
+        $file_name_data = $file['name'];
         $file_tmp = $file['tmp_name'];
         $file_size = $file['size'];
         $file_error = $file['error'];
@@ -174,10 +176,10 @@ button.exit{
         
         if(in_array($file_ext, $allowed)) {
             if($file_error === 0){
-                if(file_size <= 150000000){
+                if($file_size <= 150000000){
                     mkdir('uploads/'.$_SESSION['email'].'/'.$_POST['title'], 0755, true);
                     $file_destination = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
-                    
+                    $file_destination_data = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
                     if(move_uploaded_file($file_tmp, $file_destination)) {
                         
                      
@@ -193,6 +195,7 @@ button.exit{
 	{
         $file = $_FILES['manifestfile'];
         $file_name = $file['name'];
+        $manifest_name = $file['name'];
         $file_tmp = $file['tmp_name'];
         $file_size = $file['size'];
         $file_error = $file['error'];
@@ -204,9 +207,10 @@ button.exit{
         
         if(in_array($file_ext, $allowed)) {
             if($file_error === 0){
-                if(file_size <= 150000000){
+                if($file_size <= 150000000){
                     
                     $file_destination = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
+                     $file_destination_man = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
                     
                     if(move_uploaded_file($file_tmp, $file_destination)) {
                         
@@ -217,6 +221,7 @@ button.exit{
                 }
             }
         }
+
  if ($uploadcheck1 == true && $uploadcheck2 == true){
   echo "<div class='alert alert-success alert-dismissable' style='position: fixed; right:10%'>
                     <strong>Success!</strong>Your files have been uploaded!
@@ -229,43 +234,34 @@ else {
 }
     }
 
-		// $title = $_POST['title'];
-		// $version = $_POST['manifestVersion'];
-		// $category = $_POST['category'];
-		// $keyword = $_POST['keyword'];
-		// $dataFile = $_POST['dataset'];
-		// $lastEdit = date("Y-m-d");
-		// $manifestFile = $_POST['manifest'];
-				
-        if ($uploadcheck == true) {
+		
+        if ($uploadcheck1 == true) {
+        date_default_timezone_set('UTC');
+        $today = date('y-m-d');
 		$conn = mysqli_connect('localhost','admin','CS4320FG7','SEFinalProject') or die ("error connecting to database");
-		$ownerID = mysqli_prepare($conn, "SELECT ID from user WHERE email LIKE ?");
-		mysqli_stmt_bind_param($ownerID, "s", $_SESSION['email']);
-		mysqli_stmt_execute($ownerID);
-					
-		// if($_POST['submit'] == "New") //filled out form, no manifest file, new manifest
-		// {
-		// 	$creationDate = date("Y-m-d");
-					
-		// 	$insert = mysqli_prepare($conn, "INSERT INTO manifest VALUES version = ?, category = ?, last_edit = ?, upload_date = ?, data = ?, manifest = ?");
-		// 	mysqli_stmt_bind_param($insert, 's', htmlspecialchars($title));
-		// 	mysqli_stmt_execute($insert);
-					
-		// 	if($title != NULL) //filled out manifest file
-		// 	{
-		// 		$txt = '{"manifest": { "title":'.$title.', "version":'.$version.', "category":'.$category.', "created":'.$creationDate.'}}';
-	
-		// 		$jsontxt = json_encode($txt, JSON_PRETTY_PRINT);
-			
-		// 		$newFile = fopen($_SESSION['email']."/".$title."manifest.json","w") or die("Unable to open file");
-		// 		fwrite($newFile, $jsontxt);
-		// 		fclose($newFile);
-					
-		// 		$insertFile = mysqli_prepare($conn, "INSERT INTO manifest (category, keyword, ownerId, data, manifest) VALUES ?, ?, ?, ?, ?");
-		// 		mysqli_stmt_bind_param($insert, $category, $keyword, $ownerID, $dataFile, $newFile);
-		// 		mysqli_stmt_execute($insert);
-		// 	}		
-		// } 
+		$sql = "SELECT * FROM `user` WHERE email = '".$_SESSION['email']."';";
+
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		$userId = $row['ID'];
+
+
+		$sql = "INSERT INTO `manifest` 
+			( `version`, `category`, `last_edit`, `upload_date`, `title`, `ownerID`, `manifest_path`)  
+			VALUES ( '1','". $_POST['category']."',' ".$today."', '".$today."', '".$_POST['title']."', ".$userId." ,'".$file_destination_man."');";
+		$result = mysqli_query($conn, $sql);
+
+		if ($result){
+			$sql = "SELECT `manifest_id` FROM `manifest` WHERE manifest_id = (SELECT MAX(manifest_id) FROM `manifest`)";
+			$result = mysqli_query($conn, $sql);
+			$row = mysqli_fetch_assoc($result);
+			$manifestId = $row['manifest_id'];
+		
+		$sql = "INSERT INTO `dataset_files` 
+			(`fileName`, `fileType`, `manifestID`, `userID`,`filePath`) 
+			VALUES ( '".$file_name_data."', 'text', ".$manifestId.", ".$userId.", '".$file_destination_data."');";
+		$result = mysqli_query($conn, $sql);
+		}
 	}?>
 </div>
 </body>
