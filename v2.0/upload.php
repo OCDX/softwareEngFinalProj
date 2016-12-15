@@ -177,7 +177,7 @@ button.exit{
         if(in_array($file_ext, $allowed)) {
             if($file_error === 0){
                 if($file_size <= 150000000){
-                    mkdir('uploads/'.$_SESSION['email'].'/'.$_POST['title'], 0755, true);
+                    mkdir('uploads/'.$_SESSION['email'].'/'.$_POST['title'], 0744, true);
                     $file_destination = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
                     $file_destination_data = 'uploads/'.$_SESSION['email'].'/'.$_POST['title'].'/' . $file_name;
                     if(move_uploaded_file($file_tmp, $file_destination)) {
