@@ -333,7 +333,7 @@ NONE
 
 - Update database design
 
-###V2.0
+##V2.0
 
 - Update styling of UI
 
@@ -349,7 +349,7 @@ NONE
 
 - Add page to view user information
 
-###V3.0
+##V3.0
 
 - Add ability to uplaod manifest files and dataset files
 
@@ -791,7 +791,6 @@ This section is dedicated to the tasks that were inherited from the previous spr
 - [x] Account information page (Part of UI and Query tasks, but just to be clear so we don't forget)(Andrew) 
    
     * [commit](https://github.com/jaredwelch1/softwareEngFinalProj/commit/8d2cf8b2d40b49d520253aeded9e662e58688dcd)
-
 
 ###Tasks Remaining (sprint 5):
 
