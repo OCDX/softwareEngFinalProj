@@ -65,8 +65,7 @@
 								$query = "DELETE FROM dataset_files WHERE manifestID = ".$_POST['id'].";";
 								mysqli_query($link, $query);
 								
-								//remove files from file path
-								
+								//remove files from file path, currently not working	
 								$query = "SELECT manifest_path FROM manifest WHERE manifest_id = ".$_POST['id'].";";
 								$result = mysqli_query($link, $query);
 								/*function rrmdir($result)
