@@ -69,7 +69,7 @@
 								
 								$query = "SELECT manifest_path FROM manifest WHERE manifest_id = ".$_POST['id'].";";
 								$result = mysqli_query($link, $query);
-								function rrmdir($result)
+								/*function rrmdir($result)
 								{
 									if(is_dir($result))
 									{
@@ -90,7 +90,7 @@
 									{
 										echo "No files.";
 									}
-								}
+								}*/
 								
 								echo "Successfully removed";
 							}
