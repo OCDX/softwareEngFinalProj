@@ -1,29 +1,6 @@
-<?php include_once('header.php'); ?>
-<!-- STUB CALLS
-	Sections of code in this document will include:
-		calls to open the connection to the database: openConnection()
-		displaying the proper form for the user to fill out: chooseForm()
-		parsing and cleaning user input from the main forms: prepare()
-		posting changes to existing fields in the database: editEntry()
-		creating new data to place in the database: newEntry()
-		placing data in the database: loadData()-->
-		
-	<script>	
-				function formNewFctn(i){
-					if(i == 1)
-						document.getElementById("new").style.display=block;
-					else
-						document.getElementById("new").style.display=none;
-				}
-	
-				function formEditFctn(i){
-					if(i == 1)
-						document.getElementById("edit").style.display=block;
-					else
-						document.getElementById("edit").style.display=none;
-				}
-			</script>
-<?php 	if ($_SESSION['email'] == NULL){
+<?php include_once('header.php'); 
+
+ 	if ($_SESSION['email'] == NULL){
                         echo "<h1>Error: You must be signed in to view this content</h1>";
                         echo "<meta http-equiv='refresh' content='0;url=index.php'>";
         } else if( isset($_POST['id'])){
@@ -60,6 +37,7 @@
 													
 								<br>
 								<input type='submit' value='Submit'>
+								<button>Remove</button>
 							</form>
 						</div>";
 				}
