@@ -116,7 +116,9 @@ span.psw {
             mysqli_stmt_bind_param($stmt, "s", $user) or die("bind param");
             if(mysqli_stmt_execute($stmt)){
               mysqli_stmt_bind_result($stmt, $salt ,$hpass, $uType, $id);
+	
               if(mysqli_stmt_fetch($stmt)){
+
                 if(password_verify($salt.$password, $hpass)){
                   $_SESSION["email"] = $user;
                   $_SESSION["permission_level"] = $uType;

@@ -48,6 +48,7 @@ ini_set('display_errors', 1);
                                                 mysqli_stmt_bind_param($stmt, "sssis", $fname, $lname, $email, $salt, $hpass) or die("bind param");
                                                 if(mysqli_stmt_execute($stmt)) {
                                                         echo "<div class='alert alert-success' role='alert'>Account creation complete</div>";
+                                                    mkdir('uploads/'.$email, 0755, true);
               //TODO: add header to send to next page upon completion. Login page, perhaps?
                                                 } else {
                                                         echo "<div class='alert alert-danger' role='alert'>Account creation failed</div>";

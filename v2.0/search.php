@@ -64,7 +64,7 @@
 						        <td>".$row['category']."</td>
 						        <td>".$row['last_edit']."</td>
 						        <td>".$row['upload_date']."</td>
-						        <td><button class='manifest' onClick='sendID(" . $row['manifest_id'].");'>View</button></td>
+						        <td><button class='manifest' onClick='sendID(" . $row['manifest_id'].");'>Select</button></td>
 					        </tr>";
 
 					        //So, I need to pass manifest data to the next page, so that view can query for it. Obvious choice is the manifest ID (no security risk?)
@@ -81,7 +81,7 @@
 						        		<td>".$row['category']."</td>
 						        		<td>".$row['last_edit']."</td>
 						        		<td>".$row['upload_date']."</td>
-						        		 <td><button class='manifest' onClick='sendID(" . $row['manifest_id'].");'>View</button></td>
+						        		 <td><button class='manifest' onClick='sendID(" . $row['manifest_id'].");'>Select</button></td>
 					        		</tr>";
 					        }
 					    

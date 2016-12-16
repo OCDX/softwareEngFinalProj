@@ -370,3 +370,7 @@ These features were working and should be checked when updates are made:
 
 7. All buttons on sidebar and header should work properly 
 
+8. Upload a new manifest with files, check the upload succeeds
+
+9. Download the newly uploaded manifest, should get back the files correctly
+

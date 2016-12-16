@@ -27,17 +27,24 @@
                         echo "<h1>Error: You must be signed in to view this content</h1>";
                         echo "<meta http-equiv='refresh' content='0;url=index.php'>";
         } else if( isset($_POST['id'])){
+        	$link = mysqli_connect("localhost", "admin", "CS4320FG7", "SEFinalProject") or die ("error");
+        	$query = "SELECT * FROM `dataset_files` WHERE manifestID = ".$_POST['id'].";";
+        	$result = mysqli_query($link, $query);
+        	$row = mysqli_fetch_assoc($result);
+        	$data_file_path = $row['filePath'];
+        	$data_file = $row['fileName'];
+
 			$query = "SELECT * FROM `manifest` WHERE manifest_id = ".$_POST['id'].";";
-			$link = mysqli_connect("localhost", "admin", "CS4320FG7", "SEFinalProject") or die ("error");
 			$result = mysqli_query($link, $query);
 			
 			if ($row = mysqli_fetch_assoc($result)){
 				echo"
 					<h2>Manifest Editor</h2>
 					</div>
-					<div>
-					<button>Download Dataset/SNC files (Zip if more than one)</button>
-							<button>Download manifest file</button>
+					<div>	
+							<a href=\"${row['manifest_path']}\" download=\"manifest.json\">Download Manifest File</a>
+							<a href=\"${data_file_path}\" download=\"${data_file}\">Download Dataset File</a>
+
 					</div>
 					<div class='viewer column two-thirds'>
 						<div id='new'>
