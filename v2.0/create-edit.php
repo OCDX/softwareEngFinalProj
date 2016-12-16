@@ -8,21 +8,6 @@
 		creating new data to place in the database: newEntry()
 		placing data in the database: loadData()-->
 		
-	<script>	
-				function formNewFctn(i){
-					if(i == 1)
-						document.getElementById("new").style.display=block;
-					else
-						document.getElementById("new").style.display=none;
-				}
-	
-				function formEditFctn(i){
-					if(i == 1)
-						document.getElementById("edit").style.display=block;
-					else
-						document.getElementById("edit").style.display=none;
-				}
-			</script>
 <?php 	if ($_SESSION['email'] == NULL){
                         echo "<h1>Error: You must be signed in to view this content</h1>";
                         echo "<meta http-equiv='refresh' content='0;url=index.php'>";
@@ -59,9 +44,29 @@
 								<input type='file' name='upload new File'>
 													
 								<br>
-								<input type='submit' value='Submit'>
+								<input type='submit' value='Submit'><input type='submit' value='Remove'>
 							</form>
 						</div>";
+						if(isset($_POST['Remove'])){
+							$query = "select ownerId from manifest where manifest_id = ".$_POST['id'].";";
+							$result = mysqli_query($link, $query);
+							
+							$query = "select email from user where ID = ".$result.";";
+							$resultEmail = $result = mysqli_query($link, $query);
+							
+							if($resultEmail == $_SESSION['email'])
+							{
+								$query = "DELETE from manifests where manifest_id = ".$_POST['id'].";";
+								mysqli_query($link, $query);
+								
+								$query = "DELETE from dataset_files where manifestID = ".$_POST['id'].";";
+								mysqli_query($link, $query);
+							}
+							else
+							{
+								echo "You can't remove this.";
+							}
+						}
 				}
 			
 		} else {
