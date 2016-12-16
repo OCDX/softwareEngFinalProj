@@ -23,7 +23,7 @@
 			$result = mysqli_query($link, $query);
 			
 			if ($row = mysqli_fetch_assoc($result)){
-				echo"
+				echo "
 					<h2>Manifest Editor</h2>
 					</div>
 					<div>	
@@ -48,19 +48,21 @@
 							</form>
 						</div>";
 						if(isset($_POST['Remove'])){
-							$query = "select ownerId from manifest where manifest_id = ".$_POST['id'].";";
-							$result = mysqli_query($link, $query);
-							
-							$query = "select email from user where ID = ".$result.";";
-							$resultEmail = $result = mysqli_query($link, $query);
+							$query = "select ownerID from manifest where manifest_id = ".$_POST['id'].";";
+							$ownerCheck = mysqli_query($link, $query);
+	
+							$query = "select email from user where ID = ".$ownerCheck.";";
+							$resultEmail = mysqli_query($link, $query);
 							
 							if($resultEmail == $_SESSION['email'])
 							{
-								$query = "DELETE from manifests where manifest_id = ".$_POST['id'].";";
+								$query = "DELETE from manifest where manifest_id = ".$_POST['id'].";";
 								mysqli_query($link, $query);
 								
 								$query = "DELETE from dataset_files where manifestID = ".$_POST['id'].";";
 								mysqli_query($link, $query);
+								
+								echo "Successfully removed";
 							}
 							else
 							{
@@ -93,5 +95,6 @@
 								<input type='submit' value='Submit'>
 							</form>
 						</div>
-	";}?>
+	";}
+	mysqli_close($link);?>
 <?php include_once("footer.php"); ?>
