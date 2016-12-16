@@ -48,18 +48,21 @@
 							</form>
 						</div>";
 						if(isset($_POST['Remove'])){
-							$query = "select ownerID from manifest where manifest_id = ".$_POST['id'].";";
+							//get owner of manifest
+							$query = "SELECT ownerID FROM manifest WHERE manifest_id = ".$_POST['id'].";";
 							$ownerCheck = mysqli_query($link, $query);
-	
-							$query = "select email from user where ID = ".$ownerCheck.";";
+							
+							//get email for owner of manifest
+							$query = "SELECT email FROM user WHERE ID = ".$ownerCheck.";";
 							$resultEmail = mysqli_query($link, $query);
 							
+							//compare emails, if match, remove manifest, else do nothing
 							if($resultEmail == $_SESSION['email'])
 							{
-								$query = "DELETE from manifest where manifest_id = ".$_POST['id'].";";
+								$query = "DELETE FROM manifest WHERE manifest_id = ".$_POST['id'].";";
 								mysqli_query($link, $query);
 								
-								$query = "DELETE from dataset_files where manifestID = ".$_POST['id'].";";
+								$query = "DELETE FROM dataset_files WHERE manifestID = ".$_POST['id'].";";
 								mysqli_query($link, $query);
 								
 								echo "Successfully removed";
