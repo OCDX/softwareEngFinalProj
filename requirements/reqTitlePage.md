@@ -2,9 +2,9 @@
 
 ###Jared Welch, Geoffery Husser, Elizabeth Bryan, Zach Dolan, Andrew Stoll
 
-###Version: 2.0
+###Version: 3.0
 
-####10/18/16
+####12/15/18
 
 \pagenumbering{gobble}
 

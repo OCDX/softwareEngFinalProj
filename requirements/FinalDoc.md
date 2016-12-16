@@ -800,7 +800,7 @@ This section is dedicated to the tasks that were inherited from the previous spr
 
 - Update ERD with new data (Andrew)
 
-- Create a changelog for our next set of features
+- Create a changelog for our next set of features (Geoff)
 
 - Add tests for our new features (Jared)
 
