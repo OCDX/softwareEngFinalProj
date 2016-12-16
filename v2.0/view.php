@@ -44,6 +44,7 @@ $.extend(
 				<th>Category</th>
 				<th>Last Edit</th>
 				<th>Upload Date</th>
+				<th>Edit</th>
 			</tr>";
         while ($row = mysqli_fetch_assoc($result)){
         echo 
