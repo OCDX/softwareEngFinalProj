@@ -65,6 +65,33 @@
 								$query = "DELETE FROM dataset_files WHERE manifestID = ".$_POST['id'].";";
 								mysqli_query($link, $query);
 								
+								//remove files from file path
+								
+								$query = "SELECT manifest_path FROM manifest WHERE manifest_id = ".$_POST['id'].";";
+								$result = mysqli_query($link, $query);
+								function rrmdir($result)
+								{
+									if(is_dir($result))
+									{
+										$files = scandir($result)
+										foreach($files as $file)
+										{
+											if($file != "." && $file != "..")
+											{
+												if(is_dir($result."/".$file)
+													rrmdir($result."/".$file);
+												else
+													unlink($result."/".$file)
+											}
+											rmdir($result);
+										}
+									}
+									else
+									{
+										echo "No files.";
+									}
+								}
+								
 								echo "Successfully removed";
 							}
 							else
