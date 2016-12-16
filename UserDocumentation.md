@@ -94,8 +94,10 @@ To download files from a manifest, simply press "download dataset file" for the 
 
 ![download](/UserDocImages/download.PNG)
 
+#Delete manifest
 
- 
-    
+To remove a manifest, you must be the owner of that manifest (the user who uploaded it originally). If you are the owner, when you view the manifest, there will be a remove button. Clicking it will delete the manifest and relavant files from the system. 
+
+![delete](/UserDocImages/removeManifest.PNG)
     
 
