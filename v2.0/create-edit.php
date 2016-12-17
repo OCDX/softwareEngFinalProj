@@ -1,3 +1,21 @@
+<script src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+function remove(id){
+	$.ajax({
+						type: "POST",
+						url: "removeManifest.php",
+						data: { 'id' : id },
+				
+				success: function(data){
+         			alert(data); // will open new tab on window.onload
+				},
+				error: function(XMLHttpRequest, textStatus, errorThown){
+					console.log("error occurred with ajax");
+				}
+			});
+}
+</script>
 <?php include_once('header.php'); 
 
  	if ($_SESSION['email'] == NULL){
@@ -15,7 +33,19 @@
 			$result = mysqli_query($link, $query);
 			
 			if ($row = mysqli_fetch_assoc($result)){
-				echo"
+				
+			$query = "SELECT * FROM `user` WHERE email = '".$_SESSION['email']."'";
+			$result2 = mysqli_query($link, $query);
+
+			$row2 = mysqli_fetch_assoc($result2);
+
+			 if( $row['ownerID'] == $row2['ID'] ){
+			 	$removeBtn = "<button onclick=\"remove(${_POST['id']})\">Remove</button>";
+			 } else {
+			 	$removeBtn = "";
+			 }
+
+			echo"
 					<h2>Manifest Editor</h2>
 					</div>
 					<div>	
@@ -37,7 +67,7 @@
 													
 								<br>
 								<input type='submit' value='Submit'>
-								<button>Remove</button>
+								".$removeBtn."
 							</form>
 						</div>";
 				}
