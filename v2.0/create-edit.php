@@ -1,29 +1,24 @@
-<?php include_once('header.php'); ?>
-<!-- STUB CALLS
-	Sections of code in this document will include:
-		calls to open the connection to the database: openConnection()
-		displaying the proper form for the user to fill out: chooseForm()
-		parsing and cleaning user input from the main forms: prepare()
-		posting changes to existing fields in the database: editEntry()
-		creating new data to place in the database: newEntry()
-		placing data in the database: loadData()-->
-		
-	<script>	
-				function formNewFctn(i){
-					if(i == 1)
-						document.getElementById("new").style.display=block;
-					else
-						document.getElementById("new").style.display=none;
+<script src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+function remove(id){
+	$.ajax({
+						type: "POST",
+						url: "removeManifest.php",
+						data: { 'id' : id },
+				
+				success: function(data){
+         			window.location.replace("view.php");
+				},
+				error: function(XMLHttpRequest, textStatus, errorThown){
+					alert("error occurred with ajax");
 				}
-	
-				function formEditFctn(i){
-					if(i == 1)
-						document.getElementById("edit").style.display=block;
-					else
-						document.getElementById("edit").style.display=none;
-				}
-			</script>
-<?php 	if ($_SESSION['email'] == NULL){
+			});
+}
+</script>
+<?php include_once('header.php'); 
+
+ 	if ($_SESSION['email'] == NULL){
                         echo "<h1>Error: You must be signed in to view this content</h1>";
                         echo "<meta http-equiv='refresh' content='0;url=index.php'>";
         } else if( isset($_POST['id'])){
@@ -38,7 +33,19 @@
 			$result = mysqli_query($link, $query);
 			
 			if ($row = mysqli_fetch_assoc($result)){
-				echo"
+				
+			$query = "SELECT * FROM `user` WHERE email = '".$_SESSION['email']."'";
+			$result2 = mysqli_query($link, $query);
+
+			$row2 = mysqli_fetch_assoc($result2);
+
+			 if( $row['ownerID'] == $row2['ID'] ){
+			 	$removeBtn = "<button onclick=\"remove(${_POST['id']})\">Remove</button>";
+			 } else {
+			 	$removeBtn = "";
+			 }
+
+			echo"
 					<h2>Manifest Editor</h2>
 					</div>
 					<div>	
@@ -61,6 +68,7 @@
 								<br>
 								<input type='submit' value='Submit'>
 							</form>
+							".$removeBtn."
 						</div>";
 				}
 			
