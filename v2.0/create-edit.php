@@ -8,10 +8,10 @@ function remove(id){
 						data: { 'id' : id },
 				
 				success: function(data){
-         			alert(data); // will open new tab on window.onload
+         			window.location.replace("view.php");
 				},
 				error: function(XMLHttpRequest, textStatus, errorThown){
-					console.log("error occurred with ajax");
+					alert("error occurred with ajax");
 				}
 			});
 }
@@ -67,8 +67,8 @@ function remove(id){
 													
 								<br>
 								<input type='submit' value='Submit'>
-								".$removeBtn."
 							</form>
+							".$removeBtn."
 						</div>";
 				}
 			
